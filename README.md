@@ -32,6 +32,7 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 | `data/lexicon/<region>/*.yml` | The dictionary — one word per file. **Add yours here.** |
 | `data/phrases/<region>/*.yml` | Irregular phrases stored whole |
 | `CONTRIBUTING.md` | Your first pull request, hand-held |
+| `docs/TONE.md` | How to be funny without being mean — the tonal north star |
 | `schema/` | The shape each entry must match (a robot checks this) |
 
 ## The rules that keep it real

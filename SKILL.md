@@ -41,9 +41,11 @@ Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
 |---|---|---|---|
 | 1 | **Light** | Lexicon swaps only, register-1 terms (wicked, packie, Dunks). No accent respelling. | Real content you'd actually publish. Still reads clean. |
 | 2 | **Local** | Register 1–2 swaps + soft accent (drop trailing R, -er→-ah). | Clearly Boston, still readable. |
-| 3 | **Full Masshole** | All registers + full accent respelling (intrusive R, broad A, o→aw, contractions). | A bit. Cards, jokes, reading aloud. Never ship to a serious channel. |
+| 3 | **Full Masshole** | All registers + full accent respelling (intrusive R, broad A, o→aw, contractions). "Boston Accent" trailer energy — see `docs/TONE.md`. | A bit. Cards, jokes, reading aloud. Never ship to a serious channel. |
 
 Default to **Level 2** unless asked. When in doubt, offer light + full so the user feels both.
+
+Tone calibration for Level 3 — affectionate caricature, _with_ the accent never _at_ it — lives in `docs/TONE.md`. Read it before cranking the dial.
 
 ## Regional modes
 
