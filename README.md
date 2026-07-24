@@ -31,8 +31,10 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 | `data/pronunciation/rules.yml` | The accent engine (drop-R, broad-A, etc.) |
 | `data/lexicon/<region>/*.yml` | The dictionary — one word per file. **Add yours here.** |
 | `data/phrases/<region>/*.yml` | Irregular phrases stored whole |
+| `MANIFESTO.md` | **What this actually is** — read this if you're confused why a slang repo exists |
 | `CONTRIBUTING.md` | Your first pull request, hand-held |
 | `docs/TONE.md` | How to be funny without being mean — the tonal north star |
+| `docs/PRIOR-ART.md` | Shout-outs to the toys that came before, and our data sources |
 | `schema/` | The shape each entry must match (a robot checks this) |
 
 ## The rules that keep it real
