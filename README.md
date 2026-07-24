@@ -41,6 +41,42 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 | `docs/PRIOR-ART.md` | Shout-outs to the toys that came before, and our data sources |
 | `schema/` | The shape each entry must match (a robot checks this) |
 
+## Use it yourself (install the skill)
+
+This whole repo **is** a Claude skill — a `SKILL.md` plus its data files. Installing
+it is itself a small lesson in how skill files work, which is very much the point.
+
+**In Claude Code** — clone it into your personal skills folder:
+
+```bash
+git clone https://github.com/jmilbery/boston-translatah ~/.claude/skills/boston-translatah
+```
+
+Start a new session and just ask, in plain English:
+
+- "Make this email sound Boston."
+- "Boston-ify this, light touch." *(the readable, still-professional setting)*
+- "Give me the full Masshole version." *(the bit — accent cranked to eleven)*
+- "Translate this to Brockton / South Shore." *(the 508 mode)*
+
+The skill triggers on phrasing like *make this sound Boston, Boston-ify, speak
+Masshole,* or *translate to/from Boston slang.* No restart needed beyond opening a
+new conversation — skills are auto-detected.
+
+**Update it later** as the dictionary grows:
+
+```bash
+cd ~/.claude/skills/boston-translatah && git pull
+```
+
+**No install, just a quick try** — paste the contents of [`SKILL.md`](SKILL.md) and
+[`data/pronunciation/rules.yml`](data/pronunciation/rules.yml) into any Claude chat
+and ask it to translate your text. Less slick, works anywhere.
+
+> The **thickness dial** (light → local → full Masshole) and the regional modes are
+> described in [`SKILL.md`](SKILL.md). Ask for the level you want; default is a
+> readable middle.
+
 ## The rules that keep it real
 
 1. **Every entry cites a source.** A link, or two locals who'll vouch. No source,
