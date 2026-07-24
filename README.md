@@ -1,4 +1,8 @@
-# Boston Translator 🦞
+# boston-translatah 🦞
+
+Yes, that's how it's spelled. Rule #3 is `-er → -ah`, and we apply our own rules
+to ourselves. (If you searched for "boston-translator," you're in the right
+place — welcome.)
 
 **Claude speaks fluent Masshole.** Feed it plain English, get it back with a
 Boston accent and the right vocabulary — `liquor store` becomes `packie`, `soda`

@@ -1,5 +1,5 @@
 ---
-name: boston-translator
+name: boston-translatah
 description: >-
   Translates plain English into Boston / New England dialect — and back —
   using two engines: a pronunciation ruleset (drop-R, intrusive-R, broad-A)

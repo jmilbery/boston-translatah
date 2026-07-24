@@ -1,7 +1,8 @@
 {
-  "name": "boston-translator",
+  "name": "boston-translatah",
   "version": "0.1.0",
   "description": "Claude speaks fluent Masshole — and a git tutorial in a Halloween costume.",
+  "keywords": ["boston", "boston-translator", "boston-translatah", "slang", "dialect", "accent", "claude-skill"],
   "license": "MIT",
   "author": "Jim Milbery",
   "type": "module",

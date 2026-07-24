@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/jmilbery/boston-translator/schema/phrase.schema.json",
+  "$id": "https://github.com/jmilbery/boston-translatah/schema/phrase.schema.json",
   "title": "Phrase entry",
   "description": "A canonical multi-word rendering that does not derive from the pronunciation rules.",
   "type": "object",
