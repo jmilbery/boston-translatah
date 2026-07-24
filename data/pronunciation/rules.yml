@@ -1,0 +1,70 @@
+# The accent engine. General phonetic transforms applied to ANY word.
+# Applied in the order listed. Curated — changes here are reviewed tightly,
+# because they affect every translation. New VOCABULARY goes in data/lexicon/,
+# not here.
+
+- id: drop-final-r
+  name: Non-rhotic R-drop
+  order: 1
+  description: Delete /r/ at the end of a word or before a consonant.
+  examples:
+    - { from: car, to: cah }
+    - { from: park, to: pahk }
+    - { from: Harvard, to: Hahvad }
+    - { from: mother, to: mothah }
+  exceptions: Keep the R when the next sound is a vowel (that becomes a linking R).
+  min_thickness: 2
+
+- id: intrusive-r
+  name: Intrusive / linking R
+  order: 2
+  description: Add an R between a word ending in a vowel and a following vowel sound.
+  examples:
+    - { from: "idea of", to: "idear of" }
+    - { from: "Linda is", to: "Linder is" }
+    - { from: "draw it", to: "drawr it" }
+  min_thickness: 3
+
+- id: er-to-ah
+  name: "-er ending to -ah"
+  order: 3
+  description: Word-final -er becomes -ah.
+  examples:
+    - { from: dinner, to: dinnah }
+    - { from: sticker, to: stickah }
+    - { from: pisser, to: pissah }
+  min_thickness: 2
+
+- id: broad-a
+  name: Broad A
+  order: 4
+  description: >-
+    Some words with /ae/ broaden toward /ah/. Not universal — most natural on
+    father, rather, half, can't, ask. Apply judiciously.
+  examples:
+    - { from: father, to: fahthah }
+    - { from: half, to: hahf }
+    - { from: "can't", to: "cahn't" }
+  min_thickness: 3
+
+- id: o-to-aw
+  name: "O to AW"
+  order: 5
+  description: Short o broadens to "aw". Blocked after s, ng, f, l, th.
+  examples:
+    - { from: coffee, to: cawfee }
+    - { from: hockey, to: hawkey }
+    - { from: dog, to: dawg }
+    - { from: Boston, to: Bawston }
+  exceptions: Blocked by a following s/ng/f/l/th — "mother of God" stays "aw Gawd", not "awf".
+  min_thickness: 3
+
+- id: fast-speech
+  name: Fast-speech contractions
+  order: 6
+  description: Merge words the way rapid speech does.
+  examples:
+    - { from: "Why did you", to: "Whyja" }
+    - { from: "Did you eat", to: "Jeet" }
+    - { from: "going to", to: "gonna" }
+  min_thickness: 3

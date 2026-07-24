@@ -1,0 +1,10 @@
+term: tonic
+means: soda / soft drink
+region: boston
+register: 2
+part_of_speech: noun
+example: "Grab me a tonic from the fridge."
+notes: Older usage; fading among younger speakers but still heard.
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

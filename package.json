@@ -1,0 +1,16 @@
+{
+  "name": "boston-translator",
+  "version": "0.1.0",
+  "description": "Claude speaks fluent Masshole — and a git tutorial in a Halloween costume.",
+  "license": "MIT",
+  "author": "Jim Milbery",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "js-yaml": "^4.1.0"
+  }
+}

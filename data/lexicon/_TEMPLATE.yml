@@ -1,0 +1,13 @@
+# Copy this file to data/lexicon/<region>/<your-word>.yml and fill it in.
+# Delete these comment lines when you're done (optional — the robot ignores them).
+term: your-word              # the Boston word
+means: plain english meaning
+also: []                     # alternate spellings, or delete this line
+region: boston               # boston  OR  brockton-508
+register: 2                  # 1 = everyone knows it ... 3 = deep local
+part_of_speech: noun         # noun/verb/adjective/adverb/interjection/phrase
+example: "A sentence using it the way a local would."
+notes:                       # optional; delete if empty
+sources:                     # REQUIRED — at least one. No source, no merge.
+  - type: url                # url | vouch | book
+    ref: https://example.com/where-you-found-it

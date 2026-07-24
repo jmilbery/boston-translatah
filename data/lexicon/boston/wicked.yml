@@ -1,0 +1,12 @@
+term: wicked
+means: very / extremely
+region: boston
+register: 1
+part_of_speech: adverb
+example: "That chowdah's wicked good."
+notes: The cornerstone. Intensifier, not the standard "evil" sense.
+sources:
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jmilbery/boston-translator/schema/lexicon.schema.json",
+  "title": "Lexicon entry",
+  "description": "One Boston slang term. One term per file.",
+  "type": "object",
+  "required": ["term", "means", "region", "register", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "term": { "type": "string", "minLength": 1, "description": "The Boston word or phrase." },
+    "means": { "type": "string", "minLength": 1, "description": "Plain-English equivalent." },
+    "also": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Alternate spellings."
+    },
+    "region": {
+      "type": "string",
+      "enum": ["boston", "brockton-508"],
+      "description": "Which dialect mode. brockton-508 inherits boston."
+    },
+    "register": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "1 = everyone knows it (wicked); 3 = deep local (spuckie)."
+    },
+    "part_of_speech": {
+      "type": "string",
+      "enum": ["noun", "verb", "adjective", "adverb", "interjection", "phrase"]
+    },
+    "example": { "type": "string", "description": "One sentence using it naturally." },
+    "notes": { "type": "string" },
+    "offensive": {
+      "type": "boolean",
+      "description": "If true, stored for reverse lookup ONLY; never emitted. Maintainers only."
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "REQUIRED. At least one. No source, no merge.",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "enum": ["url", "vouch", "book"] },
+          "ref": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

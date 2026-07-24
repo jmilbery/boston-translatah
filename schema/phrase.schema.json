@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jmilbery/boston-translator/schema/phrase.schema.json",
+  "title": "Phrase entry",
+  "description": "A canonical multi-word rendering that does not derive from the pronunciation rules.",
+  "type": "object",
+  "required": ["phrase", "boston", "region", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "phrase": { "type": "string", "minLength": 1, "description": "Plain English." },
+    "boston": { "type": "string", "minLength": 1, "description": "Boston rendering." },
+    "respelling": { "type": "string", "description": "Optional pronounce-it-out-loud respelling." },
+    "region": { "type": "string", "enum": ["boston", "brockton-508"] },
+    "notes": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "enum": ["url", "vouch", "book"] },
+          "ref": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

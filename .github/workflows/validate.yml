@@ -1,0 +1,25 @@
+name: Validate entries
+
+# The robot that runs on every pull request. It checks that each new slang file
+# matches the schema and cites a source. If it goes red, read the log — that
+# feedback loop is the whole lesson.
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schema/**"
+      - "scripts/**"
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm test
