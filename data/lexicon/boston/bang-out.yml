@@ -1,0 +1,9 @@
+term: bang out
+means: to call in sick to work
+region: boston
+register: 3
+part_of_speech: verb
+example: "He banged out to catch the game."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

@@ -1,0 +1,10 @@
+term: Dunks
+means: Dunkin' Donuts
+also: [Dunkies]
+region: boston
+register: 1
+part_of_speech: noun
+example: "Meet me at Dunks, I'll grab ya a regulah."
+sources:
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022

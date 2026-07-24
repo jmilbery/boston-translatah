@@ -1,0 +1,9 @@
+term: rubbish
+means: trash / garbage
+region: boston
+register: 2
+part_of_speech: noun
+example: "Take out the rubbish, will ya."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

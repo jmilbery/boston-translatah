@@ -1,0 +1,11 @@
+term: b'daydas
+means: potatoes
+region: boston
+register: 3
+part_of_speech: noun
+example: "Mashed b'daydas with dinnah."
+sources:
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

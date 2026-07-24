@@ -1,0 +1,9 @@
+term: cruiser
+means: a police car
+region: boston
+register: 2
+part_of_speech: noun
+example: "A cruisah sat outside all night."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

@@ -1,0 +1,9 @@
+term: spa
+means: a corner convenience-and-sandwich shop
+region: boston
+register: 2
+part_of_speech: noun
+example: "Grab a tonic from the spa."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

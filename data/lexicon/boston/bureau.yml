@@ -1,0 +1,9 @@
+term: bureau
+means: a dresser / chest of drawers
+region: boston
+register: 2
+part_of_speech: noun
+example: "Socks are in the bureau."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

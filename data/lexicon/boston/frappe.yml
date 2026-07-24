@@ -1,0 +1,10 @@
+term: frappe
+means: a milkshake made with ice cream
+region: boston
+register: 2
+part_of_speech: noun
+example: "A coffee frappe — not a plain milkshake."
+notes: A plain "milkshake" here is often just milk and syrup; the ice cream one is a frappe.
+sources:
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022

@@ -1,0 +1,11 @@
+term: spuckie
+means: a submarine sandwich
+also: [spukie]
+region: boston
+register: 3
+part_of_speech: noun
+example: "Old-timers call a grindah a spuckie."
+notes: Older / East Boston usage.
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang

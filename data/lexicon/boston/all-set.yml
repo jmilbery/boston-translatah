@@ -1,0 +1,9 @@
+term: all set
+means: good / done / "no thanks"
+region: boston
+register: 1
+part_of_speech: phrase
+example: "'Need a bag?' 'Nah, I'm all set.'"
+sources:
+  - type: url
+    ref: https://www.wbur.org/news/2023/11/03/massachusetts-bostonians-common-expressions-field-guide

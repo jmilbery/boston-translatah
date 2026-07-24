@@ -1,0 +1,10 @@
+term: regular
+means: coffee with cream and sugar
+also: [regulah]
+region: boston
+register: 2
+part_of_speech: noun
+example: "Medium regulah from Dunks."
+sources:
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022

@@ -1,0 +1,10 @@
+term: blinker
+means: a turn signal
+also: [blinkah, directional]
+region: boston
+register: 2
+part_of_speech: noun
+example: "Put ya blinkah on, kid."
+sources:
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang
