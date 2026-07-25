@@ -6,8 +6,8 @@ this first.
 
 ## The inspiration
 
-- **"Boston Accent"** — the fake movie-trailer sketch from *Saturday Night Live*
-  (Dec 17, 2016, Casey Affleck hosting). The tonal north star: over-the-top,
+- **"Boston Accent"** — Seth Meyers' fake movie-trailer bit from *Late Night*
+  (Jan 21, 2016). The tonal north star: over-the-top,
   accent-to-eleven, and made with obvious love for the place. It parodies the
   gritty-Boston-crime-movie *genre*, not the people — which is exactly the line
   this project walks. See [`TONE.md`](TONE.md).

@@ -6,10 +6,10 @@ mean. Get it right and it's a love letter that happens to be a joke.
 
 ## The touchstone
 
-**"Boston Accent,"** the fake movie-trailer sketch from *Saturday Night Live*
-(aired Dec 17, 2016, Casey Affleck hosting — the same night as his Dunkin'
-"Donny" sketch) is the tonal reference for the project's loudest register.
-Clip: https://www.youtube.com/watch?v=rLwbzGyC6t4
+**"Boston Accent,"** Seth Meyers' fake movie-trailer bit from *Late Night with
+Seth Meyers* (aired Jan 21, 2016) is the tonal reference for the project's
+loudest register. Meyers — a New Hampshire native — plays every Boston-crime-
+movie cliché at once. Clip: https://www.youtube.com/watch?v=rLwbzGyC6t4
 
 What it does that we're copying — in spirit, not in words:
 
