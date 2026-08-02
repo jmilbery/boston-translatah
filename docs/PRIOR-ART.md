@@ -49,6 +49,17 @@ each entry cites its own in its `sources:` block. The big ones:
 - **New England Historical Society — the accent rules** —
   https://newenglandhistoricalsociety.com/how-to-talk-with-a-boston-accent-not-for-the-faint-of-haht/
 
+For **St. Louis** (`stl-314`):
+
+- **St. Louis Public Radio — How to speak STL** —
+  https://www.stlpr.org/culture-history/2023-10-16/how-to-speak-stl-a-pronunciation-guide-for-new-st-louisans
+- **Mental Floss — 13 St. Louis slang terms** —
+  https://www.mentalfloss.com/language/slang/st-louis-slang-terms
+- **St. Louis Magazine — "What's a Hoosier?"** —
+  https://www.stlmag.com/news/what-s-a-hoosier/
+- **Nine PBS — The history of hoosiers in St. Louis** —
+  https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

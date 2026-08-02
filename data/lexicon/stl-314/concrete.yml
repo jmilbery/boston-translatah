@@ -1,0 +1,14 @@
+term: concrete
+means: a frozen custard shake so thick it's served upside down
+region: stl-314
+register: 1
+part_of_speech: noun
+example: "Ted Drewes, large concrete, and yes he'll flip it over first."
+notes: >-
+  The signature item at Ted Drewes. It's handed to you inverted to prove
+  nothing falls out — the flip is the point, and refusing it is not an option.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Ted_Drewes
+  - type: url
+    ref: https://teddrewes.com/history/
