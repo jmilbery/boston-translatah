@@ -1,0 +1,10 @@
+term: Cards
+means: the St. Louis Cardinals
+region: stl-314
+register: 1
+part_of_speech: noun
+example: "Cards are on at seven."
+notes: In the 314 there is no ambiguity about which Cardinals anybody means.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/st-louis-slang-terms
