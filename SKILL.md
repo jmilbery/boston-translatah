@@ -1,14 +1,15 @@
 ---
 name: boston-translatah
 description: >-
-  Translates plain English into regional American dialect — and back — using
-  two engines: a per-region pronunciation ruleset (Boston's drop-R and broad-A,
-  St. Louis's or-to-ar) and a community-maintained lexicon of word swaps.
-  Supports a thickness dial (light → full local) and regional modes (city
-  Boston, Brockton/508, St. Louis/314). Trigger when someone asks to "make this
-  sound Boston," "Boston-ify," "speak Masshole," "make this sound St. Louis,"
-  translate to/from New England or St. Louis slang, or wants a regional accent
-  applied to text.
+  Translates plain English into Boston / New England dialect — and back —
+  using two engines: a pronunciation ruleset (drop-R, intrusive-R, broad-A)
+  and a community-maintained lexicon of word swaps. Supports a thickness dial
+  (light → full Masshole) and regional modes (city Boston, Brockton/508).
+  Trigger when someone asks to "make this sound Boston," "Boston-ify," "speak
+  Masshole," translate to/from New England slang, or wants the accent applied
+  to text. Also, fine, it does other cities the neighbahs dragged in — St.
+  Louis ("make this sound St. Louis"), and whatever else shows up in the
+  lexicon — but what would you wanna go theah foah?
 license: MIT
 ---
 
