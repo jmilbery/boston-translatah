@@ -6,10 +6,6 @@ name: Validate entries
 
 on:
   pull_request:
-    paths:
-      - "data/**"
-      - "schema/**"
-      - "scripts/**"
   push:
     branches: [main]
 
