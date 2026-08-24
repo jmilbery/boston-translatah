@@ -11,6 +11,11 @@ on:
 
 jobs:
   validate:
+    # This name is what GitHub publishes as the status check, and branch
+    # protection on main requires a context spelled exactly "Validate entries".
+    # Without it the check reports as the job id ("validate"), the required
+    # context never arrives, and every PR blocks forever. Don't rename it.
+    name: Validate entries
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
