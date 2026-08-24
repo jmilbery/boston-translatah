@@ -32,12 +32,15 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 | Path | What it is |
 |---|---|
 | `SKILL.md` | The Claude skill — how the translation actually works |
-| `data/pronunciation/rules.yml` | The accent engine (drop-R, broad-A, etc.) |
+| `data/regions.yml` | The region registry — every city we speak. **Adding a city starts here.** |
+| `data/pronunciation/*.yml` | The accent engines — `rules.yml` is Boston, `stl-314.yml` is St. Louis |
 | `data/lexicon/<region>/*.yml` | The dictionary — one word per file. **Add yours here.** |
 | `data/phrases/<region>/*.yml` | Irregular phrases stored whole |
+| `data/curriculum/*.yml` | Staged paths from one city's accent to another's |
 | `MANIFESTO.md` | **What this actually is** — read this if you're confused why a slang repo exists |
 | `CONTRIBUTING.md` | Your first pull request, hand-held |
 | `docs/TONE.md` | How to be funny without being mean — the tonal north star |
+| `docs/ACCENT-REDUCTION.md` | The Boston → St. Louis clinic, and why it's *addition*, not reduction |
 | `docs/PRIOR-ART.md` | Shout-outs to the toys that came before, and our data sources |
 | `schema/` | The shape each entry must match (a robot checks this) |
 
@@ -58,10 +61,11 @@ Start a new session and just ask, in plain English:
 - "Boston-ify this, light touch." *(the readable, still-professional setting)*
 - "Give me the full Masshole version." *(the bit — accent cranked to eleven)*
 - "Translate this to Brockton / South Shore." *(the 508 mode)*
+- "Make this sound St. Louis." *(the 314 mode — where the R's go back in)*
 
 The skill triggers on phrasing like *make this sound Boston, Boston-ify, speak
-Masshole,* or *translate to/from Boston slang.* No restart needed beyond opening a
-new conversation — skills are auto-detected.
+Masshole, make this sound St. Louis,* or *translate to/from Boston slang.* No
+restart needed beyond opening a new conversation — skills are auto-detected.
 
 **Update it later** as the dictionary grows:
 
@@ -84,7 +88,9 @@ and ask it to translate your text. Less slick, works anywhere.
 2. **The joke is with people, never at them.** See [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
 3. **Boston is just the first city.** The engine is region-agnostic — Yinzer,
    Philly, Baltimore, Minnesota, Cajun are all welcome as new data files. Boston
-   is the reference implementation.
+   is the reference implementation; **St. Louis (`stl-314`) is the proof.**
+   Adding a city is one entry in [`data/regions.yml`](data/regions.yml) plus your
+   word files. No schema editing, no JavaScript.
 
 ## License
 

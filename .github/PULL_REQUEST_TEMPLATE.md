@@ -4,7 +4,7 @@
 
 **Term:**
 **Means:**
-**Region:** <!-- boston or brockton-508 -->
+**Region:** <!-- a slug from data/regions.yml — boston, brockton-508, stl-314 -->
 
 ## The one required thing: your source
 

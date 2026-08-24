@@ -1,0 +1,25 @@
+# The region registry — every dialect this repo speaks.
+#
+# Adding your city? This file is the only plumbing you touch. Add an entry
+# here, create the matching folder under data/lexicon/<slug>/, drop your word
+# files in, and the robot picks it up. No schema surgery, no JSON.
+#
+#   slug     — the folder name under data/lexicon/ and data/phrases/.
+#              lowercase, dashes only. Convention is city + area code.
+#   name     — how a human says it.
+#   inherits — another slug whose lexicon this region also uses (optional).
+#   accent   — the pronunciation ruleset in data/pronunciation/ (optional).
+#              Leave it off and the region gets lexicon swaps but no respelling.
+
+- slug: boston
+  name: Boston / general New England
+  accent: rules.yml
+
+- slug: brockton-508
+  name: Brockton / South Shore (the 508)
+  inherits: boston
+  accent: rules.yml
+
+- slug: stl-314
+  name: St. Louis (the 314)
+  accent: stl-314.yml

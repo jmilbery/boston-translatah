@@ -4,13 +4,17 @@
   "title": "Phrase entry",
   "description": "A canonical multi-word rendering that does not derive from the pronunciation rules.",
   "type": "object",
-  "required": ["phrase", "boston", "region", "sources"],
+  "required": ["phrase", "local", "region", "sources"],
   "additionalProperties": false,
   "properties": {
     "phrase": { "type": "string", "minLength": 1, "description": "Plain English." },
-    "boston": { "type": "string", "minLength": 1, "description": "Boston rendering." },
+    "local": { "type": "string", "minLength": 1, "description": "The local rendering, in whatever region this entry belongs to." },
     "respelling": { "type": "string", "description": "Optional pronounce-it-out-loud respelling." },
-    "region": { "type": "string", "enum": ["boston", "brockton-508"] },
+    "region": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Region slug. Must be registered in data/regions.yml."
+    },
     "notes": { "type": "string" },
     "sources": {
       "type": "array",
