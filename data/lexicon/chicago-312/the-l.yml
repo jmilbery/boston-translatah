@@ -1,0 +1,11 @@
+term: the L
+means: the elevated train system
+region: chicago-312
+register: 1
+part_of_speech: noun
+example: "Take the L, parking down there is brutal."
+notes: >-
+  Short for elevated. Written L rather than El by the transit authority itself, though both spellings run loose in the wild.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/chicago-slang-terms

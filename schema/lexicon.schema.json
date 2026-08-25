@@ -16,8 +16,8 @@
     },
     "region": {
       "type": "string",
-      "enum": ["boston", "brockton-508"],
-      "description": "Which dialect mode. brockton-508 inherits boston."
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Region slug, e.g. boston, brockton-508, stl-314. Must be registered in data/regions.yml — the validator checks it, and that the file sits in the matching folder."
     },
     "register": {
       "type": "integer",

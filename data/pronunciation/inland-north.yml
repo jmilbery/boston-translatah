@@ -1,0 +1,95 @@
+# The Inland North accent engine (family: inland-north).
+#
+# Chicago, Detroit, Cleveland, Milwaukee, and the rest of the Great Lakes belt.
+# Same shape as rules.yml (Boston) and stl-314.yml (St. Louis): a list applied
+# in order. Curated — changes here affect every city that inherits this family.
+# New VOCABULARY goes in data/lexicon/<region>/, not here.
+#
+# The headline: this is a CHAIN SHIFT, not a list of quirks. The Northern
+# Cities Vowel Shift moved six vowels in a linked rotation, each one stepping
+# into the space the last one left. That's why the rules below are ordered and
+# why applying one or two of them in isolation sounds wrong rather than mild —
+# the vowels only make sense relative to each other.
+#
+# Unlike Boston (which deletes R's) and unlike Boston's broad-A, none of this
+# touches the consonants except the last rule. It is a vowel accent.
+#
+#   https://en.wikipedia.org/wiki/Northern_cities_vowel_shift
+#   https://en.wikipedia.org/wiki/Inland_Northern_American_English
+#   https://www.chicagomag.com/city-life/march-2012/where-the-chicago-accent-comes-from-and-how-politics-is-changing-it/
+
+- id: short-a-raising
+  name: Short A raises and breaks
+  order: 1
+  description: >-
+    The first link in the chain and the one outsiders hear first. Short /a/
+    raises toward "eh" and often breaks into two parts. Unlike the Midland,
+    where this only happens before nasals, here it happens everywhere.
+  examples:
+    - { from: cat, to: kee-at }
+    - { from: that, to: thee-at }
+    - { from: Ann, to: Ee-an }
+    - { from: bag, to: bay-ag }
+  min_thickness: 2
+
+- id: lot-fronting
+  name: LOT moves forward
+  order: 2
+  description: >-
+    Short /o/ moves forward into the room short /a/ just vacated, which is why
+    a Chicagoan's "cot" can land on an outsider's ear as "cat."
+  examples:
+    - { from: cot, to: cat }
+    - { from: block, to: blahck }
+    - { from: "hot dog", to: "hat dawg" }
+    - { from: Chicago, to: Chicahgo }
+  exceptions: Strongest on stressed syllables. Don't run it on every O in a sentence.
+  min_thickness: 2
+
+- id: thought-lowering
+  name: THOUGHT drops
+  order: 3
+  description: >-
+    Long /aw/ lowers toward the space LOT is leaving. The practical effect is
+    that "caught" and "cot" stay distinct here, but not in the way most of the
+    country keeps them distinct.
+  examples:
+    - { from: caught, to: cawt }
+    - { from: talk, to: tahk }
+    - { from: coffee, to: cahfee }
+  min_thickness: 3
+
+- id: dress-backing
+  name: DRESS backs up
+  order: 4
+  description: Short /e/ retreats toward "uh". The fourth link in the rotation.
+  examples:
+    - { from: bet, to: but }
+    - { from: desk, to: dusk }
+    - { from: seven, to: suvun }
+  min_thickness: 3
+
+- id: strut-backing
+  name: STRUT backs up
+  order: 5
+  description: Short /u/ backs and rounds, heading toward the old THOUGHT space.
+  examples:
+    - { from: bus, to: boss }
+    - { from: cup, to: cawp }
+  min_thickness: 3
+
+- id: th-stopping
+  name: TH becomes D or T
+  order: 6
+  description: >-
+    The one consonant rule, and the one everybody can already do: "the" becomes
+    "da." Strongly associated with white ethnic Chicago and carried nationally
+    by the "Bill Swerski's Superfans" sketches on Saturday Night Live. Real
+    speech, popularised as caricature — keep it at the top of the dial and read
+    docs/TONE.md before you crank it.
+  examples:
+    - { from: "the Bears", to: "da Bears" }
+    - { from: those, to: dose }
+    - { from: "with", to: "wit" }
+  exceptions: Not universal across the region and receding in younger speakers. Level 3 only.
+  min_thickness: 3

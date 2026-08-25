@@ -1,0 +1,17 @@
+term: Provel
+means: processed cheese blend used on St. Louis-style pizza
+region: stl-314
+register: 1
+part_of_speech: noun
+example: "Cracker crust, Provel, cut in squares — that's pizza."
+notes: >-
+  Cheddar, Swiss and provolone processed into something gooier than any of
+  them. Beloved locally, baffling everywhere else. Arguing about whether it
+  counts as real cheese is itself a St. Louis pastime.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Provel
+  - type: url
+    ref: https://en.wikipedia.org/wiki/St._Louis-style_pizza
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/st-louis-slang-terms

@@ -49,6 +49,41 @@ each entry cites its own in its `sources:` block. The big ones:
 - **New England Historical Society — the accent rules** —
   https://newenglandhistoricalsociety.com/how-to-talk-with-a-boston-accent-not-for-the-faint-of-haht/
 
+For **St. Louis** (`stl-314`):
+
+- **St. Louis Public Radio — How to speak STL** —
+  https://www.stlpr.org/culture-history/2023-10-16/how-to-speak-stl-a-pronunciation-guide-for-new-st-louisans
+- **Mental Floss — 13 St. Louis slang terms** —
+  https://www.mentalfloss.com/language/slang/st-louis-slang-terms
+- **St. Louis Magazine — "What's a Hoosier?"** —
+  https://www.stlmag.com/news/what-s-a-hoosier/
+- **Nine PBS — The history of hoosiers in St. Louis** —
+  https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
+
+For the **Midwest** families and cities:
+
+- **Wikipedia — Northern cities vowel shift** — the chain shift that defines the
+  Inland North, and the reason `inland-north.yml` is ordered rather than a list
+  of quirks.
+  https://en.wikipedia.org/wiki/Northern_cities_vowel_shift
+- **Wikipedia — Inland Northern American English** —
+  https://en.wikipedia.org/wiki/Inland_Northern_American_English
+- **Wikipedia — Midland American English** — including the "St. Louis Corridor"
+  up old Route 66, which is how a Midland city ended up with Northern vowels.
+  https://en.wikipedia.org/wiki/Midland_American_English
+- **Wikipedia — Midwestern American English** —
+  https://en.wikipedia.org/wiki/Midwestern_American_English
+- **Chicago Magazine — Where the Chicago accent comes from** —
+  https://www.chicagomag.com/city-life/march-2012/where-the-chicago-accent-comes-from-and-how-politics-is-changing-it/
+- **Mental Floss — 14 Chicago slang terms** —
+  https://www.mentalfloss.com/language/slang/chicago-slang-terms
+- **The Awesome Mitten — Michigan words, slang and pronunciations** —
+  https://www.awesomemitten.com/michigan-words/
+
+Standing on **William Labov**'s *Atlas of North American English* throughout the
+Midwest work, by way of the summaries above. The families in `data/regions.yml`
+are his dialect regions, not ours.
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

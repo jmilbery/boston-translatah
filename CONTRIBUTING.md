@@ -30,7 +30,9 @@ notice that they don't anymore.
 2. **Fork this repo** — click **Fork**, top-right of the repo page. Now you have
    your own copy.
 3. **Find where your word goes.** Open the folder `data/lexicon/boston/`
-   (or `data/lexicon/brockton-508/` for South Shore words).
+   (or `data/lexicon/brockton-508/` for South Shore words, or
+   `data/lexicon/stl-314/` for St. Louis). The full list of cities we speak is
+   in `data/regions.yml`.
 4. **Copy the template.** Open `data/lexicon/_TEMPLATE.yml`, click the pencil ✏️,
    select all, copy.
 5. **Make your file.** In the `boston` folder, click **Add file → Create new
@@ -49,10 +51,10 @@ That's it. You just contributed to open source.
 ## Filling out the file
 
 ```yaml
-term: spuckie              # the Boston word
+term: spuckie              # the local word
 means: submarine sandwich  # what it means in plain English
 also: [spukie]             # other spellings (optional)
-region: boston             # boston  OR  brockton-508
+region: boston             # any slug listed in data/regions.yml
 register: 3                # 1 = everyone knows it (wicked) ... 3 = deep local (spuckie)
 part_of_speech: noun
 example: "Grab me a spuckie from the corner spa."
@@ -79,6 +81,34 @@ something no one else has ever heard is how a dictionary turns into garbage.
   *produce* one — and those get added by maintainers, not PRs.
 - One word per file. One file per PR when you're learning. It keeps your first
   one clean and easy to review.
+
+## Adding a whole new city
+
+Your town isn't here at all? Good — that's the point of the project. It's four
+steps, and none of them are code:
+
+1. Add an entry to `data/regions.yml`: a `slug` (lowercase-with-dashes, we use
+   city + area code, like `stl-314`), a human `name`, and optionally
+   `inherits:` if your dialect is a variant of one that's already here.
+2. Make the folder `data/lexicon/<your-slug>/` and put your word files in it,
+   same format as everybody else's.
+3. Pick an accent. If your town sounds like the group it belongs to, add
+   `inherits:` pointing at that family (`inland-north`, `midland`) and you get
+   its accent for free — no `accent:` line needed. If your town has phonetic
+   rules of its own, add `data/pronunciation/<your-slug>.yml` and point
+   `accent:` at it instead.
+4. Add your mode to the "Regional modes" list in `SKILL.md` so the translator
+   knows the attitude, not just the words.
+
+`chicago-312` is the shortest worked example: three lines in `regions.yml`, no
+accent file, because it inherits the Inland North sound. `stl-314` is the long
+one, for a city that needed its own. You do **not** need to touch `schema/` or
+`scripts/`; the robot reads `regions.yml` and figures it out.
+
+**If your city sits in two dialect groups**, `inherits:` takes a list and the
+first one wins: `inherits: [midland, inland-north]`. Most cities don't need
+this. Read the note on St. Louis in `data/regions.yml` before you reach for it,
+because the obvious case turned out not to be one.
 
 ## Stuck?
 

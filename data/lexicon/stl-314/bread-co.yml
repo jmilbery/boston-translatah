@@ -1,0 +1,13 @@
+term: Bread Co.
+means: Panera Bread
+also: [St. Louis Bread Co., Bread Company]
+region: stl-314
+register: 1
+part_of_speech: noun
+example: "Meet you at Bread Co."
+notes: >-
+  The chain started in St. Louis as St. Louis Bread Company and still trades
+  under that name locally. Nobody from here says "Panera."
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/st-louis-slang-terms

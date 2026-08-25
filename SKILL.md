@@ -7,7 +7,9 @@ description: >-
   (light → full Masshole) and regional modes (city Boston, Brockton/508).
   Trigger when someone asks to "make this sound Boston," "Boston-ify," "speak
   Masshole," translate to/from New England slang, or wants the accent applied
-  to text.
+  to text. Also, fine, it does other cities the neighbahs dragged in — St.
+  Louis ("make this sound St. Louis"), and whatever else shows up in the
+  lexicon — but what would you wanna go theah foah?
 license: MIT
 ---
 
@@ -21,17 +23,32 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
 > requests. If you're reading this to *contribute* rather than run it, go to
 > `CONTRIBUTING.md`.
 
-## Data model — three layers
+## Data model — five layers
 
-1. **Pronunciation rules** — `data/pronunciation/rules.yml`
-   General phonetic transforms that apply to *any* word (drop-R, intrusive-R,
-   broad-A, o→aw, -er→-ah). Curated and small. This is the accent engine.
+0. **Region registry** — `data/regions.yml`
+   The list of cities this skill speaks, each with its slug, its optional
+   `inherits`, and which accent file it uses. Read this first to know what's
+   available; it's also the only file a new city has to touch.
+   Two kinds of entry live here. A **city** is somewhere you're from. A
+   **family** (`kind: family`) is a dialect group cities inherit — it isn't a
+   place, it's the accent and vocabulary a group of places share.
+1. **Pronunciation rules** — `data/pronunciation/<accent>.yml`
+   General phonetic transforms that apply to *any* word. Which file to load
+   comes from the region's `accent:` field in `data/regions.yml`, **or from the
+   nearest parent that names one** if the region doesn't. `rules.yml` is the
+   Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah); `stl-314.yml` is
+   St. Louis (rhotic, or→ar); `inland-north.yml` is the Great Lakes vowel shift;
+   `midland.yml` is the quiet middle. Curated and small.
 2. **Lexicon** — `data/lexicon/<region>/<slug>.yml`
-   One file per term. Standard word/phrase → Boston equivalent. The big,
+   One file per term. Standard word/phrase → the local equivalent. The big,
    community-grown dictionary. This is where PRs land.
 3. **Phrases** — `data/phrases/<region>/<slug>.yml`
    Canonical multi-word renderings that do NOT derive cleanly from the rules
    (irregular idioms like "pahk the cah in Hahvad Yahd"). Stored verbatim.
+4. **Curricula** — `data/curriculum/<from>-to-<to>.yml`
+   A staged path from one region's accent to another's, naming rules by `id`
+   in both engines. The only layer that reads across two regions at once.
+   Optional; a region works fine without one.
 
 Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
 
@@ -45,6 +62,11 @@ Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
 
 Default to **Level 2** unless asked. When in doubt, offer light + full so the user feels both.
 
+The dial itself is region-agnostic; only the Level 3 *label* is Boston's. Outside
+Boston just call it Level 3 — and note that "full hoosier" is **not** the St. Louis
+equivalent of "full Masshole." `masshole` is a badge locals wear; `hoosier` is
+something St. Louisans call other people. Never use it to name the mode.
+
 Tone calibration for Level 3 — affectionate caricature, _with_ the accent never _at_ it — lives in `docs/TONE.md`. Read it before cranking the dial.
 
 ## Regional modes
@@ -53,23 +75,105 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
 - **`brockton-508`** — South Shore / the 508. Harder, working-class register;
   Champion City attitude (Marciano/Hagler DNA — unflashy, lands the punch).
   Placename humor (Boogietown, Massatoilet CC). Not Harvard-Yard collegiate.
+- **`stl-314`** — St. Louis. Midwestern, rhotic, food-obsessed and
+  neighborhood-obsessed. The register is dry and unimpressed rather than
+  chowdah-tough. Placement matters more than volume: the city's real
+  shibboleth is *"Where'd you go to high school?"*
+- **`chicago-312`** — Chicago. Inland North vowels, sports-forward, and
+  neighbourhood-literal: people answer "where are you from" with a parish or a
+  street, not a city.
+- **`detroit-313`** — Detroit. Same Inland North vowels, drier delivery, and a
+  vocabulary full of things the rest of the country has no single word for
+  (*party store*, *doorwall*).
 
-Modes stack: `brockton-508` inherits all `boston` lexicon, then adds/overrides.
+### Families
 
-## How to apply (translate TO Boston)
+Two of the regions above are not places. `inland-north` and `midland` are
+**dialect families**: the shared accent and vocabulary that a group of cities
+sit inside. Chicago and Detroit don't name an accent file at all — they inherit
+`inland-north.yml` by being in the family, which is the point of having one.
 
-1. Pick region (default `boston`) and thickness (default 2).
+Modes stack via the `inherits:` field in `data/regions.yml`. A region takes its
+parent's lexicon and then adds or overrides, and it takes its parent's accent
+file unless it names its own. `brockton-508` inherits `boston`. `chicago-312`
+and `detroit-313` inherit `inland-north`, sound and words together.
+
+`inherits:` also accepts a **list**, for a city genuinely sitting in two groups
+at once, and earlier entries win. Nothing here needs that yet, and the reason
+is worth knowing: **St. Louis inherits `midland` only.** It really does carry
+Inland North vowels, picked up along a dialect corridor running up old Route 66
+toward Chicago — but what it borrows north is *sound*, not *words*, and its own
+`stl-314.yml` already carries that. Inheriting the Inland North lexicon would
+hand St. Louis "pop," and St. Louis says soda.
+
+> **Never cross the streams, part two.** A family's accent applies to its
+> cities, not to its neighbours. `inland-north.yml` shifts six vowels in a
+> linked chain; running it against a `midland` request produces the Chicago
+> accent on a city that doesn't have it.
+
+> **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
+> adds them. Running `rules.yml` against a `stl-314` request produces an accent
+> that exists in no city on earth. Load the accent file the region names.
+
+## How to apply (translate TO the dialect)
+
+1. Pick region (default `boston`) and thickness (default 2). Look the region up
+   in `data/regions.yml` to get its `inherits` and `accent` file.
 2. **Lexicon pass** — swap standard words/phrases for entries whose `register` ≤ dial.
+   Include the inherited region's lexicon first, then let the child override.
 3. **Phrase pass** — replace any canonical phrases matched verbatim.
-4. **Accent pass** (dial ≥ 2) — apply `pronunciation/rules.yml` in listed order:
-   drop-R before intrusive-R; broad-A and o→aw last.
-5. Sprinkle connective tissue at dial 3 (kid, wicked, no suh, right theah) — but
-   don't overdo it; native beats cartoonish.
+4. **Accent pass** (dial ≥ 2) — apply the region's accent file in listed order.
+   Boston (`rules.yml`): drop-R before intrusive-R; broad-A and o→aw last.
+   St. Louis (`stl-314.yml`): keep every R; or→ar first, vowel shifts last.
+5. Sprinkle connective tissue at dial 3 — Boston: *kid, wicked, no suh, right
+   theah*. St. Louis has no equivalent filler; it leans on place and school
+   names instead. Either way don't overdo it; native beats cartoonish.
 
-## Reverse (Boston → plain English)
+## Reverse (dialect → plain English)
 
-Run the lexicon in reverse (Boston term → `means`) and undo accent respellings.
+Run the lexicon in reverse (local term → `means`) and undo accent respellings.
 The rules are lossy, so reverse is best-effort — flag anything ambiguous.
+
+## Cross-region translation (city → city)
+
+Two cities means a third operation the skill didn't used to have: not English
+→ dialect, but **dialect → dialect**. It needs no new machinery, because the
+plain-English fields are already a pivot:
+
+- `means:` on every lexicon entry
+- `phrase:` on every phrase entry
+
+So a city-to-city translation is just the reverse pass followed by the forward
+one, through plain English in the middle:
+
+```
+pahk the cah  →  [reverse boston] →  park the car  →  [forward stl-314] →  park the car
+fahty-fowah   →  [reverse boston] →  forty-four    →  [forward stl-314] →  farty-far
+```
+
+1. Reverse out of the source region to plain English (lexicon by `means:`,
+   phrases by `phrase:`, then undo the source's accent respellings).
+2. Forward into the destination region as normal.
+3. **Never skip the middle.** Transforming respellings directly from one
+   accent to another is how you cross the streams. Boston's R's have to come
+   off before St. Louis's go on, even where the result looks identical.
+
+Expect it to be lossy in both directions, same caveat as the reverse pass, and
+expect gaps: a source term whose `means:` has no destination equivalent stays
+in plain English rather than getting invented.
+
+### Teaching it to a person instead
+
+`data/curriculum/boston-to-stl-314.yml` is the same journey staged for a human
+who wants to make the noises themselves: six lessons, each naming the rules it
+adds from the destination engine and the ones it retires from the origin.
+`docs/ACCENT-REDUCTION.md` is its prose companion, and covers the one thing
+that reliably goes wrong — both cities insert R's, on completely different
+triggers, and merging them yields an accent spoken nowhere.
+
+Note the framing, which is deliberate and sourced: this is **accent addition**,
+never "accent reduction." An accent is not a disorder, nobody loses Boston, and
+the profession that does this for real retired the other phrase on purpose.
 
 ## Guardrails
 
@@ -78,3 +182,7 @@ The rules are lossy, so reverse is best-effort — flag anything ambiguous.
   lookups only and are NEVER emitted in a translation.
 - Don't invent slang. If a swap isn't in the lexicon, leave the word standard or
   apply only the accent rules. Made-up terms are how this stops being credible.
+- **Don't do impressions of racially-marked speech.** Some regional features are
+  specific to a city's Black speech communities. Where an accent file documents
+  one in a comment rather than wiring it up as a rule, that omission is
+  deliberate — don't "fix" it by applying it anyway.

@@ -1,0 +1,14 @@
+term: warsh
+means: wash
+region: stl-314
+register: 2
+part_of_speech: verb
+example: "Warsh your hands before you sit down."
+notes: >-
+  An intrusive R, which is the joke of this whole region file — Boston deletes
+  R's, St. Louis inserts them. Mostly older speakers now, and fading.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/st-louis-slang-terms
+  - type: url
+    ref: https://www.stlpr.org/culture-history/2023-10-16/how-to-speak-stl-a-pronunciation-guide-for-new-st-louisans

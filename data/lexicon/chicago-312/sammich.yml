@@ -1,0 +1,11 @@
+term: sammich
+means: a sandwich, usually a substantial one
+region: chicago-312
+register: 2
+part_of_speech: noun
+example: "Italian beef sammich, dipped."
+notes: >-
+  Not merely a lazy pronunciation. A sammich is a sandwich with some heft and some sauce to it.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/chicago-slang-terms
