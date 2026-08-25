@@ -92,13 +92,23 @@ steps, and none of them are code:
    `inherits:` if your dialect is a variant of one that's already here.
 2. Make the folder `data/lexicon/<your-slug>/` and put your word files in it,
    same format as everybody else's.
-3. Optionally add `data/pronunciation/<your-slug>.yml` if your town has real
-   phonetic rules (not just vocabulary), and point `accent:` at it.
+3. Pick an accent. If your town sounds like the group it belongs to, add
+   `inherits:` pointing at that family (`inland-north`, `midland`) and you get
+   its accent for free — no `accent:` line needed. If your town has phonetic
+   rules of its own, add `data/pronunciation/<your-slug>.yml` and point
+   `accent:` at it instead.
 4. Add your mode to the "Regional modes" list in `SKILL.md` so the translator
    knows the attitude, not just the words.
 
-`stl-314` is the worked example — copy its shape. You do **not** need to touch
-`schema/` or `scripts/`; the robot reads `regions.yml` and figures it out.
+`chicago-312` is the shortest worked example: three lines in `regions.yml`, no
+accent file, because it inherits the Inland North sound. `stl-314` is the long
+one, for a city that needed its own. You do **not** need to touch `schema/` or
+`scripts/`; the robot reads `regions.yml` and figures it out.
+
+**If your city sits in two dialect groups**, `inherits:` takes a list and the
+first one wins: `inherits: [midland, inland-north]`. Most cities don't need
+this. Read the note on St. Louis in `data/regions.yml` before you reach for it,
+because the obvious case turned out not to be one.
 
 ## Stuck?
 

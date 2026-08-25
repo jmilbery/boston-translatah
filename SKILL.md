@@ -29,11 +29,16 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
    The list of cities this skill speaks, each with its slug, its optional
    `inherits`, and which accent file it uses. Read this first to know what's
    available; it's also the only file a new city has to touch.
+   Two kinds of entry live here. A **city** is somewhere you're from. A
+   **family** (`kind: family`) is a dialect group cities inherit — it isn't a
+   place, it's the accent and vocabulary a group of places share.
 1. **Pronunciation rules** — `data/pronunciation/<accent>.yml`
    General phonetic transforms that apply to *any* word. Which file to load
-   comes from the region's `accent:` field in `data/regions.yml` —
-   `rules.yml` is the Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah);
-   `stl-314.yml` is St. Louis (rhotic, or→ar). Curated and small.
+   comes from the region's `accent:` field in `data/regions.yml`, **or from the
+   nearest parent that names one** if the region doesn't. `rules.yml` is the
+   Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah); `stl-314.yml` is
+   St. Louis (rhotic, or→ar); `inland-north.yml` is the Great Lakes vowel shift;
+   `midland.yml` is the quiet middle. Curated and small.
 2. **Lexicon** — `data/lexicon/<region>/<slug>.yml`
    One file per term. Standard word/phrase → the local equivalent. The big,
    community-grown dictionary. This is where PRs land.
@@ -74,10 +79,37 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
   neighborhood-obsessed. The register is dry and unimpressed rather than
   chowdah-tough. Placement matters more than volume: the city's real
   shibboleth is *"Where'd you go to high school?"*
+- **`chicago-312`** — Chicago. Inland North vowels, sports-forward, and
+  neighbourhood-literal: people answer "where are you from" with a parish or a
+  street, not a city.
+- **`detroit-313`** — Detroit. Same Inland North vowels, drier delivery, and a
+  vocabulary full of things the rest of the country has no single word for
+  (*party store*, *doorwall*).
 
-Modes stack via the `inherits:` field in `data/regions.yml`: `brockton-508`
-inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
-— it is a separate dialect, not a Boston variant.
+### Families
+
+Two of the regions above are not places. `inland-north` and `midland` are
+**dialect families**: the shared accent and vocabulary that a group of cities
+sit inside. Chicago and Detroit don't name an accent file at all — they inherit
+`inland-north.yml` by being in the family, which is the point of having one.
+
+Modes stack via the `inherits:` field in `data/regions.yml`. A region takes its
+parent's lexicon and then adds or overrides, and it takes its parent's accent
+file unless it names its own. `brockton-508` inherits `boston`. `chicago-312`
+and `detroit-313` inherit `inland-north`, sound and words together.
+
+`inherits:` also accepts a **list**, for a city genuinely sitting in two groups
+at once, and earlier entries win. Nothing here needs that yet, and the reason
+is worth knowing: **St. Louis inherits `midland` only.** It really does carry
+Inland North vowels, picked up along a dialect corridor running up old Route 66
+toward Chicago — but what it borrows north is *sound*, not *words*, and its own
+`stl-314.yml` already carries that. Inheriting the Inland North lexicon would
+hand St. Louis "pop," and St. Louis says soda.
+
+> **Never cross the streams, part two.** A family's accent applies to its
+> cities, not to its neighbours. `inland-north.yml` shifts six vowels in a
+> linked chain; running it against a `midland` request produces the Chicago
+> accent on a city that doesn't have it.
 
 > **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
 > adds them. Running `rules.yml` against a `stl-314` request produces an accent
