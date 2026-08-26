@@ -1,0 +1,81 @@
+# The St. Louis accent engine (region: stl-314).
+#
+# Same shape as rules.yml, which is the Boston set. Applied in the order
+# listed. Curated — changes here affect every stl-314 translation. New
+# VOCABULARY goes in data/lexicon/stl-314/, not here.
+#
+# The headline: Boston is non-rhotic and DELETES R's. St. Louis is rhotic and
+# INSERTS them. Same engine, opposite direction. Never run the Boston rules
+# against a stl-314 request — you'll get an accent that exists nowhere.
+#
+# DELIBERATELY NOT A RULE — the "urr" vowel (there/hair rendered "thurr,"
+# "hurr"), most associated with Black St. Louisans and carried nationally by
+# St. Louis rappers in the early 2000s, is a real and well-documented feature
+# of the city's speech. It is recorded here on purpose and left out of the
+# applied rules on purpose: an automated caricature of a racially-marked
+# dialect is exactly the "laughing at, not with" failure CODE_OF_CONDUCT.md
+# exists to prevent. Documented so the knowledge isn't lost, not wired up so
+# the robot can do an impression. Maintainer's call to revisit.
+#   Source: https://www.stlpr.org/culture-history/2023-10-16/how-to-speak-stl-a-pronunciation-guide-for-new-st-louisans
+
+- id: keep-the-r
+  name: Rhotic — keep every R
+  order: 1
+  description: >-
+    A guard rule, and the one that matters most. St. Louis pronounces its R's
+    fully. If any drop-R or -er-to-ah transform is running, you have the wrong
+    region loaded.
+  examples:
+    - { from: car, to: car }
+    - { from: mother, to: mother }
+    - { from: park, to: park }
+  min_thickness: 1
+
+- id: or-to-ar
+  name: OR to AR
+  order: 2
+  description: >-
+    The signature St. Louis shift. /or/ moves toward /ar/, heard most strongly
+    in the city's central corridor.
+  examples:
+    - { from: forty, to: farty }
+    - { from: north, to: nahrth }
+    - { from: "Highway 44", to: "Farty-Far" }
+    - { from: corn, to: carn }
+  exceptions: Strongest on stressed syllables. Don't apply it to every OR in a sentence — it goes cartoonish fast.
+  min_thickness: 2
+
+- id: intrusive-r-wash
+  name: Intrusive R
+  order: 3
+  description: >-
+    An R appears where none is written, in a small fixed set of words. This is
+    lexical, not general — it is not Boston's linking R between vowels.
+  examples:
+    - { from: wash, to: warsh }
+    - { from: Washington, to: Warshington }
+  exceptions: Only this word family. Do not generalize it to other words — natives don't.
+  min_thickness: 3
+
+- id: french-flattening
+  name: Flattened French place names
+  order: 4
+  description: >-
+    French street and neighborhood names, said the way the city says them
+    rather than the way France would. Getting these right is the local
+    shibboleth; getting them "correct" marks you as new.
+  examples:
+    - { from: Gravois, to: "GRAV-oy" }
+    - { from: Chouteau, to: "SHOW-doh" }
+    - { from: Carondelet, to: "kuh-RON-duh-LET" }
+    - { from: Gratiot, to: "GRAT-chit" }
+  min_thickness: 2
+
+- id: northern-cities-shift
+  name: Northern Cities Shift
+  order: 5
+  description: Mid vowels move back; an urban feature that's been increasing in the region.
+  examples:
+    - { from: mom, to: mahm }
+    - { from: closet, to: klahset }
+  min_thickness: 3

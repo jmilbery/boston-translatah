@@ -7,7 +7,9 @@ description: >-
   (light → full Masshole) and regional modes (city Boston, Brockton/508).
   Trigger when someone asks to "make this sound Boston," "Boston-ify," "speak
   Masshole," translate to/from New England slang, or wants the accent applied
-  to text.
+  to text. Also, fine, it does other cities the neighbahs dragged in — St.
+  Louis ("make this sound St. Louis"), and whatever else shows up in the
+  lexicon — but what would you wanna go theah foah?
 license: MIT
 ---
 
@@ -21,13 +23,19 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
 > requests. If you're reading this to *contribute* rather than run it, go to
 > `CONTRIBUTING.md`.
 
-## Data model — three layers
+## Data model — four layers
 
-1. **Pronunciation rules** — `data/pronunciation/rules.yml`
-   General phonetic transforms that apply to *any* word (drop-R, intrusive-R,
-   broad-A, o→aw, -er→-ah). Curated and small. This is the accent engine.
+0. **Region registry** — `data/regions.yml`
+   The list of cities this skill speaks, each with its slug, its optional
+   `inherits`, and which accent file it uses. Read this first to know what's
+   available; it's also the only file a new city has to touch.
+1. **Pronunciation rules** — `data/pronunciation/<accent>.yml`
+   General phonetic transforms that apply to *any* word. Which file to load
+   comes from the region's `accent:` field in `data/regions.yml` —
+   `rules.yml` is the Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah);
+   `stl-314.yml` is St. Louis (rhotic, or→ar). Curated and small.
 2. **Lexicon** — `data/lexicon/<region>/<slug>.yml`
-   One file per term. Standard word/phrase → Boston equivalent. The big,
+   One file per term. Standard word/phrase → the local equivalent. The big,
    community-grown dictionary. This is where PRs land.
 3. **Phrases** — `data/phrases/<region>/<slug>.yml`
    Canonical multi-word renderings that do NOT derive cleanly from the rules
@@ -45,6 +53,11 @@ Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
 
 Default to **Level 2** unless asked. When in doubt, offer light + full so the user feels both.
 
+The dial itself is region-agnostic; only the Level 3 *label* is Boston's. Outside
+Boston just call it Level 3 — and note that "full hoosier" is **not** the St. Louis
+equivalent of "full Masshole." `masshole` is a badge locals wear; `hoosier` is
+something St. Louisans call other people. Never use it to name the mode.
+
 Tone calibration for Level 3 — affectionate caricature, _with_ the accent never _at_ it — lives in `docs/TONE.md`. Read it before cranking the dial.
 
 ## Regional modes
@@ -53,22 +66,36 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
 - **`brockton-508`** — South Shore / the 508. Harder, working-class register;
   Champion City attitude (Marciano/Hagler DNA — unflashy, lands the punch).
   Placename humor (Boogietown, Massatoilet CC). Not Harvard-Yard collegiate.
+- **`stl-314`** — St. Louis. Midwestern, rhotic, food-obsessed and
+  neighborhood-obsessed. The register is dry and unimpressed rather than
+  chowdah-tough. Placement matters more than volume: the city's real
+  shibboleth is *"Where'd you go to high school?"*
 
-Modes stack: `brockton-508` inherits all `boston` lexicon, then adds/overrides.
+Modes stack via the `inherits:` field in `data/regions.yml`: `brockton-508`
+inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
+— it is a separate dialect, not a Boston variant.
 
-## How to apply (translate TO Boston)
+> **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
+> adds them. Running `rules.yml` against a `stl-314` request produces an accent
+> that exists in no city on earth. Load the accent file the region names.
 
-1. Pick region (default `boston`) and thickness (default 2).
+## How to apply (translate TO the dialect)
+
+1. Pick region (default `boston`) and thickness (default 2). Look the region up
+   in `data/regions.yml` to get its `inherits` and `accent` file.
 2. **Lexicon pass** — swap standard words/phrases for entries whose `register` ≤ dial.
+   Include the inherited region's lexicon first, then let the child override.
 3. **Phrase pass** — replace any canonical phrases matched verbatim.
-4. **Accent pass** (dial ≥ 2) — apply `pronunciation/rules.yml` in listed order:
-   drop-R before intrusive-R; broad-A and o→aw last.
-5. Sprinkle connective tissue at dial 3 (kid, wicked, no suh, right theah) — but
-   don't overdo it; native beats cartoonish.
+4. **Accent pass** (dial ≥ 2) — apply the region's accent file in listed order.
+   Boston (`rules.yml`): drop-R before intrusive-R; broad-A and o→aw last.
+   St. Louis (`stl-314.yml`): keep every R; or→ar first, vowel shifts last.
+5. Sprinkle connective tissue at dial 3 — Boston: *kid, wicked, no suh, right
+   theah*. St. Louis has no equivalent filler; it leans on place and school
+   names instead. Either way don't overdo it; native beats cartoonish.
 
-## Reverse (Boston → plain English)
+## Reverse (dialect → plain English)
 
-Run the lexicon in reverse (Boston term → `means`) and undo accent respellings.
+Run the lexicon in reverse (local term → `means`) and undo accent respellings.
 The rules are lossy, so reverse is best-effort — flag anything ambiguous.
 
 ## Guardrails
@@ -78,3 +105,7 @@ The rules are lossy, so reverse is best-effort — flag anything ambiguous.
   lookups only and are NEVER emitted in a translation.
 - Don't invent slang. If a swap isn't in the lexicon, leave the word standard or
   apply only the accent rules. Made-up terms are how this stops being credible.
+- **Don't do impressions of racially-marked speech.** Some regional features are
+  specific to a city's Black speech communities. Where an accent file documents
+  one in a comment rather than wiring it up as a rule, that omission is
+  deliberate — don't "fix" it by applying it anyway.

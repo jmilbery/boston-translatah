@@ -1,0 +1,13 @@
+term: t-ravs
+means: toasted ravioli — breaded, deep-fried ravioli
+also: [toasted ravioli, toasted rav]
+region: stl-314
+register: 2
+part_of_speech: noun
+example: "Get an order of t-ravs for the table."
+notes: Invented and popularized in St. Louis, reportedly on the Hill. An appetizer, never an entree.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Toasted_ravioli
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/st-louis-slang-terms
