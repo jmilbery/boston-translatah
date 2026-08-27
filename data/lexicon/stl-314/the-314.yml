@@ -1,0 +1,19 @@
+term: the 314
+means: St. Louis, named by its area code
+region: stl-314
+register: 2
+scene: hip-hop
+part_of_speech: noun
+example: "Born and raised in the 314."
+notes: >-
+  Calling your city by its area code is a hip-hop convention before it is
+  anything else, and St. Louis rap is where the 314 entered wide circulation.
+  Worth noticing while you're in this repo: the slugs here are built the same
+  way — stl-314, brockton-508, chicago-312. That naming scheme was borrowed,
+  and docs/PRIOR-ART.md now says from whom. The 314 covers the city and the
+  inner county; 557 was overlaid on the same ground in 2023.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Area_codes_314_and_557
+  - type: url
+    ref: https://www.stlpr.org/show/st-louis-on-the-air/2020-06-26/at-20-nellys-country-grammar-still-makes-st-louis-proud

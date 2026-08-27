@@ -4,14 +4,30 @@
   "title": "Lexicon entry",
   "description": "One Boston slang term. One term per file.",
   "type": "object",
-  "required": ["term", "means", "region", "register", "sources"],
+  "required": [
+    "term",
+    "means",
+    "region",
+    "register",
+    "sources"
+  ],
   "additionalProperties": false,
   "properties": {
-    "term": { "type": "string", "minLength": 1, "description": "The Boston word or phrase." },
-    "means": { "type": "string", "minLength": 1, "description": "Plain-English equivalent." },
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The Boston word or phrase."
+    },
+    "means": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Plain-English equivalent."
+    },
     "also": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Alternate spellings."
     },
     "region": {
@@ -27,10 +43,22 @@
     },
     "part_of_speech": {
       "type": "string",
-      "enum": ["noun", "verb", "adjective", "adverb", "interjection", "phrase"]
+      "enum": [
+        "noun",
+        "verb",
+        "adjective",
+        "adverb",
+        "interjection",
+        "phrase"
+      ]
     },
-    "example": { "type": "string", "description": "One sentence using it naturally." },
-    "notes": { "type": "string" },
+    "example": {
+      "type": "string",
+      "description": "One sentence using it naturally."
+    },
+    "notes": {
+      "type": "string"
+    },
     "offensive": {
       "type": "boolean",
       "description": "If true, stored for reverse lookup ONLY; never emitted. Maintainers only."
@@ -41,11 +69,54 @@
       "description": "REQUIRED. At least one. No source, no merge.",
       "items": {
         "type": "object",
-        "required": ["type", "ref"],
+        "required": [
+          "type",
+          "ref"
+        ],
         "additionalProperties": false,
         "properties": {
-          "type": { "type": "string", "enum": ["url", "vouch", "book"] },
-          "ref": { "type": "string", "minLength": 1 }
+          "type": {
+            "type": "string",
+            "enum": [
+              "url",
+              "vouch",
+              "book"
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "scene": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The world this word lives in — hip-hop, transit, food, sports. A free string on purpose: no enum, so nobody has to win an argument about the taxonomy before adding a word."
+    },
+    "attribution": {
+      "type": "object",
+      "required": [
+        "who"
+      ],
+      "additionalProperties": false,
+      "description": "Who put this term into wide circulation, where credit is owed. Not the same as sources: — that's where WE read it, this is who said it first.",
+      "properties": {
+        "who": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Person, group, or outlet."
+        },
+        "work": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The record, film, column or show it rode in on."
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1600,
+          "maximum": 2100
         }
       }
     }

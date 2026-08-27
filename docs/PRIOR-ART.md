@@ -60,6 +60,24 @@ For **St. Louis** (`stl-314`):
 - **Nine PBS — The history of hoosiers in St. Louis** —
   https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
 
+## Where our own slugs came from
+
+Worth saying out loud, because we've been quietly using somebody else's idea
+since the first commit. The regions in this repo are named city-plus-area-code:
+`brockton-508`, `stl-314`, and every one that follows. **That convention is
+hip-hop's.** Naming a place by its area code — the 314, the 313, the 212 — is a
+rap practice, and in St. Louis's case Nelly's *Country Grammar* (2000) is the
+record that put the 314 into national circulation and, per STLPR, put the whole
+Midwest on a map that had only ever had two coasts on it.
+
+We didn't invent the naming scheme, we borrowed it, and it's a better scheme
+than anything we'd have come up with. Credit where it's due.
+
+- **STLPR — At 20, Nelly's "Country Grammar" still makes St. Louis proud** —
+  https://www.stlpr.org/show/st-louis-on-the-air/2020-06-26/at-20-nellys-country-grammar-still-makes-st-louis-proud
+- **Wikipedia — Country Grammar** — https://en.wikipedia.org/wiki/Country_Grammar
+- **Wikipedia — The Ville, St. Louis** — https://en.wikipedia.org/wiki/The_Ville,_St._Louis
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

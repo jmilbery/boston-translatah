@@ -1,0 +1,22 @@
+term: the Ville
+means: a historic Black neighbourhood in north St. Louis
+region: stl-314
+register: 3
+part_of_speech: noun
+example: "Her grandmother taught in the Ville."
+notes: >-
+  Forty-two blocks in north St. Louis, and the answer to a lot of questions
+  about where the city's culture came from. From 1911 to 1950 it was the centre
+  of Black life in St. Louis — not by preference but because restrictive
+  covenants shut Black families out of everywhere else. It held Sumner High
+  School, the first high school for Black students west of the Mississippi, and
+  Homer G. Phillips Hospital, one of the few Black teaching hospitals in the
+  country. Chuck Berry, Josephine Baker, Sonny Liston and Dick Gregory all came
+  through it.
+  Read this next to data/phrases/stl-314/ and the shibboleth stops being a joke:
+  when St. Louis asks where you went to high school, "Sumner" is an answer that
+  carries a century with it. Filed here because it's real local knowledge an
+  outsider won't have, and it is not a punchline. Don't use it as one.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/The_Ville,_St._Louis
