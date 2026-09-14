@@ -1,0 +1,11 @@
+term: Michigan left
+means: a left turn made by going straight, U-turning, and coming back
+region: detroit-313
+register: 2
+part_of_speech: noun
+example: "You can't turn there, you have to take the Michigan left."
+notes: >-
+  A real traffic engineering pattern named for the state that adopted it, and a genuine obstacle for visiting drivers.
+sources:
+  - type: url
+    ref: https://www.awesomemitten.com/michigan-words/

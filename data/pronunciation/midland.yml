@@ -1,0 +1,73 @@
+# The Midland accent engine (family: midland).
+#
+# The broad middle: central Ohio across to central Nebraska, down through
+# Oklahoma. Historically the accent people mean when they call something
+# "General American" or claim a region has no accent at all, which is itself
+# the most interesting thing about it.
+#
+# Same shape as the other engines, applied in order. New VOCABULARY goes in
+# data/lexicon/<region>/, not here.
+#
+# The headline: this is the QUIET one, and it is defined mostly by what it
+# doesn't do. It keeps its R's (unlike Boston). Its short-A only tenses before
+# nasals (unlike the Inland North, where it tenses everywhere) — that single
+# difference is the cleanest way to tell a Midland speaker from a Chicagoan.
+#
+# Note for anyone reading this next to stl-314.yml: St. Louis inherits this
+# family AND inland-north, because a dialect corridor running up old Route 66
+# pulled Northern features into an otherwise Midland city. See data/regions.yml.
+#
+#   https://en.wikipedia.org/wiki/Midland_American_English
+#   https://en.wikipedia.org/wiki/Midwestern_American_English
+
+- id: rhotic
+  name: Rhotic — keep every R
+  order: 1
+  description: >-
+    A guard rule, same as St. Louis's. The Midland pronounces its R's fully. If
+    a drop-R or -er-to-ah transform is running, the Boston engine is loaded and
+    the region is wrong.
+  examples:
+    - { from: car, to: car }
+    - { from: water, to: water }
+  min_thickness: 1
+
+- id: short-a-before-nasals
+  name: Short A tenses, but only before N and M
+  order: 2
+  description: >-
+    The diagnostic rule. "Pan" and "ham" tense; "cat" and "bag" do not. An
+    Inland North speaker tenses all of them, so this is the line between the
+    two families and the reason they need separate files.
+  examples:
+    - { from: pan, to: pay-an }
+    - { from: ham, to: hay-am }
+    - { from: cat, to: cat }
+    - { from: bag, to: bag }
+  exceptions: Before nasals only. Generalising it turns a Midland speaker into a Chicagoan.
+  min_thickness: 2
+
+- id: goat-fronting
+  name: The GOAT vowel moves forward
+  order: 3
+  description: >-
+    Long /o/ starts further forward in the mouth than it does on either coast.
+    Subtle in print and one of the things that makes the accent hard for
+    outsiders to name even when they can hear it.
+  examples:
+    - { from: boat, to: bewt }
+    - { from: "go home", to: "gew hewm" }
+  min_thickness: 3
+
+- id: cot-caught-merging
+  name: COT and CAUGHT, drifting together
+  order: 4
+  description: >-
+    A merger in progress rather than a finished one. Older and southern Midland
+    speakers keep the two apart; younger ones increasingly don't. Apply it
+    lightly, and don't treat a speaker who distinguishes them as wrong.
+  examples:
+    - { from: caught, to: cot }
+    - { from: dawn, to: Don }
+  exceptions: Genuinely variable within the region. Level 3 only.
+  min_thickness: 3

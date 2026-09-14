@@ -1,0 +1,11 @@
+term: Jewels
+means: Jewel-Osco, the grocery chain
+region: chicago-312
+register: 3
+part_of_speech: noun
+example: "I'm running to Jewels, need anything?"
+notes: >-
+  Pluralised by locals despite the chain being singular, the way other cities do it to their own supermarkets.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/chicago-slang-terms

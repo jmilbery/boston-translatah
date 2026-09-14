@@ -1,0 +1,11 @@
+term: doorwall
+means: a sliding glass door
+region: detroit-313
+register: 2
+part_of_speech: noun
+example: "Shut the doorwall, you're letting the bugs in."
+notes: >-
+  A door that is also a wall. Michiganders are routinely surprised to learn the rest of the country does not use this word and has no single word of its own.
+sources:
+  - type: url
+    ref: https://www.awesomemitten.com/michigan-words/

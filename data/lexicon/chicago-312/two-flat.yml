@@ -1,0 +1,11 @@
+term: two-flat
+means: a two-unit building, one apartment stacked on the other, sharing a front door
+region: chicago-312
+register: 2
+part_of_speech: noun
+example: "They bought a two-flat and live downstairs."
+notes: >-
+  A defining piece of Chicago housing stock, usually brick. Three-flats and six-flats follow the same pattern.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/chicago-slang-terms

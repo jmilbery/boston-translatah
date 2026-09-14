@@ -1,0 +1,13 @@
+term: pop
+means: a carbonated soft drink
+region: inland-north
+register: 1
+part_of_speech: noun
+example: "Grab a pop out of the garage fridge."
+notes: >-
+  The Great Lakes term, and the one that draws the sharpest line on a dialect map. The coasts say soda, the South says coke for all of them, and this belt says pop. Shared across the whole family, which is why it lives here rather than in any one city. St. Louis is the famous local exception and deliberately does not inherit it.
+sources:
+  - type: url
+    ref: https://www.awesomemitten.com/michigan-words/
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Midwestern_American_English

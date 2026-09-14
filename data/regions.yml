@@ -7,9 +7,45 @@
 #   slug     — the folder name under data/lexicon/ and data/phrases/.
 #              lowercase, dashes only. Convention is city + area code.
 #   name     — how a human says it.
-#   inherits — another slug whose lexicon this region also uses (optional).
+#   kind     — "city" (the default, leave it off) or "family". A family isn't
+#              somewhere you're from; it's a dialect group that cities inherit,
+#              so it holds the vocabulary and the accent they share.
+#   inherits — a slug whose lexicon this region also uses, OR a list of them
+#              (optional). See below.
 #   accent   — the pronunciation ruleset in data/pronunciation/ (optional).
 #              Leave it off and the region gets lexicon swaps but no respelling.
+#
+# ON INHERITING FROM MORE THAN ONE PLACE
+#
+# Most cities sit in one dialect group and name one parent. Some genuinely sit
+# in two — St. Louis is the worked example below — so `inherits:` also takes a
+# list:
+#
+#     inherits: [midland, inland-north]
+#
+# The order is the priority order. Earlier parents win. Your own entries beat
+# every parent, always, so the way to settle any disagreement is to define the
+# word yourself in your own folder. If two parents define the same word to mean
+# genuinely different things and you haven't, the robot says so by name rather
+# than letting list order decide it behind your back.
+
+# ---------------------------------------------------------------------------
+# Families
+# ---------------------------------------------------------------------------
+
+- slug: inland-north
+  name: Inland North (the Great Lakes)
+  kind: family
+  accent: inland-north.yml
+
+- slug: midland
+  name: Midland
+  kind: family
+  accent: midland.yml
+
+# ---------------------------------------------------------------------------
+# Cities
+# ---------------------------------------------------------------------------
 
 - slug: boston
   name: Boston / general New England
@@ -20,6 +56,22 @@
   inherits: boston
   accent: rules.yml
 
+# Two parents, and the only entry here that needs a paragraph. St. Louis is
+# historically a Midland city. From the mid-1900s a dialect "corridor" running
+# up old Route 66 toward Chicago pulled Inland North features into it, which is
+# where the Northern Cities Shift in stl-314.yml comes from. Younger speakers
+# are drifting back toward plain Midland. Midland is listed first because it's
+# the older and still-dominant layer.
+#   https://en.wikipedia.org/wiki/Midland_American_English
 - slug: stl-314
   name: St. Louis (the 314)
+  inherits: midland
   accent: stl-314.yml
+
+- slug: chicago-312
+  name: Chicago (the 312)
+  inherits: inland-north
+
+- slug: detroit-313
+  name: Detroit (the 313)
+  inherits: inland-north
