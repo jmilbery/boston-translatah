@@ -20,6 +20,8 @@ const lexiconSchema = JSON.parse(readFileSync(join(root, "schema/lexicon.schema.
 const phraseSchema = JSON.parse(readFileSync(join(root, "schema/phrase.schema.json")));
 const validateLexicon = ajv.compile(lexiconSchema);
 const validatePhrase = ajv.compile(phraseSchema);
+const curriculumSchema = JSON.parse(readFileSync(join(root, "schema/curriculum.schema.json")));
+const validateCurriculum = ajv.compile(curriculumSchema);
 
 // Region slugs and the region: field in both schemas agree on this shape.
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -31,6 +33,8 @@ function fail(file, msg) {
   console.error(`  ✗ ${file.replace(root + "/", "")}\n      ${msg}`);
   errors++;
 }
+
+let regionsBySlug = new Map();
 
 const REGISTRY = "data/regions.yml";
 const failRegistry = (msg) => fail(join(root, REGISTRY), msg);
@@ -95,6 +99,9 @@ function loadRegions() {
     }
   }
 
+  // Curricula need the whole record, not just the slug — they have to find
+  // the accent file a region points at.
+  regionsBySlug = bySlug;
   return new Set(bySlug.keys());
 }
 
@@ -146,6 +153,103 @@ function yield_file(file) {
   }
 }
 
+// A curriculum is the first file that reads across TWO regions at once, so it
+// can go wrong in ways a single-region entry can't: a rule id that was renamed
+// in one engine, a destination with no accent file to teach. Check both ends
+// and say which end broke. Same house style as the registry checker above —
+// collect everything, one pass, plain English.
+const accentCache = new Map();
+function accentRuleIds(file) {
+  if (accentCache.has(file)) return accentCache.get(file);
+  let ids = null;
+  try {
+    const doc = yaml.load(readFileSync(join(root, "data/pronunciation", file), "utf8"));
+    if (Array.isArray(doc)) ids = new Set(doc.map((r) => r && r.id).filter(Boolean));
+  } catch {
+    ids = null;
+  }
+  accentCache.set(file, ids);
+  return ids;
+}
+
+// Which rules can this region actually be taught, or talked out of? The one
+// its accent file defines. No accent file, no rules, nothing to teach.
+function rulesFor(slug, file, endLabel) {
+  const region = regionsBySlug.get(slug);
+  if (!region) {
+    fail(file, `${endLabel} region "${slug}" isn't in data/regions.yml. Known: ${[...knownRegions].join(", ")}.`);
+    return null;
+  }
+  if (!region.accent) {
+    fail(file, `${endLabel} region "${slug}" has no accent: file in data/regions.yml, so it has no rules. A curriculum needs an accent at both ends.`);
+    return null;
+  }
+  const ids = accentRuleIds(region.accent);
+  if (!ids) {
+    fail(file, `couldn't read the rules out of data/pronunciation/${region.accent} — it should be a list of rules, each with an id.`);
+    return null;
+  }
+  return { ids, accent: region.accent };
+}
+
+function checkCurriculum(file) {
+  checked++;
+  let doc;
+  try {
+    doc = yaml.load(readFileSync(file, "utf8"));
+  } catch (e) {
+    return fail(file, `not valid YAML: ${e.message}`);
+  }
+  if (!validateCurriculum(doc)) {
+    const msg = validateCurriculum.errors.map((e) => `${e.instancePath || "(root)"} ${e.message}`).join("; ");
+    return fail(file, msg);
+  }
+
+  const want = `${doc.from}-to-${doc.to}.yml`;
+  if (basename(file) !== want) {
+    fail(file, `filename "${basename(file)}" should be "${want}" — the convention is <from>-to-<to>.yml`);
+  }
+
+  const to = rulesFor(doc.to, file, "destination");
+  const from = rulesFor(doc.from, file, "origin");
+
+  const seen = new Map();
+  for (const lesson of doc.lessons) {
+    const label = `lesson ${lesson.order} ("${lesson.name}")`;
+    if (seen.has(lesson.order)) {
+      fail(file, `${label} and "${seen.get(lesson.order)}" are both order ${lesson.order}. Lessons run in sequence — give them different numbers.`);
+    } else {
+      seen.set(lesson.order, lesson.name);
+    }
+    const learn = lesson.learn || [];
+    const unlearn = lesson.unlearn || [];
+    if (learn.length === 0 && unlearn.length === 0) {
+      fail(file, `${label} neither learns nor unlearns a rule. A lesson has to move something.`);
+    }
+    if (to) {
+      for (const id of learn) {
+        if (!to.ids.has(id)) {
+          fail(file, `${label} teaches "${id}", which isn't a rule in data/pronunciation/${to.accent}. That file has: ${[...to.ids].join(", ")}.`);
+        }
+      }
+    }
+    if (from) {
+      for (const id of unlearn) {
+        if (!from.ids.has(id)) {
+          fail(file, `${label} un-teaches "${id}", which isn't a rule in data/pronunciation/${from.accent}. That file has: ${[...from.ids].join(", ")}.`);
+        }
+      }
+    }
+  }
+}
+
+function walkCurriculum(dir) {
+  if (!existsSync(dir)) return;
+  for (const name of readdirSync(dir)) {
+    if (name.endsWith(".yml") && !name.startsWith("_")) checkCurriculum(join(dir, name));
+  }
+}
+
 console.log("Checking entries…\n");
 
 // The region list has to be right before any entry's region can be judged.
@@ -157,6 +261,7 @@ if (errors > 0) {
 
 walk(join(root, "data/lexicon"));
 walk(join(root, "data/phrases"));
+walkCurriculum(join(root, "data/curriculum"));
 
 console.log(`\n${checked} entries checked, ${errors} problem(s).`);
 if (errors > 0) {

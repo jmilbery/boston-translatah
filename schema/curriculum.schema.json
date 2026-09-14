@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jmilbery/boston-translatah/schema/curriculum.schema.json",
+  "title": "Curriculum",
+  "description": "A staged path from one region's accent to another's. One curriculum per file, named <from>-to-<to>.yml.",
+  "type": "object",
+  "required": ["from", "to", "name", "lessons", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "from": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Region slug the learner starts from. Must be registered in data/regions.yml."
+    },
+    "to": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Region slug the learner is heading for. Must be registered, and must have an accent: file — there is nothing to teach otherwise."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "summary": { "type": "string" },
+    "intake": { "type": "string", "description": "How you find out where the learner is starting from." },
+    "discharge": { "type": "string", "description": "What done looks like." },
+    "lessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["order", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "order": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "learn": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Rule ids from the DESTINATION region's accent file. Checked."
+          },
+          "unlearn": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Rule ids from the ORIGIN region's accent file. Checked."
+          },
+          "drill": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["from", "to"],
+              "additionalProperties": false,
+              "properties": {
+                "from": { "type": "string", "minLength": 1 },
+                "to": { "type": "string", "minLength": 1 }
+              }
+            },
+            "description": "Same shape as the examples: in an accent file, so they read the same way."
+          },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "not_covered": {
+      "type": "array",
+      "description": "Things a reader will expect and won't find, and why. `rule` here is a LABEL, not a checked reference — some of what belongs in this list (the urr vowel) is deliberately not a rule anywhere, which is the whole reason it needs saying.",
+      "items": {
+        "type": "object",
+        "required": ["rule", "why"],
+        "additionalProperties": false,
+        "properties": {
+          "rule": { "type": "string", "minLength": 1 },
+          "why": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "REQUIRED, same as everywhere else. No source, no merge.",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "enum": ["url", "vouch", "book"] },
+          "ref": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+# A curriculum: the staged path from one region's accent to another's.
+#
+# This is the fourth data layer, and the first one that reads ACROSS two
+# regions at once. A lesson names rules by their `id` in the accent files:
+# `learn` ids must exist in the destination's accent file, `unlearn` ids in
+# the origin's. The robot checks both, so a renamed rule can't quietly leave
+# a lesson pointing at nothing.
+#
+# Filename convention: <from>-to-<to>.yml
+#
+# On the framing, because it matters and it's in docs/ACCENT-REDUCTION.md at
+# length: the profession that actually does this work says an accent is not a
+# disorder, everyone has one, and it has retired the phrase "accent reduction"
+# for the deficit-loaded thing it is. The honest term is ACCENT ADDITION. You
+# do not lose Boston here. You pick up a second city.
+
+from: boston
+to: stl-314
+name: Accent Addition — Boston to the 314
+
+summary: >-
+  Six lessons taking a fully non-rhotic Boston speaker to St. Louis. The
+  headline is that the two engines run in opposite directions: Boston deletes
+  R's, St. Louis keeps them and then adds one back in a place Boston never
+  would. Lessons 2 and 4 are the whole difficulty, and they are the reason
+  `keep-the-r` sits at order 1 of the destination engine as a guard.
+
+intake: >-
+  "Where'd you go to high school?" — see data/phrases/stl-314/. Outsiders hear
+  small talk. It is the placement exam, and it is not optional.
+
+discharge: >-
+  The patient says "Park the car in Harvard Yard" with every R intact and does
+  not flinch. Note that the sentence is unremarkable in St. Louis; the
+  canonical Boston demonstration sentence has no local equivalent, because
+  there is nothing here to demonstrate.
+
+lessons:
+  - order: 1
+    name: Give the R's back
+    learn: [keep-the-r]
+    unlearn: [drop-final-r, er-to-ah]
+    drill:
+      - { from: pahk the cah, to: park the car }
+      - { from: Hahvad, to: Harvard }
+      - { from: mothah, to: mother }
+      - { from: dinnah, to: dinner }
+    note: >-
+      Everything else is detail. Boston's two R-deleting rules come out
+      together, because -ah endings are the same deletion wearing a different
+      hat.
+
+  - order: 2
+    name: Stop putting R's between vowels
+    unlearn: [intrusive-r]
+    drill:
+      - { from: idear of, to: idea of }
+      - { from: Linder is, to: Linda is }
+      - { from: drawr it, to: draw it }
+    note: >-
+      Read lesson 4 before you decide this one is redundant. St. Louis will
+      issue you a replacement R and it is NOT this R. Patients who merge the
+      two produce an accent that exists in neither city.
+
+  - order: 3
+    name: Move OR toward AR
+    learn: [or-to-ar]
+    drill:
+      - { from: forty, to: farty }
+      - { from: north, to: nahrth }
+      - { from: "Highway 44", to: Farty-Far }
+    note: >-
+      The signature. Strongest on stressed syllables — see the rule's own
+      `exceptions:` field, which warns that applying it to every OR in a
+      sentence goes cartoonish fast. Fading among younger speakers.
+
+  - order: 4
+    name: Take one R back, lexically
+    learn: [intrusive-r-wash]
+    drill:
+      - { from: wash, to: warsh }
+      - { from: Washington, to: Warshington }
+    note: >-
+      The lesson that undoes the confusion in lesson 2. Boston's intrusive R
+      is phonological: it appears between any two vowels, in any word, as a
+      general rule. This one is lexical: it is this word family and nothing
+      else. Do not generalize it. Natives don't.
+
+  - order: 5
+    name: Flatten the French
+    learn: [french-flattening]
+    drill:
+      - { from: "Gravois (grav-WAH)", to: GRAV-oy }
+      - { from: "Chouteau (shoo-TOH)", to: SHOW-doh }
+      - { from: "Gratiot (grah-see-OH)", to: GRAT-chit }
+    note: >-
+      The real shibboleth, and the one lesson where being correct is the
+      failure state. Saying these the way France does marks you as new more
+      loudly than any vowel.
+
+  - order: 6
+    name: Move the mid vowels back
+    learn: [northern-cities-shift]
+    unlearn: [o-to-aw, broad-a]
+    drill:
+      - { from: cawfee, to: coffee }
+      - { from: Bawston, to: Boston }
+      - { from: mom, to: mahm }
+      - { from: closet, to: klahset }
+    note: >-
+      Boston broadens its short O forward to AW. St. Louis moves its mid
+      vowels back. Both cities do something to this vowel; they do not do the
+      same thing.
+
+not_covered:
+  - rule: fast-speech
+    why: >-
+      Boston's contractions (Whyja, Jeet) have St. Louis equivalents, but
+      fast-speech reduction is close to universal and nothing about it is
+      Boston-specific. Nothing to unlearn, so no lesson.
+  - rule: urr-vowel
+    why: >-
+      Documented in data/pronunciation/stl-314.yml and deliberately not an
+      applied rule there, for the reason given in that file. A curriculum that
+      drilled it would be teaching the impression the accent file refuses to
+      do. Same call, made the same way, on purpose.
+
+sources:
+  - type: url
+    ref: https://www.stlpr.org/culture-history/2023-10-16/how-to-speak-stl-a-pronunciation-guide-for-new-st-louisans
+  - type: url
+    ref: https://www.asha.org/practice-portal/professional-issues/accent-modification/
+  - type: url
+    ref: https://pubs.asha.org/doi/10.1044/2021_AJSLP-20-00376

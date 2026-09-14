@@ -23,7 +23,7 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
 > requests. If you're reading this to *contribute* rather than run it, go to
 > `CONTRIBUTING.md`.
 
-## Data model — four layers
+## Data model — five layers
 
 0. **Region registry** — `data/regions.yml`
    The list of cities this skill speaks, each with its slug, its optional
@@ -40,6 +40,10 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
 3. **Phrases** — `data/phrases/<region>/<slug>.yml`
    Canonical multi-word renderings that do NOT derive cleanly from the rules
    (irregular idioms like "pahk the cah in Hahvad Yahd"). Stored verbatim.
+4. **Curricula** — `data/curriculum/<from>-to-<to>.yml`
+   A staged path from one region's accent to another's, naming rules by `id`
+   in both engines. The only layer that reads across two regions at once.
+   Optional; a region works fine without one.
 
 Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
 
@@ -97,6 +101,47 @@ inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
 
 Run the lexicon in reverse (local term → `means`) and undo accent respellings.
 The rules are lossy, so reverse is best-effort — flag anything ambiguous.
+
+## Cross-region translation (city → city)
+
+Two cities means a third operation the skill didn't used to have: not English
+→ dialect, but **dialect → dialect**. It needs no new machinery, because the
+plain-English fields are already a pivot:
+
+- `means:` on every lexicon entry
+- `phrase:` on every phrase entry
+
+So a city-to-city translation is just the reverse pass followed by the forward
+one, through plain English in the middle:
+
+```
+pahk the cah  →  [reverse boston] →  park the car  →  [forward stl-314] →  park the car
+fahty-fowah   →  [reverse boston] →  forty-four    →  [forward stl-314] →  farty-far
+```
+
+1. Reverse out of the source region to plain English (lexicon by `means:`,
+   phrases by `phrase:`, then undo the source's accent respellings).
+2. Forward into the destination region as normal.
+3. **Never skip the middle.** Transforming respellings directly from one
+   accent to another is how you cross the streams. Boston's R's have to come
+   off before St. Louis's go on, even where the result looks identical.
+
+Expect it to be lossy in both directions, same caveat as the reverse pass, and
+expect gaps: a source term whose `means:` has no destination equivalent stays
+in plain English rather than getting invented.
+
+### Teaching it to a person instead
+
+`data/curriculum/boston-to-stl-314.yml` is the same journey staged for a human
+who wants to make the noises themselves: six lessons, each naming the rules it
+adds from the destination engine and the ones it retires from the origin.
+`docs/ACCENT-REDUCTION.md` is its prose companion, and covers the one thing
+that reliably goes wrong — both cities insert R's, on completely different
+triggers, and merging them yields an accent spoken nowhere.
+
+Note the framing, which is deliberate and sourced: this is **accent addition**,
+never "accent reduction." An accent is not a disorder, nobody loses Boston, and
+the profession that does this for real retired the other phrase on purpose.
 
 ## Guardrails
 
