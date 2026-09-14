@@ -1,0 +1,26 @@
+term: the Lou
+means: St. Louis
+region: stl-314
+register: 1
+scene: hip-hop
+part_of_speech: noun
+example: "He came up in the Lou, north side."
+attribution:
+  who: Nelly
+  work: Country Grammar
+  year: 2000
+notes: >-
+  The nickname a record gave a city. Nelly's 2000 debut single carried the line
+  "I'm from the Lou and I'm proud," and it stuck hard enough that the Cardinals
+  put THE LOU across the chest of a City Connect uniform in 2024, unveiled with
+  Nelly himself. Before that album, St. Louis barely registered on a hip-hop map
+  drawn entirely between two coasts; STLPR's twentieth-anniversary piece credits
+  it with putting the whole Midwest on that map. Say it warmly or not at all —
+  it's a proud word, not a shrug.
+sources:
+  - type: url
+    ref: https://www.stlpr.org/show/st-louis-on-the-air/2020-06-26/at-20-nellys-country-grammar-still-makes-st-louis-proud
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Country_Grammar
+  - type: url
+    ref: https://everythingmidwest.com/st-louis-nicknames/

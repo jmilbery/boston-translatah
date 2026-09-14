@@ -79,6 +79,48 @@ inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
 > adds them. Running `rules.yml` against a `stl-314` request produces an accent
 > that exists in no city on earth. Load the accent file the region names.
 
+## Scenes (talk like a *what* from there)
+
+A region says where somebody is from. A **scene** says what world they move in,
+and it's an optional `scene:` on any lexicon entry — a free string, no enum, so
+nobody has to win a taxonomy argument before adding a word.
+
+So *"talk like a St. Louis rapper"* resolves out of parts that already exist:
+
+| Axis | Value |
+|---|---|
+| region | `stl-314` |
+| thickness | 3 |
+| `register` | 3 — deep local, the words outsiders don't have |
+| `scene` | `hip-hop` |
+
+> **A scene selects vocabulary. A scene never touches pronunciation.**
+> This is the whole design, not a nicety. The accent stays whatever the region
+> already has — for `stl-314` that is `stl-314.yml`, unchanged, with the "urr"
+> vowel still documented and still deliberately not wired up. Because a scene
+> adds no phonetic rules at all, it cannot turn into an impression of
+> racially-marked speech, by accident or otherwise. If you ever find yourself
+> adding pronunciation to a scene, you've left this design.
+
+**Name scenes for scenes, never for people.** "Full Masshole" works because
+`masshole` is a badge a city wears. "A St. Louis rapper" is a role, the same
+kind of thing. A named living artist is a specific human being, and putting
+words in their mouth is a different question from regional caricature — one
+this repo hasn't answered and shouldn't answer by accident.
+
+Credit still goes where it's owed, through the optional `attribution:` block on
+a lexicon entry:
+
+```yaml
+attribution:
+  who: Nelly
+  work: Country Grammar
+  year: 2000
+```
+
+`sources:` is where *we* read it. `attribution:` is who said it first. A word
+that a city got from a record should carry the record.
+
 ## How to apply (translate TO the dialect)
 
 1. Pick region (default `boston`) and thickness (default 2). Look the region up
@@ -105,6 +147,8 @@ The rules are lossy, so reverse is best-effort — flag anything ambiguous.
   lookups only and are NEVER emitted in a translation.
 - Don't invent slang. If a swap isn't in the lexicon, leave the word standard or
   apply only the accent rules. Made-up terms are how this stops being credible.
+- **A scene is vocabulary only.** Never let `scene:` pull in pronunciation, and
+  never name one after a living person. See the Scenes section above.
 - **Don't do impressions of racially-marked speech.** Some regional features are
   specific to a city's Black speech communities. Where an accent file documents
   one in a comment rather than wiring it up as a rule, that omission is
