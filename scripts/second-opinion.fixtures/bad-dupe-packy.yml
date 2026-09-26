@@ -1,0 +1,9 @@
+term: packy
+means: liquor store
+region: boston
+register: 1
+part_of_speech: noun
+example: "Swing by the packy on the way over."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry

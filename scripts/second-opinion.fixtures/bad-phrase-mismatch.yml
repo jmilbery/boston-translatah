@@ -1,0 +1,6 @@
+phrase: "Park the car in Harvard Yard."
+local: "Go Sox, the Yankees stink."
+region: boston
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry

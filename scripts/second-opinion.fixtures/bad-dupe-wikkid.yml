@@ -1,0 +1,9 @@
+term: wikkid
+means: very / extremely
+region: boston
+register: 1
+part_of_speech: adverb
+example: "That game was wikkid close."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry

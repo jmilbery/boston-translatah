@@ -1,0 +1,9 @@
+term: snorkwobble
+means: a traffic rotary
+region: boston
+register: 2
+part_of_speech: noun
+example: "Take the second exit off the snorkwobble."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry
