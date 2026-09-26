@@ -60,6 +60,13 @@ For **St. Louis** (`stl-314`):
 - **Nine PBS — The history of hoosiers in St. Louis** —
   https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
 
+For **Kansas** (`kansas`):
+
+- **KU News — What a Kansas accent is (or is not)**, KU Sociolinguistics Lab, 2026 —
+  https://news.ku.edu/news/article/linguistics-experts-decipher-what-a-kansas-accent-is-or-is-not
+- **KCUR — What does the Kansas City dialect sound like?** —
+  https://www.kcur.org/community/2014-01-15/what-does-the-kansas-city-dialect-sound-like
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

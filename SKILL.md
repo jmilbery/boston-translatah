@@ -70,10 +70,16 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
   neighborhood-obsessed. The register is dry and unimpressed rather than
   chowdah-tough. Placement matters more than volume: the city's real
   shibboleth is *"Where'd you go to high school?"*
+- **`kansas`** (Kansas). Kansans describe their own speech as unaccented, and
+  the accent file makes few changes. At Level 1 the accent pass changes
+  nothing. At Level 2 it changes only place names such as the ar-KAN-zus
+  River. Level 3 adds the pin/pen merger. The register is polite and
+  understated. Never add a Southern drawl, because outsiders hear one that
+  Kansans do not have, and never use Wizard of Oz jokes.
 
 Modes stack via the `inherits:` field in `data/regions.yml`: `brockton-508`
-inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
-— it is a separate dialect, not a Boston variant.
+inherits all `boston` lexicon, then adds/overrides. `stl-314` and `kansas`
+inherit nothing — they are separate dialects, not Boston variants.
 
 > **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
 > adds them. Running `rules.yml` against a `stl-314` request produces an accent
@@ -89,6 +95,8 @@ inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
 4. **Accent pass** (dial ≥ 2) — apply the region's accent file in listed order.
    Boston (`rules.yml`): drop-R before intrusive-R; broad-A and o→aw last.
    St. Louis (`stl-314.yml`): keep every R; or→ar first, vowel shifts last.
+   For Kansas (`kansas.yml`), apply the guard rules first, then place names,
+   then the pin/pen merger at Level 3.
 5. Sprinkle connective tissue at dial 3 — Boston: *kid, wicked, no suh, right
    theah*. St. Louis has no equivalent filler; it leans on place and school
    names instead. Either way don't overdo it; native beats cartoonish.

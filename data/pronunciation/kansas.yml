@@ -1,0 +1,84 @@
+# The Kansas accent engine (region: kansas).
+#
+# This file follows the same format as rules.yml and stl-314.yml, and the
+# engine applies its rules in the order listed. New words belong in
+# data/lexicon/kansas/.
+#
+# This is the shortest accent file in the repo because Kansas speech has few
+# features that change how a word is spelled. In a 2026 study, the KU
+# Sociolinguistics Lab found that Kansans hear their own speech as unaccented,
+# and one of the researchers said no single feature is uniquely Kansan. Most of
+# the rules below are guard rules that keep the engine from changing the text.
+#   Source: https://news.ku.edu/news/article/linguistics-experts-decipher-what-a-kansas-accent-is-or-is-not
+#
+# The rules deliberately leave out the Southern drawl. The same study found
+# that people outside Kansas hear the state's speech as Southern because they
+# associate Kansas with rural life. A drawl rule would reproduce that outside
+# perception, which is the kind of joke CODE_OF_CONDUCT.md rules out.
+#
+# The rules also leave out the cot/caught merger. Kansans pronounce the two
+# words the same way, but their spellings already differ, so a respelling has
+# nothing to change.
+#   Source: https://www.kcur.org/community/2014-01-15/what-does-the-kansas-city-dialect-sound-like
+
+- id: leave-it-alone
+  name: No change
+  order: 1
+  description: >-
+    At Level 1 the Kansas rules make no change to the text, and at Level 2
+    they change only place names (see arkansas-river). Unchanged output at
+    these levels is correct. If a Level 2 Kansas translation shows dropped R's
+    or other heavy respelling, the engine has loaded another region's accent
+    file.
+  examples:
+    - { from: "Nice weather today.", to: "Nice weather today." }
+    - { from: "I'll get the car.", to: "I'll get the car." }
+  min_thickness: 1
+
+- id: keep-the-r
+  name: Rhotic, keep every R
+  order: 2
+  description: >-
+    Kansas speakers pronounce every R, as St. Louis speakers do. If a drop-R
+    or -er-to-ah transform appears in Kansas output, the engine has loaded the
+    Boston rules.
+  examples:
+    - { from: car, to: car }
+    - { from: dinner, to: dinner }
+  min_thickness: 1
+
+- id: arkansas-river
+  name: Kansas place names
+  order: 3
+  description: >-
+    Kansans pronounce the Arkansas River "ar-KAN-zus," and several town names
+    have local pronunciations that differ from how an outsider would read
+    them. This rule works like the french-flattening rule in stl-314.yml.
+    Sources: https://en.wikipedia.org/wiki/Arkansas_River (the river's Kansas
+    pronunciation), https://en.wikipedia.org/wiki/Salina,_Kansas,
+    https://en.wikipedia.org/wiki/Olathe,_Kansas
+  examples:
+    - { from: "the Arkansas River", to: "the ar-KAN-zus River" }
+    - { from: Salina, to: "suh-LYE-nuh" }
+    - { from: Olathe, to: "oh-LAY-thuh" }
+  exceptions: >-
+    The rule applies to the river only. Kansans still pronounce the state of
+    Arkansas "AR-kan-saw."
+  min_thickness: 2
+
+- id: pin-pen
+  name: Pin/pen merger
+  order: 4
+  description: >-
+    Before N or M, a short E is pronounced as a short I, so "pen" and "pin"
+    sound the same. The KU study names this merger as a Kansas feature and
+    notes that it is also common in the South. It stays at Level 3.
+    Source: https://news.ku.edu/news/article/linguistics-experts-decipher-what-a-kansas-accent-is-or-is-not
+  examples:
+    - { from: pen, to: pin }
+    - { from: ten, to: tin }
+    - { from: "When?", to: "Whin?" }
+  exceptions: >-
+    The merger applies only before N or M, so "bed" keeps its spelling. Not
+    every Kansas speaker has it. Use it once or twice in a passage.
+  min_thickness: 3

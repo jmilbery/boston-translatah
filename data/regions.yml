@@ -23,3 +23,7 @@
 - slug: stl-314
   name: St. Louis (the 314)
   accent: stl-314.yml
+
+- slug: kansas
+  name: Kansas
+  accent: kansas.yml
