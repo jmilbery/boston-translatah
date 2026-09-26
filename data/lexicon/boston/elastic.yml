@@ -1,0 +1,15 @@
+term: elastic
+means: rubber band (also a hair tie)
+region: boston
+register: 2
+part_of_speech: noun
+example: "Toss me an elastic, these receipts are all ovah the cah."
+notes: >-
+  Outsiders hear "elastic" and picture the waistband of their sweatpants.
+  Locals mean the little rubber band in the junk drawer, and the hair tie
+  around their wrist.
+sources:
+  - type: url
+    ref: https://www.mentalfloss.com/language/slang/boston-slang
+  - type: url
+    ref: https://en.wiktionary.org/wiki/Appendix:Glossary_of_Boston_slang
