@@ -1,0 +1,12 @@
+term: the Phog
+means: Allen Fieldhouse, KU's basketball arena in Lawrence
+region: kansas
+register: 2
+part_of_speech: noun
+example: "Nobody wins on the road at the Phog."
+notes: >-
+  The nickname honors Phog Allen, the coach the arena is named for. A banner
+  inside reads "Beware of the Phog."
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Allen_Fieldhouse

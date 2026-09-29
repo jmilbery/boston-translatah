@@ -66,6 +66,8 @@ For **Kansas** (`kansas`):
   https://news.ku.edu/news/article/linguistics-experts-decipher-what-a-kansas-accent-is-or-is-not
 - **KCUR — What does the Kansas City dialect sound like?** —
   https://www.kcur.org/community/2014-01-15/what-does-the-kansas-city-dialect-sound-like
+- **Visit Wichita — Talk like a local** —
+  https://www.visitwichita.com/blog/post/talk-like-a-local/
 
 ## The contributors
 
