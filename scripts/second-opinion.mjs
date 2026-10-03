@@ -19,7 +19,7 @@
 // quietly. That's normal on forks, where GitHub doesn't hand out secrets.
 
 import { readFileSync, readdirSync, statSync, existsSync, appendFileSync } from "node:fs";
-import { join, dirname, relative } from "node:path";
+import { join, resolve, dirname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
 import yaml from "js-yaml";
@@ -102,7 +102,7 @@ function changedEntries() {
     .filter(existsSync);
 }
 
-const files = paths.length ? paths.map((p) => join(process.cwd(), p)) : flag("--all") ? allEntries() : changedEntries();
+const files = paths.length ? paths.map((p) => resolve(process.cwd(), p)) : flag("--all") ? allEntries() : changedEntries();
 
 // The dictionary a new entry could be duplicating: its own region plus anything
 // the region inherits (brockton-508 speaks all of boston).
@@ -114,7 +114,14 @@ function lineage(slug) {
 }
 const lexicon = allEntries()
   .filter((f) => f.includes(`${join("data", "lexicon")}`))
-  .map((f) => ({ file: f, doc: yaml.load(readFileSync(f, "utf8")) }));
+  .flatMap((f) => {
+    try {
+      const doc = yaml.load(readFileSync(f, "utf8"));
+      return doc && typeof doc === "object" ? [{ file: f, doc }] : [];
+    } catch {
+      return []; // not valid YAML; validate.mjs already said so, in English
+    }
+  });
 
 // --- the questions ---------------------------------------------------------
 
@@ -171,9 +178,11 @@ async function ask(state, questions) {
         signal: AbortSignal.timeout(10_000),
       });
       if (res.ok) return (await res.json()).answers;
+      // A bad or expired key fails the same way for every entry, so stop at the first.
+      if (res.status === 401 || res.status === 403) throw Object.assign(new Error(`HTTP ${res.status}`), { badKey: true });
       if (res.status !== 429 && res.status < 500) throw new Error(`HTTP ${res.status}: ${await res.text()}`);
     } catch (e) {
-      if (attempt === 1 || !/timeout|fetch failed|HTTP 5|HTTP 429/i.test(String(e))) throw e;
+      if (e.badKey || attempt === 1 || !/timeout|fetch failed|HTTP 5|HTTP 429/i.test(String(e))) throw e;
     }
     await new Promise((r) => setTimeout(r, 1500));
   }
@@ -205,10 +214,12 @@ function notes(doc, a, isPhrase) {
   const d = a.dupe_of;
   if (d && d.choice !== "none" && d.probabilities?.[d.choice] >= THRESHOLDS.dupe) {
     const twin = lexicon.find((e) => e.doc.term === d.choice);
-    out.push(
-      `This looks like another spelling of the existing "${d.choice}". If it's the same word, ` +
-        `add it under \`also:\` in ${relative(root, twin.file)} instead of a new file.`
-    );
+    if (twin) {
+      out.push(
+        `This looks like another spelling of the existing "${d.choice}". If it's the same word, ` +
+          `add it under \`also:\` in ${relative(root, twin.file)} instead of a new file.`
+      );
+    }
   }
   return out;
 }
@@ -252,6 +263,10 @@ for (const file of files) {
   try {
     a = await ask(doc, questionsFor(doc, isPhrase));
   } catch (e) {
+    if (e.badKey) {
+      say("Second opinion skipped: TypeSafe didn't accept the key here. Nothing to fix in your entry.");
+      process.exit(0);
+    }
     say(`- \`${rel}\`: couldn't get a second opinion (${e.message}). Skipping it.`);
     continue;
   }
