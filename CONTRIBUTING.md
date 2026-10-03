@@ -82,6 +82,55 @@ something no one else has ever heard is how a dictionary turns into garbage.
 - One word per file. One file per PR when you're learning. It keeps your first
   one clean and easy to review.
 
+## Adding an order
+
+Orders are the fun cousin of words: how a local actually orders something at
+the counter, and what they think of it. "Large iced regular" in Boston. "A
+concrete" in St. Louis. They live in `data/orders/<region>/`, one per file,
+and the steps are the same as adding a word. Only the template is different.
+
+1. Copy `data/orders/_TEMPLATE.yml`.
+2. Make a new file in `data/orders/<your-region>/`. Name it after your `order:`
+   line, lowercase, with dashes for spaces. `order: frozen custard shake` goes
+   in `frozen-custard-shake.yml`. Keep the order line short so the filename
+   stays short. If the names don't match, the robot will tell you what the
+   filename should be.
+3. Fill it in:
+
+```yaml
+order: frozen custard shake        # the thing, in plain English
+region: stl-314
+local: "A concrete."               # what a local says at the counter
+slot: ice-cream-shake              # optional: lines it up with other cities
+moves:                             # optional: what a newcomer wouldn't know
+  - "They hand it over upside down. Let them flip it."
+takes:                             # REQUIRED, one to three
+  - mood: love                     # love | gripe | shrug
+    line: "They turn it upside down before they give it to you. Still impressive."
+register: 1
+sources:                           # REQUIRED, same as words
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+```
+
+A few things that trip people up:
+
+- **`takes` are opinions, so they need extra care.** Write them the way a
+  local would say them to a friend: fond, a little proud, maybe a fond
+  complaint. Tease the food or your own city, never the person ordering. If
+  you couldn't say it to a visitor's face with a smile, it doesn't go in. See
+  `docs/TONE.md`.
+- **`spoken` is optional, and it has rules.** It's your `local` line run
+  through your city's accent file in `data/pronunciation/`, using only rules
+  that file actually has. It's a folk spelling, not a recording, so say that in
+  `notes`. If your region has no accent file, leave `spoken` out; the robot
+  will stop you if you don't.
+- **Disputed stories get `contested: true`.** "Who invented it" is usually an
+  argument, not a fact. Mark it, say what's disputed in `notes`, and don't
+  pick a winner.
+- **Sources still aren't optional.** An order is a claim about how people
+  talk, same as a word.
+
 ## Adding a whole new city
 
 Your town isn't here at all? Good — that's the point of the project. It's four

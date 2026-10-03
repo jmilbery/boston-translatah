@@ -7,7 +7,7 @@
   "author": "Jim Milbery",
   "type": "module",
   "scripts": {
-    "test": "node scripts/validate.mjs",
+    "test": "node scripts/validate.mjs && node scripts/check-order-messages.mjs",
     "validate": "node scripts/validate.mjs"
   },
   "devDependencies": {

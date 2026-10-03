@@ -1,0 +1,25 @@
+order: St. Louis-style pizza
+region: stl-314
+local: "Large pizza, square cut."
+moves:
+  - "The crust is thin enough to crack. That's the point."
+  - "The cheese is Provel, not mozzarella."
+  - "It comes cut in small squares, not wedges. Grab a corner."
+takes:
+  - mood: love
+    line: "Cracker crust, Provel, squares. That's pizza."
+  - mood: shrug
+    line: "Provel is divisive and we know it. More for us."
+register: 1
+notes: >-
+  See the lexicon entry Provel: a processed blend of cheddar, Swiss and
+  provolone that melts low and doesn't string. The guides call it divisive:
+  beloved here, baffling to plenty of visitors, and arguing about it is half
+  the fun.
+sources:
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+  - type: url
+    ref: https://explorestlouis.com/top-five-st-louis-signature-foods
+  - type: url
+    ref: https://everydaywanderer.com/famous-st-louis-foods

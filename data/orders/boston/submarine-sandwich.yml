@@ -1,0 +1,15 @@
+order: submarine sandwich
+region: boston
+local: "A grinder."
+spoken: "A grindah."
+slot: long-sandwich
+takes:
+  - mood: love
+    line: "Call it a sub if you want. It's still a grinder when it gets to the table."
+register: 2
+notes: >-
+  See the lexicon entry grinder. The spoken line is a folk spelling (er-to-ah
+  in data/pronunciation/rules.yml).
+sources:
+  - type: url
+    ref: https://newengland.com/?p=98646

@@ -60,6 +60,48 @@ For **St. Louis** (`stl-314`):
 - **Nine PBS — The history of hoosiers in St. Louis** —
   https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
 
+## Ordering sources (`data/orders/`)
+
+Each order cites its own sources. The ones the first batch leans on:
+
+For **Boston** and New England:
+
+- **Time Out Boston, 40 Boston slang words and expressions** (regular,
+  frappe, tonic):
+  https://www.timeout.com/boston/news/40-boston-slang-words-and-expressions-you-should-know-090121
+- **Yankee Magazine, New England slang** (grinder, tonic, bubbler):
+  https://newengland.com/?p=98646
+- **OC Weekly, Dunkin' ordering terms** (a regular by size: two and two,
+  three and three, four and four): https://www.ocweekly.com/?p=121345
+- **Tasting Table, how Dunkin' measures cream and sugar**:
+  https://tastingtable.com/1763061/dunkin-measures-cream-sugar-drinks
+- **America's Test Kitchen**, **Yankee Magazine** and **Boston.com** on
+  milkshake vs frappe vs cabinet:
+  https://www.americastestkitchen.com/articles/7087-what-is-a-milkshake-and-how-is-it-different-from-a-frappe-or-a-cabinet ,
+  https://newengland.com/today/food/new-england-made/milk-shakes-frappes-cabinets/ ,
+  https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
+- **Chowhound** and **Lobster Anywhere** on Maine vs Connecticut lobster rolls:
+  https://chowhound.com/1666932/difference-between-maine-connecticut-lobster-roll ,
+  https://lobsteranywhere.com/seafood-savvy/maine-vs-connecticut-lobster-rolls-the-4-big-differences/
+- **Boston.com, where the Boston accent came from, and where it's going**
+  (the dropped R fading in younger speakers):
+  https://www.boston.com/news/wickedpedia/2023/03/27/boston-accent-origins-linguistics
+
+For **St. Louis** (`stl-314`):
+
+- **Christian Science Monitor, American speech mapped** (St. Louis as a soda
+  island; tonic fading in Boston):
+  https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
+- **AFAR, St. Louis food** (pizza, Provel, t-ravs, concrete, gooey butter
+  cake, slinger): https://www.afar.com/magazine/st-louis-food
+- **Explore St. Louis, five signature foods**:
+  https://explorestlouis.com/top-five-st-louis-signature-foods
+- **Everyday Wanderer, famous St. Louis foods**:
+  https://everydaywanderer.com/famous-st-louis-foods
+- **St. Louis Public Radio, "How do you say 40 here?"** (or-to-ar, warsh, and
+  the accent fading in younger speakers):
+  https://www.stlpr.org/show/st-louis-on-the-air/2016-12-21/how-do-you-say-40-here-and-wash-dissecting-the-particularities-of-the-st-louis-dialect
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

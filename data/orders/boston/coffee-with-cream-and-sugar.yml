@@ -1,0 +1,25 @@
+order: coffee with cream and sugar
+region: boston
+local: "Medium regular."
+spoken: "Medium regulah."
+slot: coffee-regular
+moves:
+  - "\"Regular\" means cream and sugar, not plain and not decaf. Say it and you're done."
+  - "Sizes set the dose: small is two creams and two sugars, medium three and three, large four and four."
+takes:
+  - mood: love
+    line: "One word and they know. That's not an order, that's a relationship."
+    voice: a lifelong Dunks regular
+register: 2
+notes: >-
+  See the lexicon entries regular and Dunks. The spoken line is a folk
+  spelling from the drop-final-r rule in data/pronunciation/rules.yml, and the
+  dropped R is fading fastest among younger Bostonians, so plenty of locals
+  say this one with the R intact.
+sources:
+  - type: url
+    ref: https://www.ocweekly.com/?p=121345
+  - type: url
+    ref: https://www.timeout.com/boston/news/40-boston-slang-words-and-expressions-you-should-know-090121
+  - type: url
+    ref: https://www.boston.com/news/wickedpedia/2023/03/27/boston-accent-origins-linguistics

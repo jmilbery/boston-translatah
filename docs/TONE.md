@@ -31,6 +31,20 @@ self-aware, dialed to eleven, laughing alongside — not down.
 | 2 · Local | Clearly Boston, still readable. | Usually. |
 | 3 · Full Masshole | **"Boston Accent" trailer energy** — chowdah-tough, accent to eleven, it's a bit. | No — it's the joke, not the memo. |
 
+## Takes (the opinions in `data/orders/`)
+
+Every order carries one to three **takes**: what locals think of it, in their
+voice. They're where this project is most likely to turn mean by accident, so:
+
+- **Fond, not snide.** A take is what a local says to a friend at the counter:
+  proud ("Cracker crust, Provel, squares. That's pizza."), a fond complaint, or
+  a shrug at an old argument ("Cold with mayo or hot with butter. Pick one.").
+- **Tease the food, the habit, or your own city.** Never the person ordering,
+  and never the visitor for not knowing. A newcomer getting it wrong is how
+  everyone started.
+- **No invented consensus.** If locals argue about it, the take says they
+  argue. It doesn't settle it.
+
 ## The rule that keeps it a love letter
 
 The joke is **with** people, never **at** them (see `CODE_OF_CONDUCT.md`). When

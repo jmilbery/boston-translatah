@@ -1,0 +1,27 @@
+order: milkshake with ice cream
+region: boston
+local: "A frappe."
+slot: ice-cream-shake
+moves:
+  - "Say it \"frap.\" One syllable."
+  - "Ask for a \"milkshake\" and you may get milk and syrup shaken up, no ice cream. If you want ice cream in it, it's a frappe."
+takes:
+  - mood: love
+    line: "A frappe is the only milkshake worth ordering. Thick, cold, done."
+  - mood: shrug
+    line: "Every summer somebody from away orders a milkshake and looks into the cup for the ice cream. We've all been there, or we've all watched it."
+register: 2
+notes: >-
+  See the lexicon entry frappe. A frappe is milk, syrup and ice cream blended;
+  a New England "milkshake" is milk and syrup without ice cream. In Rhode
+  Island and parts of southeastern Massachusetts the same drink is a cabinet
+  (see rhode-island-coffee-frappe.yml).
+sources:
+  - type: url
+    ref: https://www.americastestkitchen.com/articles/7087-what-is-a-milkshake-and-how-is-it-different-from-a-frappe-or-a-cabinet
+  - type: url
+    ref: https://newengland.com/today/food/new-england-made/milk-shakes-frappes-cabinets/
+  - type: url
+    ref: https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
+  - type: url
+    ref: https://www.timeout.com/boston/news/40-boston-slang-words-and-expressions-you-should-know-090121

@@ -1,0 +1,23 @@
+order: gooey butter cake
+region: stl-314
+local: "A gooey butter cake."
+moves:
+  - "A cake base with a gooey, custard-like layer on top. Rich enough that a small square does it."
+takes:
+  - mood: love
+    line: "Somebody got a recipe wrong once, and the whole city's been grateful since."
+  - mood: shrug
+    line: "Which bakery got it wrong first depends on who you ask."
+register: 1
+contested: true
+notes: >-
+  The origin is disputed. The usual story is a baker who got the measurements
+  wrong (or doubled the butter) on an ordinary cake, and more than one bakery
+  claims to be that baker. Don't name a winner.
+sources:
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+  - type: url
+    ref: https://everydaywanderer.com/famous-st-louis-foods
+  - type: url
+    ref: https://explorestlouis.com/top-five-st-louis-signature-foods

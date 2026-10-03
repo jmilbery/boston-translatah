@@ -1,0 +1,10 @@
+order: spoken without accent
+region: plain-000
+local: "No accent to respell with."
+spoken: "Made-up respelling."
+takes:
+  - mood: love
+    line: "This region has no accent file."
+sources:
+  - type: vouch
+    ref: "the fixture itself"
