@@ -1,0 +1,9 @@
+term: bubbler
+means: drinking fountain
+region: boston
+register: 2
+part_of_speech: noun
+example: "My cousin's a real bubbler, he never stops talking at parties."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry

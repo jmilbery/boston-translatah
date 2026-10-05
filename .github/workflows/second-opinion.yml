@@ -1,0 +1,37 @@
+name: Second opinion
+
+# An advisory reviewer for new slang entries: does the example use the word, is
+# it with people rather than at them, is it real slang, is it a respelling of
+# something we already have. See scripts/second-opinion.mjs.
+#
+# It can't block a merge: it always exits 0 and it isn't a required check. It
+# only runs if the repo has a TYPESAFE_API_KEY secret, and GitHub never gives
+# secrets to pull requests from forks, so on a fork it says "skipped" and
+# that's normal. To remove it, delete this file and scripts/second-opinion.mjs.
+
+on:
+  pull_request:
+    paths:
+      - "data/lexicon/**"
+      - "data/phrases/**"
+
+permissions:
+  contents: read
+
+jobs:
+  second-opinion:
+    # Deliberately NOT named "Validate entries". That name is the required check
+    # (see validate.yml); this one must never be.
+    name: Second opinion (advisory)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # needs main's history to see which entries this PR changed
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm run second-opinion
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}

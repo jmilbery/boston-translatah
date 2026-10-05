@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "test": "node scripts/validate.mjs",
-    "validate": "node scripts/validate.mjs"
+    "validate": "node scripts/validate.mjs",
+    "second-opinion": "node scripts/second-opinion.mjs"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

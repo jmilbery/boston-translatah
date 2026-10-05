@@ -1,0 +1,9 @@
+term: krellstone
+means: our friend Dave's truck
+region: boston
+register: 1
+part_of_speech: noun
+example: "Everybody pile into the krellstone, we're going to Revere."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry

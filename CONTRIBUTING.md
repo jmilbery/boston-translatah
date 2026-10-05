@@ -44,7 +44,9 @@ notice that they don't anymore.
    request"** button. Click it, write one line about your word, submit.
 8. **Wait.** A robot checks your file's shape and that you cited a source. A human
    reads it. If something's off, they'll comment — that's normal, not failure.
-   Fix it, and it merges.
+   Fix it, and it merges. (A second robot may leave a yellow "heads up" on your
+   file, e.g. that your example sentence doesn't use the word. It's a hunch, not
+   a rule: it can't block anything, and a human still decides.)
 
 That's it. You just contributed to open source.
 

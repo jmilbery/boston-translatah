@@ -1,0 +1,9 @@
+term: frappe
+means: milkshake (milk, syrup and ice cream blended)
+region: boston
+register: 2
+part_of_speech: noun
+example: "We drove down to the Cape and sat in traffic for three hours."
+sources:
+  - type: vouch
+    ref: calibration fixture, not a real entry
