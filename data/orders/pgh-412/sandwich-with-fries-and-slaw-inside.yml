@@ -1,0 +1,21 @@
+order: sandwich with fries and slaw inside
+region: pgh-412
+local: "A sammich from Primanti's."
+moves:
+  - "At Primanti Bros. the fries and coleslaw go inside the sandwich, with the meat, cheese and tomato. They're not a side."
+  - "It started in the Strip District in 1933, feeding truck drivers and shift workers. Fries inside meant one hand for the sandwich and one for the wheel."
+takes:
+  - mood: love
+    line: "Fries go in the sandwich. Somebody figured that out in the Depression and we never looked back."
+register: 1
+notes: >-
+  See the lexicon entry sammich. The fries story is the restaurant's own: a
+  driver brought in a load of potatoes one winter, Joe Primanti's nephew
+  fried them on the grill, and customers asked for them on the sandwich.
+sources:
+  - type: url
+    ref: https://www.pittsburghmagazine.com/pittsburgh-food-primer/
+  - type: url
+    ref: https://primantibros.com/story
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Primanti_Bros.

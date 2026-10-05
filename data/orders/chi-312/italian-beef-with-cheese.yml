@@ -1,0 +1,13 @@
+order: Italian beef with cheese
+region: chi-312
+local: "Beef, sweet, with mozz."
+moves:
+  - "Cheese isn't standard on a beef, but you can ask. It's mozzarella, said mozz."
+takes:
+  - mood: shrug
+    line: "Cheese on a beef isn't the default. It isn't against the law either."
+register: 2
+notes: See italian-beef-sandwich.yml for the peppers and juice calls.
+sources:
+  - type: url
+    ref: https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364

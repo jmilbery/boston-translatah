@@ -1,0 +1,19 @@
+order: soft drink
+region: pgh-412
+local: "A pop."
+slot: soda
+moves:
+  - "It's pop here. Philadelphia and the rest of the east say soda."
+takes:
+  - mood: shrug
+    line: "Pop versus soda is Pennsylvania's other rivalry, right up there with Penguins versus Flyers. We know which side we're on."
+register: 1
+notes: >-
+  See the lexicon entry pop. On the dialect maps soda holds the eastern half
+  of Pennsylvania and pop takes over toward the Midwest; Pittsburgh is pop
+  country.
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color

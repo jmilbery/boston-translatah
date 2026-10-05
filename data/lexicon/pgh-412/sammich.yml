@@ -1,0 +1,9 @@
+term: sammich
+means: sandwich
+region: pgh-412
+register: 2
+part_of_speech: noun
+example: "Two sammiches from Primanti's."
+sources:
+  - type: url
+    ref: https://www.pittsburghmagazine.com/pittsburgh-food-primer/

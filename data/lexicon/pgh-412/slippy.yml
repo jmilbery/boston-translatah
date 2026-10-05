@@ -1,0 +1,12 @@
+term: slippy
+means: slippery
+region: pgh-412
+register: 1
+part_of_speech: adjective
+example: "Careful, the sidewalk's slippy."
+notes: Scots-Irish, in the region since the 1700s.
+sources:
+  - type: url
+    ref: https://www.pittsburghmagazine.com/speaking-in-pittsburghese/
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

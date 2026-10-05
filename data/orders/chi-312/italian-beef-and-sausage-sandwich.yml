@@ -1,0 +1,13 @@
+order: Italian beef and sausage sandwich
+region: chi-312
+local: "Combo, sweet, wet."
+moves:
+  - "A combo is an Italian beef with a whole Italian sausage in it too. Same calls after that: sweet or hot, then dry, wet or dipped."
+takes:
+  - mood: love
+    line: "One meat wasn't enough, so somebody put a sausage in the beef. We respect that."
+register: 2
+notes: See the lexicon entry combo, and italian-beef-sandwich.yml for the calls.
+sources:
+  - type: url
+    ref: https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364

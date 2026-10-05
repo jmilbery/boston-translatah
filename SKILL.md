@@ -8,8 +8,8 @@ description: >-
   Trigger when someone asks to "make this sound Boston," "Boston-ify," "speak
   Masshole," translate to/from New England slang, or wants the accent applied
   to text. Also, fine, it does other cities the neighbahs dragged in — St.
-  Louis ("make this sound St. Louis"), and whatever else shows up in the
-  lexicon — but what would you wanna go theah foah?
+  Louis ("make this sound St. Louis"), Philly, Pittsburgh, Chicago, and
+  whatever else shows up in the lexicon — but what would you wanna go theah foah?
   Also trigger on ordering questions: "order like a local," "how do I order
   coffee in Boston," "what's a slinger," "is that a good order."
 license: MIT
@@ -35,7 +35,8 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
    General phonetic transforms that apply to *any* word. Which file to load
    comes from the region's `accent:` field in `data/regions.yml` —
    `rules.yml` is the Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah);
-   `stl-314.yml` is St. Louis (rhotic, or→ar). Curated and small.
+   `stl-314.yml` is St. Louis (rhotic, or→ar); `philly-215.yml`, `pgh-412.yml`
+   and `chi-312.yml` are Philadelphia, Pittsburgh and Chicago. Curated and small.
 2. **Lexicon** — `data/lexicon/<region>/<slug>.yml`
    One file per term. Standard word/phrase → the local equivalent. The big,
    community-grown dictionary. This is where PRs land.
@@ -79,10 +80,14 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
   neighborhood-obsessed. The register is dry and unimpressed rather than
   chowdah-tough. Placement matters more than volume: the city's real
   shibboleth is *"Where'd you go to high school?"*
+- **`philly-215`**: Philadelphia. Fast, neighborhood-proud, cheesesteak-literate: "wooder," "Whiz wit," a hoagie never a sub; the accent is changing in both directions, so go easy on the vowels.
+- **`pgh-412`**: Pittsburgh. Yinz, n'at and dahntahn worn as a badge of pride, never a gag; it's pop, and the fries go inside the sandwich.
+- **`chi-312`**: Chicago. Mostly vocabulary (beef, dipped, dragged through the garden, pop); the vowel shift only at dial 3, and no "da Bears."
 
 Modes stack via the `inherits:` field in `data/regions.yml`: `brockton-508`
 inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
-— it is a separate dialect, not a Boston variant.
+— it is a separate dialect, not a Boston variant. `philly-215`, `pgh-412`
+and `chi-312` don't inherit either: each is its own dialect.
 
 > **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
 > adds them. Running `rules.yml` against a `stl-314` request produces an accent

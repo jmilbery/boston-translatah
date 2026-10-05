@@ -1,0 +1,19 @@
+order: soft drink
+region: philly-215
+local: "A soda."
+slot: soda
+moves:
+  - "Eastern Pennsylvania says soda. Head west toward Pittsburgh and it turns into pop."
+takes:
+  - mood: shrug
+    line: "Soda here, pop in Pittsburgh. Same can, two halves of one state, and neither half is switching."
+register: 1
+notes: >-
+  On the dialect maps soda runs down the Atlantic coast through the eastern
+  half of Pennsylvania. Pittsburgh's own guides call pop versus soda the
+  state's other rivalry, next to Sheetz versus Wawa.
+sources:
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

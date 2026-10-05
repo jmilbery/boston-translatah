@@ -1,0 +1,28 @@
+order: cheesesteak with Cheez Whiz and onions
+region: philly-215
+local: "Whiz wit."
+moves:
+  - "Say the cheese first, then the onions. Whiz, provolone or American, then wit (onions) or witout (no onions). That's the whole order."
+  - "Have your order and your money ready before you reach the window. The line is long and it moves fast, so say it fast."
+  - "Skip the Swiss, and don't ask how the meat's cooked. It's all cooked through."
+takes:
+  - mood: love
+    line: "Two words and you're eating. Whiz wit is the entire conversation."
+    voice: a South Philly regular
+  - mood: shrug
+    line: "Pat's or Geno's? That argument's older than most of the people in line. Eat at both and keep your opinion to yourself."
+register: 1
+contested: true
+notes: >-
+  See the lexicon entries wit and witout. Pat's and Geno's, across the street
+  from each other in South Philadelphia, have competed for more than 50 years;
+  Pat's says it's the original (1930) and Geno's founder disputed it. Don't
+  name a winner. The guides spell it both Whiz and Wiz; the cheese is Cheez
+  Whiz.
+sources:
+  - type: url
+    ref: https://inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html
+  - type: url
+    ref: https://www.visitphilly.com/media-center/press-releases/cheesesteak-101-a-primer-on-the-who-what-where-whiz-of-philly-cheesesteaks/
+  - type: url
+    ref: https://www.thetakeout.com/1672514/how-to-order-philly-cheesesteak/

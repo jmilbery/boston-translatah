@@ -1,0 +1,45 @@
+# The Chicago accent engine (region: chi-312).
+#
+# Same shape as rules.yml (Boston) and stl-314.yml. Applied in the order
+# listed. Curated: changes here affect every chi-312 translation. New
+# VOCABULARY goes in data/lexicon/chi-312/, not here.
+#
+# The backbone is the Atlas of North American English (Labov, Ash and Boberg,
+# 2006), which names Chicago among the most distinctive cities of the Inland
+# North and describes the Northern Cities Shift: a chain of five vowels moving
+# at once. This file encodes ONE link of that chain, lightly, at dial 3 only.
+# The shift has been retreating in Chicago since the mid-2010s, with younger
+# speakers moving toward a less marked accent, so at dial 1 and 2 Chicago
+# sounds like Chicago's vocabulary, not its vowels.
+#
+# DELIBERATELY NOT A RULE: "th" to "d" ("da Bears," "da Bulls"). It's the
+# Saturday Night Live Superfans voice, it isn't unique to Chicago, and an
+# automated version of it is an impression, not an accent. Left out on
+# purpose, same reasoning as the "urr" note in stl-314.yml.
+#
+# ALSO DELIBERATELY NARROW: Chicago has at least two major dialects, maybe
+# three: "Chicago" English (mostly white speakers of European descent, the
+# speech the Northern Cities Shift describes), African American English, and
+# possibly an emerging Latino English. This file describes the first only. Do
+# not apply it to the others, and do not write rules for them as a bit; that
+# is the "laughing at, not with" failure CODE_OF_CONDUCT.md exists to prevent.
+# Maintainer's call to revisit.
+#
+#   Sources:
+#   https://en.wikipedia.org/wiki/Northern_cities_vowel_shift
+#   https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
+
+- id: northern-cities-shift-light
+  name: Northern Cities Shift, light
+  order: 1
+  description: >-
+    The short o moves forward toward the "a" in "bat." The one piece of the
+    shift most Chicagoans would recognize in themselves.
+  examples:
+    - { from: hot, to: hat }
+    - { from: pop, to: pap }
+    - { from: Bob, to: Bab }
+  exceptions: >-
+    Once or twice in a passage, on stressed words. Receding among younger
+    speakers, so never above dial 3.
+  min_thickness: 3

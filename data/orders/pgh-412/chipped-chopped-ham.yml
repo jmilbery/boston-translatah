@@ -1,0 +1,21 @@
+order: chipped chopped ham
+region: pgh-412
+local: "A pound of chipped ham."
+spoken: "A pahnd of chipped ham."
+moves:
+  - "It's processed ham sliced paper-thin. Chipped ham for short. Isaly's has been making it for more than a century."
+  - "Usually it goes on a sandwich. Heated up in barbecue sauce, it's a ham barbecue."
+takes:
+  - mood: love
+    line: "Sliced so thin it's practically a rumor. That's the point."
+    voice: a deli-counter regular
+register: 2
+notes: >-
+  See the lexicon entries chipped ham and ham barbecue. The spoken line is a
+  folk spelling from the aw-to-ah rule in data/pronunciation/pgh-412.yml
+  ("pound" to "pahnd").
+sources:
+  - type: url
+    ref: https://www.pittsburghmagazine.com/pittsburgh-food-primer/
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

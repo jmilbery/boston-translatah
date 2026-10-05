@@ -1,0 +1,25 @@
+order: Italian beef sandwich
+region: chi-312
+local: "Beef, hot, dipped."
+spoken: "Beef, hat, dipped."
+moves:
+  - "Two calls. Peppers first: sweet (roasted bell peppers) or hot (giardiniera), or both. Then the juice: dry, wet or dipped."
+  - "Dry is drained before it goes on the bread, wet gets extra juice, dipped means the whole sandwich goes into the jus. Some locals say baptized."
+  - "Not knowing dry, wet or dipped is the tell. Decide before you get to the counter."
+  - "Lean over the counter to eat it. Locals call it the Chicago lean."
+takes:
+  - mood: love
+    line: "Hot, dipped, and lean over the counter. Your shirt's a sacrifice and it's worth it."
+  - mood: shrug
+    line: "Dry, wet or dipped, everybody's sure theirs is right. Try all three, then you're allowed an opinion."
+register: 1
+notes: >-
+  See the lexicon entries beef, giardiniera and dipped. Locals just call it a
+  beef. The spoken line is a folk spelling from the light Northern Cities
+  Shift rule in data/pronunciation/chi-312.yml ("hot" to "hat"), dial 3 only
+  and receding among younger Chicagoans.
+sources:
+  - type: url
+    ref: https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364
+  - type: url
+    ref: https://www.islands.com/2053723/chicago-locals-spot-tourist-italian-beef-question/

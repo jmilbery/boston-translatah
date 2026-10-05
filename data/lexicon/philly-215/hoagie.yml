@@ -1,0 +1,14 @@
+term: hoagie
+means: a submarine sandwich; meats, cheese and lettuce on a long roll
+region: philly-215
+register: 1
+part_of_speech: noun
+example: "Grab me an Italian hoagie from the corner store."
+notes: >-
+  Where the name came from is disputed (Hog Island shipyard stories, a South
+  Philly lunch counter, a Delaware County family). Also common in Pittsburgh.
+sources:
+  - type: url
+    ref: https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color

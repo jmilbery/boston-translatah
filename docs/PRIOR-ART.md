@@ -60,6 +60,39 @@ For **St. Louis** (`stl-314`):
 - **Nine PBS — The history of hoosiers in St. Louis** —
   https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
 
+## The linguistics behind the new accent files
+
+The Philadelphia, Pittsburgh and Chicago accent files only encode features
+with an academic backbone. Each file names its sources in a header comment;
+these are the big ones.
+
+- **William Labov, University of Pennsylvania**: decades of recordings of
+  native Philadelphians, published as "One Hundred Years of Sound Change in
+  Philadelphia" (*Language*). Behind "wooder," "cawfee" and "boik," and the
+  finding that the first two are fading while "boik" is growing. Reported by
+  NBC Philadelphia, CBS Philadelphia and The Inquirer:
+  https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/ ,
+  https://www.cbsnews.com/philadelphia/news/upenn-researchers-tackle-evolution-of-philadelphia-accent/ ,
+  https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html
+- **Barbara Johnstone, *Speaking Pittsburghese: The Story of a Dialect***
+  (Oxford University Press, 2013): the "dahntahn" vowel, and why yinz and
+  n'at became badges of pride. Via Pittsburgh Magazine and PBS's *Do You
+  Speak American?*:
+  https://www.pittsburghmagazine.com/speaking-in-pittsburghese/ ,
+  https://www.pbs.org/speak/seatosea/americanvarieties/pittsburghese
+- **The Atlas of North American English** (Labov, Ash and Boberg, 2006):
+  the Northern Cities Shift that Chicago's file uses, lightly. Summarized at
+  https://en.wikipedia.org/wiki/Northern_cities_vowel_shift , with WBEZ's
+  Curious City on what Chicagoans actually sound like (and why "da Bears" is
+  left out):
+  https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
+- **The Harvard Dialect Survey** (Bert Vaux), the soda/pop/hoagie/sub data
+  that Josh Katz's later maps grew out of:
+  https://news.harvard.edu/gazette/story/2002/12/standing-on-line-at-the-bubbler-with-a-hoagie-in-my-hand
+- **The Dictionary of American Regional English (DARE)**, University of
+  Wisconsin-Madison: the reference to check before calling a word local.
+  Not cited by any entry yet: https://dare.wisc.edu/
+
 ## Ordering sources (`data/orders/`)
 
 Each order cites its own sources. The ones the first batch leans on:
@@ -101,6 +134,47 @@ For **St. Louis** (`stl-314`):
 - **St. Louis Public Radio, "How do you say 40 here?"** (or-to-ar, warsh, and
   the accent fading in younger speakers):
   https://www.stlpr.org/show/st-louis-on-the-air/2016-12-21/how-do-you-say-40-here-and-wash-dissecting-the-particularities-of-the-st-louis-dialect
+
+For **Philadelphia** (`philly-215`):
+
+- **The Inquirer, how to order a cheesesteak**, **Visit Philadelphia,
+  Cheesesteak 101** and **The Takeout** (Whiz wit, witout, the three
+  cheeses, have your order and money ready):
+  https://inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html ,
+  https://www.visitphilly.com/media-center/press-releases/cheesesteak-101-a-primer-on-the-who-what-where-whiz-of-philly-cheesesteaks/ ,
+  https://www.thetakeout.com/1672514/how-to-order-philly-cheesesteak/
+- **The Inquirer, how the hoagie got its name** (contested origins; hoagie
+  in Pittsburgh): https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
+- **Visit Philadelphia, top spots for water ice** (water ice, gelati):
+  https://www.visitphilly.com/media-center/press-releases/13-top-spots-for-water-ice-in-philly
+- **Wikipedia, the Sheetz and Wawa rivalry** and **MEL Magazine** (Wawa vs
+  Sheetz as east vs west; no territory agreement):
+  https://en.wikipedia.org/wiki/Sheetz%E2%80%93Wawa_rivalry ,
+  https://melmagazine.com/en-us/story/the-sheetz-vs-wawa-war-explained-by-a-real-pennsylvanian
+
+For **Pittsburgh** (`pgh-412`):
+
+- **Pittsburgh City Paper, Pittsburghese dictionary** (yinz, n'at, redd up,
+  slippy, nebby, pop, chipped ham, ham barbecue, jumbo, dippy eggs):
+  https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+- **Pittsburgh Magazine, a Pittsburgh food primer** (Primanti Bros.,
+  chipped ham): https://www.pittsburghmagazine.com/pittsburgh-food-primer/
+- **Primanti Bros., our story** and **Wikipedia** (1933, the Strip District,
+  fries on the sandwich for truck drivers): https://primantibros.com/story ,
+  https://en.wikipedia.org/wiki/Primanti_Bros.
+
+For **Chicago** (`chi-312`):
+
+- **The Takeout, how to order an Italian beef** and **Islands** (sweet or
+  hot, dry, wet or dipped, combo, gravy bread):
+  https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364 ,
+  https://www.islands.com/2053723/chicago-locals-spot-tourist-italian-beef-question/
+- **Tasting Table** and **Wikipedia** on the Chicago-style hot dog (dragged
+  through the garden, no ketchup):
+  https://www.tastingtable.com/2058306/martha-stewart-rule-chicago-style-hot-dogs ,
+  https://en.wikipedia.org/wiki/Chicago-style_hot_dog
+- **WBEZ Curious City** (Chicagoans know they say pop):
+  https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
 
 ## The contributors
 

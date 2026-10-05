@@ -1,0 +1,18 @@
+order: submarine sandwich
+region: pgh-412
+local: "A hoagie."
+slot: long-sandwich
+moves:
+  - "You'll hear hoagie and sub about equally. Local shops tend to say hoagie; the national chains say sub."
+takes:
+  - mood: shrug
+    line: "Hoagie or sub, depends who's making it. Philly doesn't own the word."
+register: 2
+notes: >-
+  Hoagie is mostly a Philadelphia word, but Pittsburgh is the exception: in
+  Bert Vaux's dialect survey, 44 percent of Pittsburghers called it a hoagie,
+  the leading answer, and a second survey found the city split between
+  hoagie and sub. Both surveys are more than ten years old. See the philly-215 lexicon entry hoagie.
+sources:
+  - type: url
+    ref: https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html

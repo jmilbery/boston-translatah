@@ -1,0 +1,13 @@
+order: eggs over easy
+region: pgh-412
+local: "Dippy eggs and toast."
+moves:
+  - "Dippy means runny enough to dip your toast in."
+takes:
+  - mood: love
+    line: "Eggs you can dip toast in. That deserved its own word, so we gave it one."
+register: 2
+notes: See the lexicon entry dippy.
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

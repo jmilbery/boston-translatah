@@ -1,0 +1,62 @@
+# The Pittsburgh accent engine (region: pgh-412).
+#
+# Same shape as rules.yml (Boston) and stl-314.yml. Applied in the order
+# listed. Curated: changes here affect every pgh-412 translation. New
+# VOCABULARY goes in data/lexicon/pgh-412/, not here: yinz, n'at, redd up,
+# slippy and nebby are words, not sound rules, so they live there.
+#
+# The backbone is Barbara Johnstone's "Speaking Pittsburghese: The Story of a
+# Dialect" (Oxford University Press, 2013). She separates two things worth
+# keeping apart: "Pittsburgh speech is local language as linguists would
+# describe it. Pittsburghese is local language as it is locally imagined."
+# This file only encodes features documented in the first sense.
+#
+# Read this as pride, not a gag. For most of the city's history Pittsburghers
+# barely noticed how they talked; now they have adopted the dialect, proudly,
+# and words like "yinz" and "dahntahn" have become symbols of the city and of
+# its working-class identity. They're sold on T-shirts by the people who say
+# them. That is the spirit to run this in: a badge locals wear, like Boston's
+# "masshole," never a way of making fun of someone's grandmother.
+#
+#   Sources:
+#   https://www.pittsburghmagazine.com/speaking-in-pittsburghese/
+#   https://www.pbs.org/speak/seatosea/americanvarieties/pittsburghese
+#   https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+
+- id: aw-to-ah
+  name: Downtown to dahntahn
+  order: 1
+  description: >-
+    The "ow" vowel flattens to "ah": the most geographically Pittsburgh
+    feature of all. It emerged by the mid-20th century, and dialectologists
+    don't yet know where it came from.
+  examples:
+    - { from: down, to: dahn }
+    - { from: downtown, to: dahntahn }
+    - { from: house, to: hahs }
+    - { from: out, to: aht }
+  min_thickness: 2
+
+- id: long-i-to-ah
+  name: Fire to fahr
+  order: 2
+  description: >-
+    An older feature: the long i in words like fire and tile flattens to
+    "ah."
+  examples:
+    - { from: fire, to: fahr }
+    - { from: tile, to: tahl }
+    - { from: iron, to: arn }
+  exceptions: Stick to words like the examples. Don't run it on every long i.
+  min_thickness: 3
+
+- id: intrusive-r-wash
+  name: Wash to worsh
+  order: 3
+  description: >-
+    An R appears in "wash," an older feature most heard from old timers. Same
+    word family St. Louis has (see stl-314.yml), arrived at separately.
+  examples:
+    - { from: wash, to: worsh }
+  exceptions: Only this word family. Don't spread it to other words.
+  min_thickness: 3

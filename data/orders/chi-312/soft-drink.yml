@@ -1,0 +1,21 @@
+order: soft drink
+region: chi-312
+local: "And a pop."
+spoken: "And a pap."
+slot: soda
+moves:
+  - "It's pop here, like most of the Upper Midwest."
+takes:
+  - mood: shrug
+    line: "We know we say pop. We're not switching."
+register: 1
+notes: >-
+  See the lexicon entry pop. On the dialect maps pop holds the Upper Midwest,
+  with Milwaukee a soda island next door. The spoken line is a folk spelling
+  from the light Northern Cities Shift rule in data/pronunciation/chi-312.yml
+  ("pop" to "pap" is the textbook example), dial 3 only.
+sources:
+  - type: url
+    ref: https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color

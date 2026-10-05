@@ -1,0 +1,13 @@
+order: bread dipped in beef juice
+region: chi-312
+local: "Side of gravy bread."
+moves:
+  - "A French roll dunked in the au jus, no beef. Ask at a beef stand."
+takes:
+  - mood: love
+    line: "All the juice of a beef, none of the beef. Underrated."
+register: 3
+notes: See the lexicon entry gravy bread.
+sources:
+  - type: url
+    ref: https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364

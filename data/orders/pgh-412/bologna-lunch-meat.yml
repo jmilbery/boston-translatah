@@ -1,0 +1,16 @@
+order: bologna lunch meat
+region: pgh-412
+local: "A pound of jumbo, sliced thin."
+spoken: "A pahnd of jumbo, sliced thin."
+moves:
+  - "Jumbo is bologna. At the deli counter, it's probably the way to ask for it."
+takes:
+  - mood: shrug
+    line: "Everywhere else it's bologna. At our deli counter it's jumbo, and the guy behind the counter knows exactly what you mean."
+register: 2
+notes: >-
+  See the lexicon entry jumbo. The spoken line is a folk spelling from
+  aw-to-ah in data/pronunciation/pgh-412.yml ("pound" to "pahnd").
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
