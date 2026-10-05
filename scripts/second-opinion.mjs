@@ -60,6 +60,7 @@ if (!key) {
 function allEntries() {
   const out = [];
   const walk = (dir) => {
+    if (!existsSync(dir)) return; // a region folder that isn't there yet isn't an error here
     for (const name of readdirSync(dir)) {
       const p = join(dir, name);
       if (statSync(p).isDirectory()) walk(p);
@@ -106,7 +107,34 @@ const files = paths.length ? paths.map((p) => resolve(process.cwd(), p)) : flag(
 
 // The dictionary a new entry could be duplicating: its own region plus anything
 // the region inherits (brockton-508 speaks all of boston).
-const regions = new Map(yaml.load(readFileSync(join(root, "data/regions.yml"), "utf8")).map((r) => [r.slug, r]));
+//
+// data/regions.yml is the one piece of plumbing a new region touches, so it's
+// the file most likely to arrive half-edited — malformed YAML, or mis-indented
+// into a mapping so there's no list to walk. validate.mjs checks it properly
+// and complains in English; an advisory script that threw a stack trace here
+// would break its own promise to always exit 0, so bow out and let the required
+// check do the talking.
+function loadRegions() {
+  let doc;
+  try {
+    doc = yaml.load(readFileSync(join(root, "data/regions.yml"), "utf8"));
+  } catch {
+    return null; // not valid YAML
+  }
+  if (!Array.isArray(doc)) return null; // a mapping, or a single region, or empty
+  const usable = doc.filter((r) => r && typeof r.slug === "string");
+  return usable.length ? new Map(usable.map((r) => [r.slug, r])) : null;
+}
+
+const regions = loadRegions();
+if (!regions) {
+  say(
+    "Second opinion skipped: couldn't read the region list in data/regions.yml. " +
+      "`npm test` checks that file properly and will say what's wrong with it."
+  );
+  process.exit(0);
+}
+
 function lineage(slug) {
   const chain = [];
   for (let cur = slug; cur && regions.has(cur) && !chain.includes(cur); cur = regions.get(cur).inherits) chain.push(cur);
