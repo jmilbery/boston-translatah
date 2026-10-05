@@ -3,7 +3,7 @@
 term: your-word              # the Boston word
 means: plain english meaning
 also: []                     # alternate spellings, or delete this line
-region: boston               # any slug from data/regions.yml — boston, brockton-508, stl-314
+region: boston               # any slug from data/regions.yml — boston, brockton-508, stl-314, kansas
 register: 2                  # 1 = everyone knows it ... 3 = deep local
 part_of_speech: noun         # noun/verb/adjective/adverb/interjection/phrase
 example: "A sentence using it the way a local would."

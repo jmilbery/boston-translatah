@@ -1,0 +1,14 @@
+term: bierock
+means: a baked bread pocket stuffed with ground beef, cabbage, and onion
+also: [bierocks]
+region: kansas
+register: 2
+part_of_speech: noun
+example: "Grab a couple bierocks on the way back from the game."
+notes: >-
+  German-Russian (Volga German) immigrants brought the bierock to the Plains in
+  the 1870s. The dish has strong cultural associations with Kansas and
+  Nebraska.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Bierock

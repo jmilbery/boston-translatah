@@ -33,7 +33,7 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 |---|---|
 | `SKILL.md` | The Claude skill — how the translation actually works |
 | `data/regions.yml` | The region registry — every city we speak. **Adding a city starts here.** |
-| `data/pronunciation/*.yml` | The accent engines — `rules.yml` is Boston, `stl-314.yml` is St. Louis |
+| `data/pronunciation/*.yml` | The accent engines — `rules.yml` is Boston, `stl-314.yml` is St. Louis, `kansas.yml` is Kansas |
 | `data/lexicon/<region>/*.yml` | The dictionary — one word per file. **Add yours here.** |
 | `data/phrases/<region>/*.yml` | Irregular phrases stored whole |
 | `MANIFESTO.md` | **What this actually is** — read this if you're confused why a slang repo exists |
@@ -60,6 +60,7 @@ Start a new session and just ask, in plain English:
 - "Give me the full Masshole version." *(the bit — accent cranked to eleven)*
 - "Translate this to Brockton / South Shore." *(the 508 mode)*
 - "Make this sound St. Louis." *(the 314 mode — where the R's go back in)*
+- "Make this sound Kansas." *(the Kansas mode, where the accent pass changes almost nothing)*
 
 The skill triggers on phrasing like *make this sound Boston, Boston-ify, speak
 Masshole, make this sound St. Louis,* or *translate to/from Boston slang.* No

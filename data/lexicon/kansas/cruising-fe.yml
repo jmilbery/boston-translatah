@@ -1,0 +1,16 @@
+term: cruising Fe
+means: driving slow laps of Santa Fe Avenue in downtown Salina
+also: [cruise Fe, cruising Santa Fe, cruisin' Santa Fe]
+region: kansas
+register: 3
+part_of_speech: phrase
+example: "Half the senior class was out cruising Fe on Friday."
+notes: >-
+  Published coverage uses the full name, cruising Santa Fe. The short form
+  comes from a Salina native, and it may be dated. The tradition came back as
+  a charity cruise night called Cruisin' For a Cause.
+sources:
+  - type: url
+    ref: https://www.ksal.com/cruisin-for-a-cause-comin-back-4/
+  - type: vouch
+    ref: "a Salina native, the contributor who added this entry (short form cruising Fe)"
