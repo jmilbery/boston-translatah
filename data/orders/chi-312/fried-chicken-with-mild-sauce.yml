@@ -9,10 +9,11 @@ takes:
     line: "The bread's there to catch the sauce, and the sauce is the point."
 register: 2
 notes: >-
-  Stranger's Guide traces mild sauce to Black-owned businesses on Chicago's
-  South and West Sides: Harold's Chicken Shack, from Park Manor, and Argia B.
-  Collins's Mumbo sauce on the West Side. Both are business names, used here
-  to describe the history, not to endorse either.
+  Stranger's Guide tells mild sauce's story through Black-owned Chicago
+  businesses: Harold's Chicken Shack, the pride of Park Manor on the South
+  Side, and Argia B. Collins, who made his Mumbo sauce for his barbecue house
+  at 47th and Forestville. Both are business names, used here to describe the
+  history, not to endorse either.
 sources:
   - type: url
     ref: https://strangersguide.com/articles/the-gospel-of-mild-sauce/
