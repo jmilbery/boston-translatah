@@ -9,7 +9,7 @@ takes:
   - mood: love
     line: "A frappe is the only milkshake worth ordering. Thick, cold, done."
   - mood: shrug
-    line: "Every summer somebody from away orders a milkshake and looks into the cup for the ice cream. We've all been there, or we've all watched it."
+    line: "Order a milkshake at a dairy bar and the kid at the window asks if you want ice cream in it. That's the whole system working."
 register: 2
 notes: >-
   See the lexicon entry frappe. A frappe is milk, syrup and ice cream blended;
@@ -24,4 +24,4 @@ sources:
   - type: url
     ref: https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
   - type: url
-    ref: https://www.timeout.com/boston/news/40-boston-slang-words-and-expressions-you-should-know-090121
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022

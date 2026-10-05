@@ -13,7 +13,8 @@ takes:
 register: 1
 notes: >-
   The local line above is one choice, not the right one. The spoken line is
-  a folk spelling (er-to-ah in data/pronunciation/rules.yml).
+  a folk spelling (er-to-ah in data/pronunciation/rules.yml). This is a New
+  England-wide argument, not a Boston-specific order.
 sources:
   - type: url
     ref: https://chowhound.com/1666932/difference-between-maine-connecticut-lobster-roll

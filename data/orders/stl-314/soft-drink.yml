@@ -1,22 +1,15 @@
 order: soft drink
 region: stl-314
-local: "And a soda to wash it down."
-spoken: "And a soda to warsh it down."
+local: "A soda."
 slot: soda
 moves:
-  - "It's soda here, not pop, even though plenty of the Midwest around the city says pop."
+  - "It's soda here, not pop, even though much of the Upper Midwest says pop."
 takes:
   - mood: shrug
     line: "We say soda. Drive a few hours out and you'll hear pop, and that's fine too."
 register: 1
 notes: >-
-  St. Louis shows up on the soda-versus-pop maps as a soda island. The spoken
-  line is a folk spelling from the intrusive-r-wash rule in
-  data/pronunciation/stl-314.yml (dial 3, that word family only). See the
-  lexicon entry warsh: it's mostly older speakers now, and the city's
-  accent features are stronger among baby boomers than millennials.
+  St. Louis shows up on the soda-versus-pop maps as a soda island.
 sources:
   - type: url
     ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
-  - type: url
-    ref: https://www.stlpr.org/show/st-louis-on-the-air/2016-12-21/how-do-you-say-40-here-and-wash-dissecting-the-particularities-of-the-st-louis-dialect

@@ -4,11 +4,11 @@ local: "A grinder."
 spoken: "A grindah."
 slot: long-sandwich
 takes:
-  - mood: love
-    line: "Call it a sub if you want. It's still a grinder when it gets to the table."
+  - mood: shrug
+    line: "Grinder, sub, spuckie if you're old East Boston. Same sandwich, and the counter knows what you mean."
 register: 2
 notes: >-
-  See the lexicon entry grinder. The spoken line is a folk spelling (er-to-ah
+  See the lexicon entries grinder and spuckie. The spoken line is a folk spelling (er-to-ah
   in data/pronunciation/rules.yml).
 sources:
   - type: url

@@ -123,7 +123,8 @@ A few things that trip people up:
 - **`spoken` is optional, and it has rules.** It's your `local` line run
   through your city's accent file in `data/pronunciation/`, using only rules
   that file actually has. It's a folk spelling, not a recording, so say that in
-  `notes`. If your region has no accent file, leave `spoken` out; the robot
+  `notes`, and name the rules you used there: the skill only shows `spoken`
+  when the dial is high enough for every one of them. If your region has no accent file, leave `spoken` out; the robot
   will stop you if you don't.
 - **Disputed stories get `contested: true`.** "Who invented it" is usually an
   argument, not a fact. Mark it, say what's disputed in `notes`, and don't

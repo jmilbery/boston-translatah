@@ -5,7 +5,7 @@ moves:
   - "A cake base with a gooey, custard-like layer on top. Rich enough that a small square does it."
 takes:
   - mood: love
-    line: "Somebody got a recipe wrong once, and the whole city's been grateful since."
+    line: "The story is somebody got a recipe wrong. Whoever it was, the whole city's grateful."
   - mood: shrug
     line: "Which bakery got it wrong first depends on who you ask."
 register: 1

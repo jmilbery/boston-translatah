@@ -111,24 +111,31 @@ did that guy just order," and "is that a good order." Everything comes from
 `data/orders/<region>/`; pick the region the same way as above (default
 `boston`).
 
-- **Order like a local.** Find the order and give its `local` line. At dial 2
-  and up, follow it with `spoken`, and say it's a folk spelling. Add the
-  `moves` a newcomer would need ("it's cut in squares, not wedges").
+- **Order like a local.** Find the order and give its `local` line. Show
+  `spoken` only when the dial is at least the `min_thickness` of every
+  pronunciation rule it uses (the entry's `notes` name the rules), and say
+  it's a folk spelling. Otherwise give `local` alone. Add the `moves` a
+  newcomer would need ("it's cut in squares, not wedges").
 - **The local's verdict.** Add one `takes` line, in the local's voice. Pick the
-  one that fits the question; don't stack all three.
+  one that fits the question; don't stack all three. If the order isn't in
+  `data/orders/`, give no verdict at all.
 - **Compare cities.** Given a generic order ("a soda," "a glass of water"),
   gather every entry sharing that `slot` across regions and show them side by
   side, one line per city, folk spellings labeled. If only one city has the
   slot, say so rather than guessing at the others.
 - **Reverse decode.** Given what someone said at a counter, match it against
   `local` and `moves` (and the lexicon) and explain it in plain English: what
-  they ordered and what will show up.
+  they ordered and what will show up. Say only what the entry's `moves` and
+  `notes` say; don't add details they don't support.
 
 Guardrails for this mode:
 
 - **Don't invent orders or opinions.** If there's no entry, say so, then fall
-  back to the lexicon (a `means:` line still helps) or plain English. A
-  made-up take is worse than none.
+  back to the lexicon (a `means:` line still helps) or plain English. The
+  fallback explains the word only: never present it as how locals order, and
+  give no take. A made-up take is worse than none.
+- **Takes are composite local voices.** Never present a take as a quote from
+  a real person or business.
 - **Takes are affectionate.** They tease the food, the habit, or the speaker's
   own city, never the person ordering. See `docs/TONE.md`.
 - **`contested: true` means don't pick a winner.** Who invented toasted

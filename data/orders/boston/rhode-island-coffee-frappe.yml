@@ -8,7 +8,7 @@ moves:
   - "Coffee is the classic flavor, made with coffee syrup."
 takes:
   - mood: love
-    line: "Same drink as a frappe. It's named after the cabinet the blender lived in, and we're keeping the name."
+    line: "Same drink as a frappe. The story is it's named after the cabinet the blender lived in, and we're keeping the name."
 register: 3
 notes: >-
   Rhode Island usage, filed under boston because that region covers general

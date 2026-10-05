@@ -6,11 +6,11 @@ moves:
   - "Want the ice cream version? That's a frappe."
 takes:
   - mood: shrug
-    line: "A frappe is a frappe. A milkshake is not a frappe. Easy once you know."
+    line: "Milkshake, frappe: two different drinks up here. Easy once you know."
 register: 3
 notes: >-
-  The trap order for visitors. The take paraphrases a Massachusetts dairy
-  owner quoted by Boston.com.
+  The trap order for visitors. Dairy owners still ask whether you want ice
+  cream in it (Boston.com).
 sources:
   - type: url
     ref: https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
