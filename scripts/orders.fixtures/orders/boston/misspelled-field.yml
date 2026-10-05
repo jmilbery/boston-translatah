@@ -1,0 +1,9 @@
+order: misspelled field
+region: boston
+local: "Typo."
+take:
+  - mood: love
+    line: "Should be takes."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// The robot at the door. Checks every lexicon and phrase entry against its
-// schema, that its region is a city we actually speak (data/regions.yml) and
+// The robot at the door. Checks every lexicon, phrase and order entry against
+// its schema, that its region is a city we actually speak (data/regions.yml) and
 // that it's filed in the matching folder, and — the rule we won't bend — that
 // it cites a source.
 // Run: npm test    (or: node scripts/validate.mjs)
@@ -146,6 +146,105 @@ function yield_file(file) {
   }
 }
 
+// Orders: how a local orders one thing at the counter, and what they think of
+// it. Kept in one self-contained block so it's easy to read (and to rebase).
+// Same house style as everything above: collect every problem, one pass,
+// plain English.
+
+const orderSchema = JSON.parse(readFileSync(join(root, "schema/order.schema.json")));
+const validateOrder = ajv.compile(orderSchema);
+
+function walkOrders(dir) {
+  if (!existsSync(dir)) return;
+
+  // Which regions have an accent file? The registry was already checked
+  // above, so a straight read is safe here.
+  const accentOf = new Map(
+    yaml.load(readFileSync(join(root, REGISTRY), "utf8")).map((r) => [r.slug, r.accent])
+  );
+  const slotRegions = new Map();
+
+  for (const folder of readdirSync(dir)) {
+    const sub = join(dir, folder);
+    if (!statSync(sub).isDirectory()) continue;
+    for (const name of readdirSync(sub)) {
+      if (name.endsWith(".yml") && !name.startsWith("_")) checkOrder(join(sub, name), accentOf, slotRegions);
+    }
+  }
+
+  // A slot is a comparison, and a comparison needs two cities. One city on
+  // its own isn't wrong, just lonely, so this is a heads-up, not an error.
+  for (const [slot, regions] of slotRegions) {
+    if (regions.size === 1) {
+      console.log(`  i slot "${slot}" only has orders from ${[...regions][0]} so far. Another city's would make it a comparison.`);
+    }
+  }
+}
+
+// The schema errors a first-timer is most likely to hit, said in English.
+// Anything else falls through to the schema's own wording.
+function orderError(e) {
+  const at = e.instancePath || "(root)";
+  if (e.keyword === "required") {
+    return `missing "${e.params.missingProperty}". Every order needs order, region, local, takes and sources (see data/orders/_TEMPLATE.yml)`;
+  }
+  if (e.keyword === "additionalProperties") {
+    return `"${e.params.additionalProperty}" isn't a field orders have. Check the spelling against data/orders/_TEMPLATE.yml`;
+  }
+  if (e.keyword === "enum" && at.endsWith("/mood")) {
+    return `${at} has to be love, gripe or shrug`;
+  }
+  if (at === "/takes" && (e.keyword === "minItems" || e.keyword === "maxItems")) {
+    return "takes needs one to three lines. Pick the best ones";
+  }
+  return `${at} ${e.message}`;
+}
+
+function checkOrder(file, accentOf, slotRegions) {
+  checked++;
+  let doc;
+  try {
+    doc = yaml.load(readFileSync(file, "utf8"));
+  } catch (e) {
+    return fail(file, `not valid YAML: ${e.message}`);
+  }
+  // Sources first, so the rule we won't bend gets its own sentence instead of
+  // a schema message about array lengths.
+  if (!doc || !Array.isArray(doc.sources) || doc.sources.length === 0) {
+    return fail(file, "no source cited. An order is a claim about how people talk, so it needs one like everything else.");
+  }
+  if (!validateOrder(doc)) {
+    return fail(file, validateOrder.errors.map(orderError).join("; "));
+  }
+  if (!knownRegions.has(doc.region)) {
+    return fail(
+      file,
+      `region "${doc.region}" isn't in data/regions.yml. Known: ${[...knownRegions].join(", ")}. ` +
+        `New city? Add it there first, then its orders.`
+    );
+  }
+  const folder = basename(dirname(file));
+  if (folder !== doc.region) {
+    fail(file, `region "${doc.region}" but the file sits in "${folder}/". Move it or fix the region.`);
+  }
+  const slug = doc.order.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const fileSlug = basename(file, ".yml");
+  if (slug !== fileSlug) {
+    fail(file, `filename "${fileSlug}.yml" should match the order, "${slug}.yml". Rename the file or shorten the order line.`);
+  }
+  if (doc.spoken !== undefined && !accentOf.get(doc.region)) {
+    fail(
+      file,
+      `has a spoken: line, but "${doc.region}" has no accent file in data/regions.yml, so there are no rules to respell it with. ` +
+        `Delete spoken:, or give the region an accent first.`
+    );
+  }
+  if (doc.slot) {
+    if (!slotRegions.has(doc.slot)) slotRegions.set(doc.slot, new Set());
+    slotRegions.get(doc.slot).add(doc.region);
+  }
+}
+
 console.log("Checking entries…\n");
 
 // The region list has to be right before any entry's region can be judged.
@@ -157,6 +256,7 @@ if (errors > 0) {
 
 walk(join(root, "data/lexicon"));
 walk(join(root, "data/phrases"));
+walkOrders(join(root, "data/orders"));
 
 console.log(`\n${checked} entries checked, ${errors} problem(s).`);
 if (errors > 0) {

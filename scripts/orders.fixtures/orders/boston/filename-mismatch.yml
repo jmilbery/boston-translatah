@@ -1,0 +1,9 @@
+order: something else entirely
+region: boston
+local: "Wrong file name."
+takes:
+  - mood: love
+    line: "The file should be named after the order."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

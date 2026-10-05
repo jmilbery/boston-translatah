@@ -1,0 +1,6 @@
+order: no takes
+region: boston
+local: "No opinion."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

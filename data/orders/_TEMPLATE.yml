@@ -1,0 +1,24 @@
+# Copy this file to data/orders/<region>/<your-order>.yml and fill it in.
+# The filename is your `order:` line, lowercase, with dashes for spaces, so
+# "iced coffee with cream and sugar" lives in iced-coffee-with-cream-and-sugar.yml.
+# Delete these comment lines when you're done (optional; the robot ignores them).
+order: plain english name of the thing   # keep it short
+region: boston               # any slug from data/regions.yml: boston, stl-314, ...
+local: "What you'd actually say at the counter."
+# spoken: optional. The same line run through your city's accent rules
+# (data/pronunciation/). Only for regions with an accent: file. It's a folk
+# spelling, so say so in notes.
+# slot: optional. A comparison key shared with other cities, like soda or water.
+# moves: optional. Counter etiquette a newcomer wouldn't know.
+#   - "Know your order before you get to the window."
+takes:                       # REQUIRED, one to three. What locals think of it.
+  - mood: love               # love | gripe | shrug
+    line: "Affectionate, in a local's voice. With people, never at them."
+    # voice: optional: a type of person, never a real named one.
+register: 2                  # 1 = everyone knows it ... 3 = deep local
+# notes: optional. Same trap as the lexicon template: don't leave "notes:"
+# sitting there empty, or the robot says "/notes must be string".
+# contested: true            # optional, only if who-invented-it is disputed
+sources:                     # REQUIRED, at least one. No source, no merge.
+  - type: url                # url | vouch | book
+    ref: https://example.com/where-you-found-it

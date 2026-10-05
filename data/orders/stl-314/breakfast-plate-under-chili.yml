@@ -1,0 +1,17 @@
+order: breakfast plate under chili
+region: stl-314
+local: "A slinger."
+moves:
+  - "Eggs, hash browns and a hamburger patty, all under chili, usually with cheese and onions."
+  - "Prime time is late at night, after the bars."
+takes:
+  - mood: love
+    line: "Breakfast, dinner and the end of a long night, all on one plate."
+register: 2
+sources:
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+  - type: url
+    ref: https://explorestlouis.com/top-five-st-louis-signature-foods
+  - type: url
+    ref: https://everydaywanderer.com/famous-st-louis-foods

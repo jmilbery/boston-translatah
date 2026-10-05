@@ -1,0 +1,20 @@
+order: milk shaken with syrup
+region: boston
+local: "A milkshake."
+moves:
+  - "In the old New England sense this is milk and flavored syrup, shaken or blended until frothy. No ice cream."
+  - "Want the ice cream version? That's a frappe."
+takes:
+  - mood: shrug
+    line: "Milkshake, frappe: two different drinks up here. Easy once you know."
+register: 3
+notes: >-
+  The trap order for visitors. Dairy owners still ask whether you want ice
+  cream in it (Boston.com).
+sources:
+  - type: url
+    ref: https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
+  - type: url
+    ref: https://www.americastestkitchen.com/articles/7087-what-is-a-milkshake-and-how-is-it-different-from-a-frappe-or-a-cabinet
+  - type: url
+    ref: https://newengland.com/today/food/new-england-made/milk-shakes-frappes-cabinets/

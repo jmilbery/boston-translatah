@@ -1,0 +1,22 @@
+order: lobster roll
+region: boston
+local: "Lobster roll. Cold, with mayo."
+spoken: "Lobstah roll. Cold, with mayo."
+moves:
+  - "Know which one you want. Maine style is cold lobster with a light coat of mayo; Connecticut style is warm lobster with melted butter."
+  - "Some Connecticut people will tell you the cold one is lobster salad, not a lobster roll."
+takes:
+  - mood: shrug
+    line: "Cold with mayo or hot with butter. Pick one, defend it at the picnic table, eat the other one next week."
+  - mood: love
+    line: "It's lobster on a roll. Neither side is actually losing."
+register: 1
+notes: >-
+  The local line above is one choice, not the right one. The spoken line is
+  a folk spelling (er-to-ah in data/pronunciation/rules.yml). This is a New
+  England-wide argument, not a Boston-specific order.
+sources:
+  - type: url
+    ref: https://chowhound.com/1666932/difference-between-maine-connecticut-lobster-roll
+  - type: url
+    ref: https://lobsteranywhere.com/seafood-savvy/maine-vs-connecticut-lobster-rolls-the-4-big-differences/

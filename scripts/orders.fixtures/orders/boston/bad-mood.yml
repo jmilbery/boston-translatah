@@ -1,0 +1,9 @@
+order: bad mood
+region: boston
+local: "Whatever."
+takes:
+  - mood: meh
+    line: "Not a mood we have."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

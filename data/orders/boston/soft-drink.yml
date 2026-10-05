@@ -1,0 +1,23 @@
+order: soft drink
+region: boston
+local: "A tonic."
+slot: soda
+moves:
+  - "Tonic means any carbonated soft drink here, not tonic water."
+  - "You'll hear soda far more often now. Tonic is mostly older Bostonians."
+takes:
+  - mood: shrug
+    line: "My grandmother asks for a tonic. My kids ask for a soda. Same fridge."
+register: 2
+notes: >-
+  See the lexicon entry tonic. A fading word: in the Harvard Dialect Survey
+  data mapped by the Christian Science Monitor, more than 30 percent of
+  residents born in the 1940s said tonic, while over 95 percent of the
+  under-25s said soda.
+sources:
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
+  - type: url
+    ref: https://newengland.com/?p=98646
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022

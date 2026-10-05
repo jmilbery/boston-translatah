@@ -1,0 +1,9 @@
+order: wrong folder
+region: stl-314
+local: "Filed under the wrong city."
+takes:
+  - mood: love
+    line: "Says St. Louis, sits in boston/."
+sources:
+  - type: vouch
+    ref: "the fixture itself"
