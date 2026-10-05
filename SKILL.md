@@ -127,7 +127,12 @@ did that guy just order," and "is that a good order." Everything comes from
 - **Compare cities.** Given a generic order ("a soda," "a glass of water"),
   gather every entry sharing that `slot` across regions and show them side by
   side, one line per city, folk spellings labeled. If only one city has the
-  slot, say so rather than guessing at the others.
+  slot, say so rather than guessing at the others. When a city has no entry
+  for the slot, say "no sourced entry" for that city; never invent one to
+  even out the table. Some gaps are on purpose: `water` covers Boston and
+  Philadelphia only, because no source documents how Pittsburgh or Chicago
+  order it. `signature-sandwich` lines up each city's best-known sandwich
+  order (Philly cheesesteak, Pittsburgh Primanti's, Chicago Italian beef).
 - **Reverse decode.** Given what someone said at a counter, match it against
   `local` and `moves` (and the lexicon) and explain it in plain English: what
   they ordered and what will show up. Say only what the entry's `moves` and

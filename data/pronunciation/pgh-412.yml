@@ -9,7 +9,9 @@
 # Dialect" (Oxford University Press, 2013). She separates two things worth
 # keeping apart: "Pittsburgh speech is local language as linguists would
 # describe it. Pittsburghese is local language as it is locally imagined."
-# This file only encodes features documented in the first sense.
+# This file only encodes features documented in the first sense. All three
+# rules below (dahntahn, fahr and worsh) are documented in Johnstone and
+# Scott Kiesling's essay for PBS's "Do You Speak American?" (linked below).
 #
 # Read this as pride, not a gag. For most of the city's history Pittsburghers
 # barely noticed how they talked; now they have adopted the dialect, proudly,
@@ -54,8 +56,9 @@
   name: Wash to worsh
   order: 3
   description: >-
-    An R appears in "wash," an older feature most heard from old timers. Same
-    word family St. Louis has (see stl-314.yml), arrived at separately.
+    An R appears in "wash," an older feature most heard from old timers. St.
+    Louis has it too (see stl-314.yml); the PBS essay places it around
+    Pittsburgh and to the west and south.
   examples:
     - { from: wash, to: worsh }
   exceptions: Only this word family. Don't spread it to other words.

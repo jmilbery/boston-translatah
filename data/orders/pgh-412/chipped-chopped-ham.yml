@@ -3,7 +3,7 @@ region: pgh-412
 local: "A pound of chipped ham."
 spoken: "A pahnd of chipped ham."
 moves:
-  - "It's processed ham sliced paper-thin. Chipped ham for short. Isaly's has been making it for more than a century."
+  - "It's processed ham sliced paper-thin. Chipped ham for short. It's tied to Isaly's, and the company behind it has been around for more than a century."
   - "Usually it goes on a sandwich. Heated up in barbecue sauce, it's a ham barbecue."
 takes:
   - mood: love

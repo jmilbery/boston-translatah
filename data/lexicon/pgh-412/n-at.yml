@@ -4,7 +4,7 @@ also: [n@]
 region: pgh-412
 register: 2
 part_of_speech: phrase
-example: "We were watching the Pirates and drinking beer, n'at."
+example: "Bring chips, pop, n'at."
 sources:
   - type: url
     ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

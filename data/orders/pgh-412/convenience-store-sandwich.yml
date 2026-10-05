@@ -5,7 +5,7 @@ moves:
   - "MTO means made-to-order. Out here the convenience store is Sheetz; east of the middle of the state it's Wawa, and people pick a side."
 takes:
   - mood: love
-    line: "Sheetz has the deep fryer. Mac bites, fried pickles, a breakfast sandwich made to order. Wawa can keep the hoagie."
+    line: "Sheetz has the fryer and a touch screen full of sauces. Breakfast at midnight, built how you want it."
     voice: a western Pennsylvanian
   - mood: shrug
     line: "Fine, Wawa's hoagie bread is better. We've got the fryer."

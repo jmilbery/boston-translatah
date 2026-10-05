@@ -9,14 +9,20 @@ takes:
   - mood: love
     line: "Seven toppings, and the one that isn't there matters most."
   - mood: gripe
-    line: "You can ask for ketchup. You'll get a look, and maybe a short history lesson."
+    line: "Some stands won't even keep ketchup behind the counter. We take toppings personally."
 register: 1
 notes: >-
   See the lexicon entry dragged through the garden. The no-ketchup rule is a
-  widely shared local consensus, not a law. The spoken line is a folk
-  spelling from the light Northern Cities Shift rule in
-  data/pronunciation/chi-312.yml ("hot" to "hat"), dial 3 only.
+  widely shared local consensus, not a law; NBC Chicago traces the pride in
+  it to the Depression, when ketchup was blamed for covering up poor meat.
+  Wikipedia lists the seven toppings and, citing Zeldes, the "dragged
+  through the garden" name. The spoken line is a folk
+  spelling from the light Northern Cities Shift rule,
+  northern-cities-shift-light in data/pronunciation/chi-312.yml ("hot" to
+  "hat"), dial 3 only.
 sources:
+  - type: url
+    ref: https://www.nbcchicago.com/only-in-chicago-nbc-5/why-dont-chicagoans-put-ketchup-on-their-hot-dogs-the-history-that-started-it/3683702/
   - type: url
     ref: https://www.tastingtable.com/2058306/martha-stewart-rule-chicago-style-hot-dogs
   - type: url

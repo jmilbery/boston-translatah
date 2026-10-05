@@ -5,11 +5,10 @@ spoken: "Can I get a wooder?"
 slot: water
 takes:
   - mood: love
-    line: "Wooder is part of Philadelphia. If it ever goes away we'll be just like everybody else, saying it correctly, and where's the fun in that?"
+    line: "We'll swear we don't have an accent. Then we'll ask for a wooder."
     voice: a lifelong Philadelphian
   - mood: gripe
-    line: "Out of town I end up pointing at the glass. Say wooder in New Orleans and the server thinks you're ready to order."
-    voice: a Northeast Philly native
+    line: "Wooder, water, whatever. Here the server already knows what you mean."
 register: 1
 notes: >-
   See the lexicon entry wooder. The spoken line is a folk spelling from the
@@ -17,8 +16,7 @@ notes: >-
   it to Philadelphians born around 1900 to 1910; the spelling "wooder" took
   off much later and is now on T-shirts and Gritty's signs. Labov's team
   finds younger speakers drifting back toward "water," though nobody's sure
-  it's going away. Both takes paraphrase Philadelphians quoted by The
-  Inquirer.
+  it's going away.
 sources:
   - type: url
     ref: https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html

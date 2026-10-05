@@ -3,7 +3,7 @@ region: philly-215
 local: "A hoagie."
 slot: long-sandwich
 moves:
-  - "Meats, cheese and lettuce on a long roll is a hoagie here. Sub is the New York word."
+  - "Meats, cheese and lettuce on a long roll is a hoagie here. Most of the country says sub."
 takes:
   - mood: love
     line: "Every corner store makes one and every family has a favorite. It's a hoagie."
@@ -12,14 +12,17 @@ takes:
 register: 1
 contested: true
 notes: >-
-  See the lexicon entry hoagie. Dialect maps show the hoagie/sub line running
-  between Philadelphia and New York; the word also turns up in Pittsburgh
-  (see data/orders/pgh-412/submarine-sandwich.yml). The origin of the name is
+  See the lexicon entry hoagie. A dialect survey by a North Carolina State
+  graduate student set out to map where hoagie gives way to sub; the word
+  also turns up in Pittsburgh (see data/orders/pgh-412/submarine-sandwich.yml). The origin of the name is
   disputed: several Hog Island stories, the DePalma family's luncheonette, and
   the DiCostanza family in Delaware County all have claims. Don't name a
-  winner.
+  winner. In 1992 Mayor Ed Rendell named the hoagie the Official Sandwich of
+  Philadelphia; that's a city designation, not a state one.
 sources:
   - type: url
     ref: https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
   - type: url
     ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
+  - type: url
+    ref: https://philadelphiaencyclopedia.org/?p=12454

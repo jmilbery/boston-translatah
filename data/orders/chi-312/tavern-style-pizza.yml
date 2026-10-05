@@ -1,0 +1,20 @@
+order: tavern-style pizza
+region: chi-312
+local: "A large thin crust, sausage."
+moves:
+  - "It's cut in squares, not wedges. Thin and crispy, with sauce and cheese pushed all the way to the edge."
+  - "Sausage is the usual meat."
+takes:
+  - mood: love
+    line: "Crispy as a cracker, cut in squares, sausage on top. That's the pizza we actually eat."
+  - mood: shrug
+    line: "Deep dish gets the postcards. Thin crust gets ordered on a Tuesday night."
+register: 1
+notes: >-
+  The Takeout describes tavern-style as square cut, thin and crispy, sauce
+  and cheese to the edge, with a crust like a saltine and bulk sausage the
+  usual meat. Chicagoans eat deep dish too, but the thin, square-cut pie is
+  the everyday one.
+sources:
+  - type: url
+    ref: https://thetakeout.com/chicago-style-pizza-deep-dish-tavern-steve-dolinsky-1830006453

@@ -86,9 +86,10 @@ these are the big ones.
   Curious City on what Chicagoans actually sound like (and why "da Bears" is
   left out):
   https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
-- **The Harvard Dialect Survey** (Bert Vaux), the soda/pop/hoagie/sub data
-  that Josh Katz's later maps grew out of:
-  https://news.harvard.edu/gazette/story/2002/12/standing-on-line-at-the-bubbler-with-a-hoagie-in-my-hand
+- **Bert Vaux's dialect survey**: sub/hero/hoagie regional names (Gazette)
+  and the 44% hoagie figure for Pittsburgh (Inquirer):
+  https://news.harvard.edu/gazette/story/2002/12/standing-on-line-at-the-bubbler-with-a-hoagie-in-my-hand ,
+  https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
 - **The Dictionary of American Regional English (DARE)**, University of
   Wisconsin-Madison: the reference to check before calling a word local.
   Not cited by any entry yet: https://dare.wisc.edu/
@@ -147,6 +148,20 @@ For **Philadelphia** (`philly-215`):
   in Pittsburgh): https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
 - **Visit Philadelphia, top spots for water ice** (water ice, gelati):
   https://www.visitphilly.com/media-center/press-releases/13-top-spots-for-water-ice-in-philly
+- **Encyclopedia of Greater Philadelphia, hoagie** (Official Sandwich of
+  Philadelphia, 1992; Hog Island and DePalma origin stories):
+  https://philadelphiaencyclopedia.org/?p=12454
+- **The Inquirer, how Wawa's Hoagie Day gets made** (Shorti rolls):
+  https://www.inquirer.com/food/how-giant-free-hoagie-wawa-hoagie-day-gets-made-20180628.html
+- **Philadelphia Magazine, where "jawn" came from** (a variant of "joint,"
+  1980s, an all-purpose noun):
+  https://www.phillymag.com/news/2021/09/15/jawn-origin-philadelphia/
+- **Visit Philadelphia, sandwich hall of fame** (roast pork, sharp
+  provolone, broccoli rabe or spinach):
+  https://www.visitphilly.com/articles/philadelphia/philadelphias-sandwich-hall-of-fame/
+- **Encyclopedia of Greater Philadelphia, pretzels** (figure-8, street
+  corners, mustard from hot dog vendors):
+  https://philadelphiaencyclopedia.org/essays/pretzels/
 - **Wikipedia, the Sheetz and Wawa rivalry** and **MEL Magazine** (Wawa vs
   Sheetz as east vs west; no territory agreement):
   https://en.wikipedia.org/wiki/Sheetz%E2%80%93Wawa_rivalry ,
@@ -169,10 +184,22 @@ For **Chicago** (`chi-312`):
   hot, dry, wet or dipped, combo, gravy bread):
   https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364 ,
   https://www.islands.com/2053723/chicago-locals-spot-tourist-italian-beef-question/
-- **Tasting Table** and **Wikipedia** on the Chicago-style hot dog (dragged
-  through the garden, no ketchup):
+- **NBC Chicago**, **Tasting Table** and **Wikipedia** on the Chicago-style
+  hot dog (dragged through the garden, the seven toppings, no ketchup):
+  https://www.nbcchicago.com/only-in-chicago-nbc-5/why-dont-chicagoans-put-ketchup-on-their-hot-dogs-the-history-that-started-it/3683702/ ,
   https://www.tastingtable.com/2058306/martha-stewart-rule-chicago-style-hot-dogs ,
   https://en.wikipedia.org/wiki/Chicago-style_hot_dog
+- **WBEZ Curious City, why Malört** (the Chicago handshake):
+  https://www.wbez.org/curious-city/2023/07/06/why-is-malort-popular-in-chicago
+- **The Takeout, tavern-style pizza** (square cut, thin and crispy):
+  https://thetakeout.com/chicago-style-pizza-deep-dish-tavern-steve-dolinsky-1830006453
+- **City Cast Chicago, the Maxwell Street Polish**:
+  https://chicago.citycast.fm/food-drink/jims-original-maxwell-street-polish-sausage
+- **Chicago Tribune, how the jibarito became a Chicago classic** (via the
+  News Tribune):
+  https://www.newstribune.com/news/2026/sep/09/how-the-jibarito-became-chicago-classic/
+- **Stranger's Guide, the gospel of mild sauce**:
+  https://strangersguide.com/articles/the-gospel-of-mild-sauce/
 - **WBEZ Curious City** (Chicagoans know they say pop):
   https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
 

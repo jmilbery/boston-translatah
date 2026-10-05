@@ -2,7 +2,6 @@ order: cup of coffee
 region: philly-215
 local: "A coffee."
 spoken: "A cawfee."
-slot: coffee-regular
 takes:
   - mood: shrug
     line: "My grandmother says cawfee, my nephew says coffee. Both of them still want it hot."

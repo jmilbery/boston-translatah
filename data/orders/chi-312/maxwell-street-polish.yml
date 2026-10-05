@@ -1,0 +1,16 @@
+order: Maxwell Street Polish
+region: chi-312
+local: "A Maxwell Street Polish."
+moves:
+  - "It's a Polish sausage smothered in grilled onions, with mustard and sport peppers."
+takes:
+  - mood: love
+    line: "Follow the smell of grilled onions. That's the whole map."
+register: 2
+notes: >-
+  City Cast Chicago dates the Maxwell Street Polish as it's eaten today to
+  around 1939. Jim's Original opened its first stand at Maxwell and Halsted;
+  it's a business name, used here to place the sandwich, not to endorse it.
+sources:
+  - type: url
+    ref: https://chicago.citycast.fm/food-drink/jims-original-maxwell-street-polish-sausage

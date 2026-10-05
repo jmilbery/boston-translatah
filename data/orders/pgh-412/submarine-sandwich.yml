@@ -3,7 +3,7 @@ region: pgh-412
 local: "A hoagie."
 slot: long-sandwich
 moves:
-  - "You'll hear hoagie and sub about equally. Local shops tend to say hoagie; the national chains say sub."
+  - "You'll hear both. Online, Pittsburghers say local shops lean hoagie and national chains say sub."
 takes:
   - mood: shrug
     line: "Hoagie or sub, depends who's making it. Philly doesn't own the word."

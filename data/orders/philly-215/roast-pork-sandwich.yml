@@ -1,0 +1,20 @@
+order: roast pork sandwich
+region: philly-215
+local: "Roast pork with sharp provolone and broccoli rabe."
+moves:
+  - "The pork is roasted for hours and sliced thin. Sharp provolone and broccoli rabe is the classic way; some shops do provolone and sauteed spinach instead."
+takes:
+  - mood: love
+    line: "Sharp cheese, bitter greens, pork in its own gravy. The cheesesteak gets the fame and this one gets the regulars."
+    voice: a South Philly regular
+  - mood: shrug
+    line: "Broccoli rabe or spinach depends on the shop. We'll argue about it with our mouths full."
+register: 1
+notes: >-
+  Visit Philly describes pork roasted for five hours, sliced thin and topped
+  with sharp provolone and broccoli rabe at one Reading Terminal Market
+  stand, and provolone with sauteed spinach at a South Philadelphia shop
+  that simmers the pork in its own gravy.
+sources:
+  - type: url
+    ref: https://www.visitphilly.com/articles/philadelphia/philadelphias-sandwich-hall-of-fame/
