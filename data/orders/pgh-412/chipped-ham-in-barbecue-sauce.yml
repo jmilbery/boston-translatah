@@ -1,0 +1,17 @@
+order: chipped ham in barbecue sauce
+region: pgh-412
+local: "A ham barbecue."
+moves:
+  - "Chipped ham, warmed in barbecue sauce, usually on a sandwich."
+takes:
+  - mood: love
+    line: "A guilty pleasure, and honestly we don't feel that guilty."
+register: 3
+notes: >-
+  See the lexicon entries ham barbecue and chipped ham. Pittsburgh Magazine
+  calls chipped ham covered in barbecue sauce a guilty pleasure.
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+  - type: url
+    ref: https://www.pittsburghmagazine.com/pittsburgh-food-primer/

@@ -1,0 +1,21 @@
+order: cup of coffee
+region: philly-215
+local: "A coffee."
+spoken: "A cawfee."
+takes:
+  - mood: shrug
+    line: "My grandmother says cawfee, my nephew says coffee. Both of them still want it hot."
+register: 1
+notes: >-
+  Here for the vowel, not the order: Philadelphia has no one-word code like
+  Boston's "regular" that we could source, so ask for what you want in it.
+  The spoken line is a folk spelling from the aw-raising rule in
+  data/pronunciation/philly-215.yml (dial 3). Labov's team finds it fading:
+  more Philadelphians now say "coffee."
+sources:
+  - type: url
+    ref: https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/
+  - type: url
+    ref: https://www.cbsnews.com/philadelphia/news/upenn-researchers-tackle-evolution-of-philadelphia-accent/
+  - type: url
+    ref: https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html

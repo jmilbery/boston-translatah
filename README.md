@@ -33,9 +33,10 @@ won't.** → Start at [`CONTRIBUTING.md`](CONTRIBUTING.md).
 |---|---|
 | `SKILL.md` | The Claude skill — how the translation actually works |
 | `data/regions.yml` | The region registry — every city we speak. **Adding a city starts here.** |
-| `data/pronunciation/*.yml` | The accent engines — `rules.yml` is Boston, `stl-314.yml` is St. Louis |
+| `data/pronunciation/*.yml` | The accent engines — `rules.yml` is Boston, `stl-314.yml` is St. Louis, plus `philly-215.yml`, `pgh-412.yml` and `chi-312.yml` |
 | `data/lexicon/<region>/*.yml` | The dictionary — one word per file. **Add yours here.** |
 | `data/phrases/<region>/*.yml` | Irregular phrases stored whole |
+| `data/orders/<region>/*.yml` | How locals order at the counter, and what they think of it. "Large iced regular," a concrete, t-ravs, "Whiz wit," a beef dipped |
 | `MANIFESTO.md` | **What this actually is** — read this if you're confused why a slang repo exists |
 | `CONTRIBUTING.md` | Your first pull request, hand-held |
 | `docs/TONE.md` | How to be funny without being mean — the tonal north star |

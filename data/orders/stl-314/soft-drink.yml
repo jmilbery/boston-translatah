@@ -1,0 +1,15 @@
+order: soft drink
+region: stl-314
+local: "A soda."
+slot: soda
+moves:
+  - "It's soda here, not pop, even though much of the Upper Midwest says pop."
+takes:
+  - mood: shrug
+    line: "We say soda. Drive a few hours out and you'll hear pop, and that's fine too."
+register: 1
+notes: >-
+  St. Louis shows up on the soda-versus-pop maps as a soda island.
+sources:
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color

@@ -1,0 +1,15 @@
+order: submarine sandwich
+region: boston
+local: "A grinder."
+spoken: "A grindah."
+slot: long-sandwich
+takes:
+  - mood: shrug
+    line: "Grinder, sub, spuckie if you're old East Boston. Same sandwich, and the counter knows what you mean."
+register: 2
+notes: >-
+  See the lexicon entries grinder and spuckie. The spoken line is a folk spelling (er-to-ah
+  in data/pronunciation/rules.yml).
+sources:
+  - type: url
+    ref: https://newengland.com/?p=98646

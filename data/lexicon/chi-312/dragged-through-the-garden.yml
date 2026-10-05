@@ -1,0 +1,14 @@
+term: dragged through the garden
+means: a hot dog with all the Chicago toppings (mustard, onion, relish, pickle, tomato, sport peppers, celery salt)
+region: chi-312
+register: 1
+part_of_speech: phrase
+example: "Two dogs, dragged through the garden."
+notes: Named for all the vegetables (Wikipedia, citing Zeldes). No ketchup.
+sources:
+  - type: url
+    ref: https://www.nbcchicago.com/only-in-chicago-nbc-5/why-dont-chicagoans-put-ketchup-on-their-hot-dogs-the-history-that-started-it/3683702/
+  - type: url
+    ref: https://www.tastingtable.com/2058306/martha-stewart-rule-chicago-style-hot-dogs
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Chicago-style_hot_dog

@@ -1,0 +1,12 @@
+term: witout
+means: without onions (on a cheesesteak)
+also: [widout]
+region: philly-215
+register: 1
+part_of_speech: phrase
+example: "Provolone witout."
+sources:
+  - type: url
+    ref: https://inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html
+  - type: url
+    ref: https://www.visitphilly.com/media-center/press-releases/cheesesteak-101-a-primer-on-the-who-what-where-whiz-of-philly-cheesesteaks/

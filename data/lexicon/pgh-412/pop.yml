@@ -1,0 +1,12 @@
+term: pop
+means: soda; any soft drink
+region: pgh-412
+register: 1
+part_of_speech: noun
+example: "Grab a pop from the cooler."
+notes: The west of the state says pop; the east says soda.
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+  - type: url
+    ref: https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color

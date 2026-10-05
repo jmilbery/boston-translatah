@@ -1,0 +1,24 @@
+order: Rhode Island coffee frappe
+region: boston
+local: "A coffee cabinet."
+spoken: "A cawfee cabinet."
+slot: ice-cream-shake
+moves:
+  - "In Rhode Island and parts of southeastern Massachusetts, the frappe is called a cabinet."
+  - "Coffee is the classic flavor, made with coffee syrup."
+takes:
+  - mood: love
+    line: "Same drink as a frappe. The story is it's named after the cabinet the blender lived in, and we're keeping the name."
+register: 3
+notes: >-
+  Rhode Island usage, filed under boston because that region covers general
+  New England. The name supposedly comes from where the blender was kept. The
+  spoken line is a folk spelling from the o-to-aw rule in
+  data/pronunciation/rules.yml (coffee is its own example), a dial-3 feature.
+sources:
+  - type: url
+    ref: https://newengland.com/today/food/new-england-made/milk-shakes-frappes-cabinets/
+  - type: url
+    ref: https://www.americastestkitchen.com/articles/7087-what-is-a-milkshake-and-how-is-it-different-from-a-frappe-or-a-cabinet
+  - type: url
+    ref: https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england

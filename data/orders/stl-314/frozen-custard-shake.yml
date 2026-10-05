@@ -1,0 +1,20 @@
+order: frozen custard shake
+region: stl-314
+local: "A concrete."
+slot: ice-cream-shake
+moves:
+  - "It's frozen custard blended so thick they hand it over upside down. Let them flip it."
+takes:
+  - mood: love
+    line: "They turn it upside down before they give it to you. It's impressive the hundredth time too."
+register: 1
+notes: >-
+  See the lexicon entry concrete. The signature order at Ted Drewes, which
+  has been serving them since 1959.
+sources:
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+  - type: url
+    ref: https://explorestlouis.com/top-five-st-louis-signature-foods
+  - type: url
+    ref: https://everydaywanderer.com/famous-st-louis-foods

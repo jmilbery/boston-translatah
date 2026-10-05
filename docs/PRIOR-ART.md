@@ -60,6 +60,149 @@ For **St. Louis** (`stl-314`):
 - **Nine PBS — The history of hoosiers in St. Louis** —
   https://www.ninepbs.org/blogs/history/the-history-of-hoosiers-in-st-louis/
 
+## The linguistics behind the new accent files
+
+The Philadelphia, Pittsburgh and Chicago accent files only encode features
+with an academic backbone. Each file names its sources in a header comment;
+these are the big ones.
+
+- **William Labov, University of Pennsylvania**: decades of recordings of
+  native Philadelphians, published as "One Hundred Years of Sound Change in
+  Philadelphia" (*Language*). Behind "wooder," "cawfee" and "boik," and the
+  finding that the first two are fading while "boik" is growing. Reported by
+  NBC Philadelphia, CBS Philadelphia and The Inquirer:
+  https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/ ,
+  https://www.cbsnews.com/philadelphia/news/upenn-researchers-tackle-evolution-of-philadelphia-accent/ ,
+  https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html
+- **Barbara Johnstone, *Speaking Pittsburghese: The Story of a Dialect***
+  (Oxford University Press, 2013): the "dahntahn" vowel, and why yinz and
+  n'at became badges of pride. Via Pittsburgh Magazine and PBS's *Do You
+  Speak American?*:
+  https://www.pittsburghmagazine.com/speaking-in-pittsburghese/ ,
+  https://www.pbs.org/speak/seatosea/americanvarieties/pittsburghese
+- **The Atlas of North American English** (Labov, Ash and Boberg, 2006):
+  the Northern Cities Shift that Chicago's file uses, lightly. Summarized at
+  https://en.wikipedia.org/wiki/Northern_cities_vowel_shift , with WBEZ's
+  Curious City on what Chicagoans actually sound like (and why "da Bears" is
+  left out):
+  https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
+- **Bert Vaux's dialect survey**: sub/hero/hoagie regional names (Gazette)
+  and the 44% hoagie figure for Pittsburgh (Inquirer):
+  https://news.harvard.edu/gazette/story/2002/12/standing-on-line-at-the-bubbler-with-a-hoagie-in-my-hand ,
+  https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
+- **The Dictionary of American Regional English (DARE)**, University of
+  Wisconsin-Madison: the reference to check before calling a word local.
+  Not cited by any entry yet: https://dare.wisc.edu/
+
+## Ordering sources (`data/orders/`)
+
+Each order cites its own sources. The ones the first batch leans on:
+
+For **Boston** and New England:
+
+- **Time Out Boston, 40 Boston slang words and expressions** (regular,
+  frappe, tonic):
+  https://www.timeout.com/boston/news/40-boston-slang-words-and-expressions-you-should-know-090121
+- **Yankee Magazine, New England slang** (grinder, tonic, bubbler):
+  https://newengland.com/?p=98646
+- **OC Weekly, Dunkin' ordering terms** (a regular by size: two and two,
+  three and three, four and four): https://www.ocweekly.com/?p=121345
+- **Tasting Table, how Dunkin' measures cream and sugar**:
+  https://tastingtable.com/1763061/dunkin-measures-cream-sugar-drinks
+- **America's Test Kitchen**, **Yankee Magazine** and **Boston.com** on
+  milkshake vs frappe vs cabinet:
+  https://www.americastestkitchen.com/articles/7087-what-is-a-milkshake-and-how-is-it-different-from-a-frappe-or-a-cabinet ,
+  https://newengland.com/today/food/new-england-made/milk-shakes-frappes-cabinets/ ,
+  https://www.boston.com/food/wickedpedia/2023/10/04/milkshake-frappe-new-england
+- **Chowhound** and **Lobster Anywhere** on Maine vs Connecticut lobster rolls:
+  https://chowhound.com/1666932/difference-between-maine-connecticut-lobster-roll ,
+  https://lobsteranywhere.com/seafood-savvy/maine-vs-connecticut-lobster-rolls-the-4-big-differences/
+- **Boston.com, where the Boston accent came from, and where it's going**
+  (the dropped R fading in younger speakers):
+  https://www.boston.com/news/wickedpedia/2023/03/27/boston-accent-origins-linguistics
+
+For **St. Louis** (`stl-314`):
+
+- **Christian Science Monitor, American speech mapped** (St. Louis as a soda
+  island; tonic fading in Boston):
+  https://www.csmonitor.com/The-Culture/Verbal-Energy/2016/1124/American-speech-mapped-in-vivid-color
+- **AFAR, St. Louis food** (pizza, Provel, t-ravs, concrete, gooey butter
+  cake, slinger): https://www.afar.com/magazine/st-louis-food
+- **Explore St. Louis, five signature foods**:
+  https://explorestlouis.com/top-five-st-louis-signature-foods
+- **Everyday Wanderer, famous St. Louis foods**:
+  https://everydaywanderer.com/famous-st-louis-foods
+- **St. Louis Public Radio, "How do you say 40 here?"** (or-to-ar, warsh, and
+  the accent fading in younger speakers):
+  https://www.stlpr.org/show/st-louis-on-the-air/2016-12-21/how-do-you-say-40-here-and-wash-dissecting-the-particularities-of-the-st-louis-dialect
+
+For **Philadelphia** (`philly-215`):
+
+- **The Inquirer, how to order a cheesesteak**, **Visit Philadelphia,
+  Cheesesteak 101** and **The Takeout** (Whiz wit, witout, the three
+  cheeses, have your order and money ready):
+  https://inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html ,
+  https://www.visitphilly.com/media-center/press-releases/cheesesteak-101-a-primer-on-the-who-what-where-whiz-of-philly-cheesesteaks/ ,
+  https://www.thetakeout.com/1672514/how-to-order-philly-cheesesteak/
+- **The Inquirer, how the hoagie got its name** (contested origins; hoagie
+  in Pittsburgh): https://www.inquirer.com/food/hoagie-philadelphia-history-sub-20240715.html
+- **Visit Philadelphia, top spots for water ice** (water ice, gelati):
+  https://www.visitphilly.com/media-center/press-releases/13-top-spots-for-water-ice-in-philly
+- **Encyclopedia of Greater Philadelphia, hoagie** (Official Sandwich of
+  Philadelphia, 1992; Hog Island and DePalma origin stories):
+  https://philadelphiaencyclopedia.org/?p=12454
+- **The Inquirer, how Wawa's Hoagie Day gets made** (Shorti rolls):
+  https://www.inquirer.com/food/how-giant-free-hoagie-wawa-hoagie-day-gets-made-20180628.html
+- **Philadelphia Magazine, where "jawn" came from** (a variant of "joint,"
+  1980s, an all-purpose noun):
+  https://www.phillymag.com/news/2021/09/15/jawn-origin-philadelphia/
+- **Visit Philadelphia, sandwich hall of fame** (roast pork, sharp
+  provolone, broccoli rabe or spinach):
+  https://www.visitphilly.com/articles/philadelphia/philadelphias-sandwich-hall-of-fame/
+- **Encyclopedia of Greater Philadelphia, pretzels** (figure-8, street
+  corners, mustard from hot dog vendors):
+  https://philadelphiaencyclopedia.org/essays/pretzels/
+- **Wikipedia, the Sheetz and Wawa rivalry** and **MEL Magazine** (Wawa vs
+  Sheetz as east vs west; no territory agreement):
+  https://en.wikipedia.org/wiki/Sheetz%E2%80%93Wawa_rivalry ,
+  https://melmagazine.com/en-us/story/the-sheetz-vs-wawa-war-explained-by-a-real-pennsylvanian
+
+For **Pittsburgh** (`pgh-412`):
+
+- **Pittsburgh City Paper, Pittsburghese dictionary** (yinz, n'at, redd up,
+  slippy, nebby, pop, chipped ham, ham barbecue, jumbo, dippy eggs):
+  https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370
+- **Pittsburgh Magazine, a Pittsburgh food primer** (Primanti Bros.,
+  chipped ham): https://www.pittsburghmagazine.com/pittsburgh-food-primer/
+- **Primanti Bros., our story** and **Wikipedia** (1933, the Strip District,
+  fries on the sandwich for truck drivers): https://primantibros.com/story ,
+  https://en.wikipedia.org/wiki/Primanti_Bros.
+
+For **Chicago** (`chi-312`):
+
+- **The Takeout, how to order an Italian beef** and **Islands** (sweet or
+  hot, dry, wet or dipped, combo, gravy bread):
+  https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364 ,
+  https://www.islands.com/2053723/chicago-locals-spot-tourist-italian-beef-question/
+- **NBC Chicago**, **Tasting Table** and **Wikipedia** on the Chicago-style
+  hot dog (dragged through the garden, the seven toppings, no ketchup):
+  https://www.nbcchicago.com/only-in-chicago-nbc-5/why-dont-chicagoans-put-ketchup-on-their-hot-dogs-the-history-that-started-it/3683702/ ,
+  https://www.tastingtable.com/2058306/martha-stewart-rule-chicago-style-hot-dogs ,
+  https://en.wikipedia.org/wiki/Chicago-style_hot_dog
+- **WBEZ Curious City, why Malört** (the Chicago handshake):
+  https://www.wbez.org/curious-city/2023/07/06/why-is-malort-popular-in-chicago
+- **The Takeout, tavern-style pizza** (square cut, thin and crispy):
+  https://thetakeout.com/chicago-style-pizza-deep-dish-tavern-steve-dolinsky-1830006453
+- **City Cast Chicago, the Maxwell Street Polish**:
+  https://chicago.citycast.fm/food-drink/jims-original-maxwell-street-polish-sausage
+- **Chicago Tribune, how the jibarito became a Chicago classic** (via the
+  News Tribune):
+  https://www.newstribune.com/news/2026/sep/09/how-the-jibarito-became-chicago-classic/
+- **Stranger's Guide, the gospel of mild sauce**:
+  https://strangersguide.com/articles/the-gospel-of-mild-sauce/
+- **WBEZ Curious City** (Chicagoans know they say pop):
+  https://www.wbez.org/shows/curious-city/chuh-kaw-go-what-do-you-really-sound-like/9054d7a4-f876-4c53-8ce1-08adae048d28
+
 ## The contributors
 
 Everybody who's ever opened a PR here — especially the ones for whom it was their

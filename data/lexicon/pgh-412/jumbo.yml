@@ -1,0 +1,9 @@
+term: jumbo
+means: bologna (the lunch meat)
+region: pgh-412
+register: 2
+part_of_speech: noun
+example: "Half a pound of jumbo for the lunches this week."
+sources:
+  - type: url
+    ref: https://pghcitypaper.com/specials-guides/pittsburghese-dictionary-how-to-talk-like-a-yinzer-19623370

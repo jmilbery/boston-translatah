@@ -1,0 +1,21 @@
+order: water ice
+region: philly-215
+local: "A water ice."
+spoken: "A wooder ice."
+moves:
+  - "It's what most of the country calls Italian ice: ice, fruit and sugar blended smooth, in a cup with a spoon."
+  - "Some shops layer it with ice cream. That's a gelati."
+takes:
+  - mood: love
+    line: "Summer in a paper cup. Say it however you like, it's water ice, not Italian ice."
+register: 1
+notes: >-
+  See the lexicon entries water ice, gelati and wooder. Italian immigrants
+  are usually credited with bringing it to Philadelphia. The spoken line is a
+  folk spelling from water-to-wooder in data/pronunciation/philly-215.yml;
+  "wooder ice" is how one Northeast Philadelphian put it to The Inquirer.
+sources:
+  - type: url
+    ref: https://www.visitphilly.com/media-center/press-releases/13-top-spots-for-water-ice-in-philly
+  - type: url
+    ref: https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html

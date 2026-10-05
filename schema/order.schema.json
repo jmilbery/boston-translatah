@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/jmilbery/boston-translatah/schema/order.schema.json",
+  "title": "Order entry",
+  "description": "How a local orders one thing at the counter, and what they think of it. One order per file, named after the order.",
+  "type": "object",
+  "required": ["order", "region", "local", "takes", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "order": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The thing, in plain English, kept short (\"iced coffee with cream and sugar\"). The filename is this, lowercase-with-dashes; the validator checks it."
+    },
+    "region": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Region slug, e.g. boston, stl-314. Must be registered in data/regions.yml, and the file must sit in data/orders/<region>/."
+    },
+    "local": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What a local actually says at the counter, in standard spelling (\"Large iced regular.\")."
+    },
+    "spoken": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional. The same order respelled by the region's accent rules (\"Lahge iced regulah.\"). A folk spelling, never a transcription. Only allowed if the region has an accent: file in data/regions.yml."
+    },
+    "slot": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Optional. A cross-city comparison key, lowercase-with-dashes (soda, water, long-sandwich). Orders from different regions that share a slot get compared side by side."
+    },
+    "moves": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Optional. Counter etiquette a newcomer wouldn't know (\"It's cut in squares, not wedges.\")."
+    },
+    "takes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "description": "REQUIRED, one to three. What locals think of the order, in their voice. Affectionate: with people, never at them. See docs/TONE.md.",
+      "items": {
+        "type": "object",
+        "required": ["mood", "line"],
+        "additionalProperties": false,
+        "properties": {
+          "mood": {
+            "type": "string",
+            "enum": ["love", "gripe", "shrug"],
+            "description": "love = a point of pride; gripe = a fond complaint; shrug = locals argue about it and don't much mind."
+          },
+          "line": { "type": "string", "minLength": 1, "description": "The take itself, one or two sentences." },
+          "voice": { "type": "string", "minLength": 1, "description": "Optional. Who's talking, as a type of person, never a real named one (\"a lifelong Dunks regular\")." }
+        }
+      }
+    },
+    "register": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3,
+      "description": "Optional. Same as the lexicon: 1 = everyone knows it ... 3 = deep local. Gates the order by the thickness dial."
+    },
+    "notes": { "type": "string" },
+    "contested": {
+      "type": "boolean",
+      "description": "Optional. true if part of the story is a \"locals will tell you…\" claim, like who invented it, whose is the original. Say what's disputed in notes."
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "REQUIRED. At least one. No source, no merge.",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string", "enum": ["url", "vouch", "book"] },
+          "ref": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

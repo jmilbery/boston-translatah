@@ -1,0 +1,27 @@
+order: large iced coffee with cream and sugar
+region: boston
+local: "Large iced regular."
+spoken: "Lahge iced regulah."
+slot: coffee-regular
+moves:
+  - "A large regular is four creams and four sugars. Ask for something else if you want it lighter."
+  - "Plenty of locals drink it iced all year, even when it's below freezing out."
+takes:
+  - mood: love
+    line: "Iced, in February, with the snowbanks taller than you. It's coffee, not a weather report."
+register: 2
+notes: >-
+  See the lexicon entries regular and Dunks. The spoken line is a folk
+  spelling (drop-final-r in data/pronunciation/rules.yml: "large" and
+  "regular" both lose the R). Younger speakers drop it less and less. Sources
+  give the cream and sugar counts for coffee in general; they don't say
+  whether iced is made the same way.
+sources:
+  - type: url
+    ref: https://www.ocweekly.com/?p=121345
+  - type: url
+    ref: https://tastingtable.com/1763061/dunkin-measures-cream-sugar-drinks
+  - type: url
+    ref: https://www.timeout.com/boston/news/50-boston-slang-words-and-sayings-you-should-know-083022
+  - type: url
+    ref: https://www.boston.com/news/wickedpedia/2023/03/27/boston-accent-origins-linguistics

@@ -1,0 +1,23 @@
+order: convenience store sandwich
+region: pgh-412
+local: "An MTO from Sheetz."
+moves:
+  - "MTO means made-to-order. Out here the convenience store is Sheetz; east of the middle of the state it's Wawa, and people pick a side."
+takes:
+  - mood: love
+    line: "Sheetz has the fryer and a touch screen full of sauces. Order it your way, any hour."
+    voice: a western Pennsylvanian
+  - mood: shrug
+    line: "Fine, Wawa's hoagie bread is better. We've got the fryer."
+register: 2
+contested: true
+notes: >-
+  See the lexicon entry MTO, and the mirror order
+  data/orders/philly-215/convenience-store-hoagie.yml. Which chain is better
+  is the argument, so it's marked contested. There's no territory deal between
+  the two, whatever you've heard: Wawa's president has said none ever existed.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Sheetz%E2%80%93Wawa_rivalry
+  - type: url
+    ref: https://melmagazine.com/en-us/story/the-sheetz-vs-wawa-war-explained-by-a-real-pennsylvanian

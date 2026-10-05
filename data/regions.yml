@@ -23,3 +23,15 @@
 - slug: stl-314
   name: St. Louis (the 314)
   accent: stl-314.yml
+
+- slug: philly-215
+  name: Philadelphia (the 215)
+  accent: philly-215.yml
+
+- slug: pgh-412
+  name: Pittsburgh (the 412)
+  accent: pgh-412.yml
+
+- slug: chi-312
+  name: Chicago (the 312)
+  accent: chi-312.yml

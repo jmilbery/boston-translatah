@@ -1,0 +1,26 @@
+order: glass of water
+region: philly-215
+local: "Can I get a water?"
+spoken: "Can I get a wooder?"
+slot: water
+takes:
+  - mood: love
+    line: "We'll swear we don't have an accent. Then we'll ask for a wooder."
+    voice: a lifelong Philadelphian
+  - mood: gripe
+    line: "Wooder, water, whatever. Here the server already knows what you mean."
+register: 1
+notes: >-
+  See the lexicon entry wooder. The spoken line is a folk spelling from the
+  water-to-wooder rule in data/pronunciation/philly-215.yml. Linguists trace
+  it to Philadelphians born around 1900 to 1910; the spelling "wooder" took
+  off much later and is now on T-shirts and Gritty's signs. Labov's team
+  finds younger speakers drifting back toward "water," though nobody's sure
+  it's going away.
+sources:
+  - type: url
+    ref: https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html
+  - type: url
+    ref: https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/
+  - type: url
+    ref: https://www.cbsnews.com/philadelphia/news/upenn-researchers-tackle-evolution-of-philadelphia-accent/

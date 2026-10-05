@@ -1,0 +1,28 @@
+order: convenience store hoagie
+region: philly-215
+local: "I'm stopping at Wawa. You want a hoagie?"
+moves:
+  - "In eastern Pennsylvania the convenience store is Wawa. Out west, around Pittsburgh, it's Sheetz, and people pick a side."
+takes:
+  - mood: love
+    line: "Wawa wins on hoagies, and it's the bread. Philly bread is just better."
+    voice: an eastern Pennsylvanian
+  - mood: shrug
+    line: "No, there's no secret deal splitting the state between them. Wawa's own president said so. We just like ours better."
+register: 2
+contested: true
+notes: >-
+  See the lexicon entries Wawa and hoagie, and the mirror order
+  data/orders/pgh-412/convenience-store-sandwich.yml. Which chain is better is
+  the argument, so it's marked contested. The "gentlemen's agreement" to stay
+  out of each other's territory is an urban legend: Wawa's president has said
+  no such agreement ever existed. "Shorti" is Wawa's own name for one of its
+  hoagie rolls (The Inquirer's Hoagie Day coverage counts Shorti rolls); it's
+  a brand term, not general Philly slang.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Sheetz%E2%80%93Wawa_rivalry
+  - type: url
+    ref: https://melmagazine.com/en-us/story/the-sheetz-vs-wawa-war-explained-by-a-real-pennsylvanian
+  - type: url
+    ref: https://www.inquirer.com/food/how-giant-free-hoagie-wawa-hoagie-day-gets-made-20180628.html

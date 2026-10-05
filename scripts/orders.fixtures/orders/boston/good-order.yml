@@ -1,0 +1,10 @@
+order: good order
+region: boston
+local: "A good order."
+spoken: "A good ordah."
+takes:
+  - mood: love
+    line: "Fine by us."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

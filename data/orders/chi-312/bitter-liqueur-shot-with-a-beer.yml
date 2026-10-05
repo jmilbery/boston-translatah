@@ -1,0 +1,20 @@
+order: bitter liqueur shot with a beer
+region: chi-312
+local: "A Chicago handshake."
+moves:
+  - "That's a shot of Malört with an Old Style beer. You'll find it at dive bars and VFW halls."
+  - "Malört is a bitter Swedish-style liqueur. The face people make after the first sip has its own name: Malört face."
+takes:
+  - mood: love
+    line: "It tastes like a dare, and we keep ordering it anyway. That's the whole point."
+    voice: a dive bar regular
+  - mood: shrug
+    line: "Half the city loves it and half the city makes the face. Nobody's neutral."
+register: 2
+notes: >-
+  Malört came to Chicago in the 1920s, when Swedish immigrant Carl Jeppson
+  started selling the bitters. WBEZ calls it Chicago's drink. Malört and Old Style are brand
+  names, used here to describe the order; naming them isn't an endorsement.
+sources:
+  - type: url
+    ref: https://www.wbez.org/curious-city/2023/07/06/why-is-malort-popular-in-chicago

@@ -1,0 +1,21 @@
+order: cheesesteak with provolone, no onions
+region: philly-215
+local: "Provolone witout."
+moves:
+  - "Same two calls as any cheesesteak: cheese, then onions. Witout means no onions. You'll also see it spelled widout."
+  - "American works the same way: \"American wit,\" \"American witout.\""
+takes:
+  - mood: shrug
+    line: "Whiz, provolone, American: all three are correct. Arguing about which is most correct is also correct."
+register: 1
+notes: >-
+  See the lexicon entries wit and witout, and cheesesteak-with-cheez-whiz-and-onions.yml
+  for counter etiquette. The three cheeses come straight from the guides;
+  provolone is the sharp one, American the creamy one.
+sources:
+  - type: url
+    ref: https://inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html
+  - type: url
+    ref: https://www.visitphilly.com/media-center/press-releases/cheesesteak-101-a-primer-on-the-who-what-where-whiz-of-philly-cheesesteaks/
+  - type: url
+    ref: https://www.thetakeout.com/1672514/how-to-order-philly-cheesesteak/

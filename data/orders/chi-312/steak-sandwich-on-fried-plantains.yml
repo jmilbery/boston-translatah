@@ -1,0 +1,16 @@
+order: steak sandwich on fried plantains
+region: chi-312
+local: "A jibarito."
+moves:
+  - "Fried plantain slices stand in for the bread, with steak, lettuce, tomato, garlic mayonnaise and cheese in between."
+takes:
+  - mood: love
+    line: "Plantains instead of bread. A Puerto Rican restaurant in Chicago came up with it, and now it's a Chicago classic."
+register: 2
+notes: >-
+  Created by Puerto Rican restaurateur Juan "Peter" Figueroa at Borinquen in
+  the 1990s, according to the Chicago Tribune. The name comes from jibaro,
+  the Spanish word for a rural Puerto Rican farmer.
+sources:
+  - type: url
+    ref: https://www.newstribune.com/news/2026/sep/09/how-the-jibarito-became-chicago-classic/

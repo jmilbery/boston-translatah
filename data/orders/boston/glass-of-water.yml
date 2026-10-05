@@ -1,0 +1,21 @@
+order: glass of water
+region: boston
+local: "Can I get a water?"
+spoken: "Can I get a watah?"
+slot: water
+moves:
+  - "If you just want a drink and there's no counter, look for the bubbler: the drinking fountain."
+takes:
+  - mood: love
+    line: "Ask for a water, get a water. The R is optional and the bubbler is free."
+register: 1
+notes: >-
+  The spoken line is a folk spelling from the er-to-ah rule in
+  data/pronunciation/rules.yml. The dropped R is disappearing faster than
+  other Boston features, especially among younger speakers, so don't expect
+  every local to say it this way. See the lexicon entry bubbler.
+sources:
+  - type: url
+    ref: https://www.boston.com/news/wickedpedia/2023/03/27/boston-accent-origins-linguistics
+  - type: url
+    ref: https://newengland.com/?p=98646

@@ -1,0 +1,19 @@
+order: fried chicken with mild sauce
+region: chi-312
+local: "Half chicken, mild sauce."
+moves:
+  - "The chicken comes doused in sauce, hot or mild, with coleslaw and two slices of bread laid across to soak it up."
+  - "Mild sauce is pungent, sweet and tomato-y, with a vinegar sting."
+takes:
+  - mood: love
+    line: "The bread's there to catch the sauce, and the sauce is the point."
+register: 2
+notes: >-
+  Stranger's Guide tells mild sauce's story through Black-owned Chicago
+  businesses: Harold's Chicken Shack, the pride of Park Manor on the South
+  Side, and Argia B. Collins, who made his Mumbo sauce for his barbecue house
+  at 47th and Forestville. Both are business names, used here to describe the
+  history, not to endorse either.
+sources:
+  - type: url
+    ref: https://strangersguide.com/articles/the-gospel-of-mild-sauce/

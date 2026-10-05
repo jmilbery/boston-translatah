@@ -1,0 +1,9 @@
+order: unknown region
+region: nowhere-000
+local: "Not a city we speak."
+takes:
+  - mood: love
+    line: "Not in the registry."
+sources:
+  - type: vouch
+    ref: "the fixture itself"

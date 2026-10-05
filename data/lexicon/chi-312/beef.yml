@@ -1,0 +1,9 @@
+term: beef
+means: an Italian beef sandwich
+region: chi-312
+register: 1
+part_of_speech: noun
+example: "Beef, hot, dipped."
+sources:
+  - type: url
+    ref: https://thetakeout.com/how-to-order-an-italian-beef-in-chicago-1845889364

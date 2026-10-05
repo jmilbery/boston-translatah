@@ -1,0 +1,17 @@
+term: wooder
+means: water
+region: philly-215
+register: 2
+part_of_speech: noun
+example: "Wooder ice, cherry, small."
+notes: >-
+  A folk spelling of the Philadelphia pronunciation; one of the earliest
+  printed spellings ("wood-er") came from an Inquirer columnist in 1981, and
+  it's now a badge of local authenticity. Linguists
+  trace the sound to speakers born around 1900 to 1910; younger speakers say
+  it less. See water-to-wooder in data/pronunciation/philly-215.yml.
+sources:
+  - type: url
+    ref: https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html
+  - type: url
+    ref: https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/

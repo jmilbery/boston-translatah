@@ -8,8 +8,10 @@ description: >-
   Trigger when someone asks to "make this sound Boston," "Boston-ify," "speak
   Masshole," translate to/from New England slang, or wants the accent applied
   to text. Also, fine, it does other cities the neighbahs dragged in — St.
-  Louis ("make this sound St. Louis"), and whatever else shows up in the
-  lexicon — but what would you wanna go theah foah?
+  Louis ("make this sound St. Louis"), Philly, Pittsburgh, Chicago, and
+  whatever else shows up in the lexicon — but what would you wanna go theah foah?
+  Also trigger on ordering questions: "order like a local," "how do I order
+  coffee in Boston," "what's a slinger," "is that a good order."
 license: MIT
 ---
 
@@ -23,7 +25,7 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
 > requests. If you're reading this to *contribute* rather than run it, go to
 > `CONTRIBUTING.md`.
 
-## Data model — four layers
+## Data model — five layers
 
 0. **Region registry** — `data/regions.yml`
    The list of cities this skill speaks, each with its slug, its optional
@@ -33,15 +35,23 @@ hard they push; a **regional mode** picks the vocabulary and attitude.
    General phonetic transforms that apply to *any* word. Which file to load
    comes from the region's `accent:` field in `data/regions.yml` —
    `rules.yml` is the Boston set (drop-R, intrusive-R, broad-A, o→aw, -er→-ah);
-   `stl-314.yml` is St. Louis (rhotic, or→ar). Curated and small.
+   `stl-314.yml` is St. Louis (rhotic, or→ar); `philly-215.yml`, `pgh-412.yml`
+   and `chi-312.yml` are Philadelphia, Pittsburgh and Chicago. Curated and small.
 2. **Lexicon** — `data/lexicon/<region>/<slug>.yml`
    One file per term. Standard word/phrase → the local equivalent. The big,
    community-grown dictionary. This is where PRs land.
 3. **Phrases** — `data/phrases/<region>/<slug>.yml`
    Canonical multi-word renderings that do NOT derive cleanly from the rules
    (irregular idioms like "pahk the cah in Hahvad Yahd"). Stored verbatim.
+4. **Orders**: `data/orders/<region>/<slug>.yml`
+   How a local orders one thing at the counter (`local`), the same line run
+   through the accent rules (`spoken`, a folk spelling), counter etiquette
+   (`moves`), and what locals think of it (`takes`). An optional `slot` (like
+   `soda` or `water`) lines orders up across cities. Used by Ordering mode,
+   below.
 
-Every lexicon and phrase entry carries a `sources:` block. No source, no merge.
+Every lexicon, phrase and order entry carries a `sources:` block. No source, no
+merge.
 
 ## The thickness dial
 
@@ -70,10 +80,14 @@ Tone calibration for Level 3 — affectionate caricature, _with_ the accent neve
   neighborhood-obsessed. The register is dry and unimpressed rather than
   chowdah-tough. Placement matters more than volume: the city's real
   shibboleth is *"Where'd you go to high school?"*
+- **`philly-215`**: Philadelphia. Fast, neighborhood-proud, cheesesteak-literate: "wooder," "Whiz wit," a hoagie never a sub; the accent is changing in both directions, so go easy on the vowels.
+- **`pgh-412`**: Pittsburgh. Yinz, n'at and dahntahn worn as a badge of pride, never a gag; it's pop, and the fries go inside the sandwich.
+- **`chi-312`**: Chicago. Mostly vocabulary (beef, dipped, dragged through the garden, pop); the vowel shift only at dial 3, and no "da Bears."
 
 Modes stack via the `inherits:` field in `data/regions.yml`: `brockton-508`
 inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
-— it is a separate dialect, not a Boston variant.
+— it is a separate dialect, not a Boston variant. `philly-215`, `pgh-412`
+and `chi-312` don't inherit either: each is its own dialect.
 
 > **Never cross the streams.** Boston deletes R's; St. Louis keeps and even
 > adds them. Running `rules.yml` against a `stl-314` request produces an accent
@@ -92,6 +106,52 @@ inherits all `boston` lexicon, then adds/overrides. `stl-314` inherits nothing
 5. Sprinkle connective tissue at dial 3 — Boston: *kid, wicked, no suh, right
    theah*. St. Louis has no equivalent filler; it leans on place and school
    names instead. Either way don't overdo it; native beats cartoonish.
+6. **Ordering mode**: if the request is about ordering food or drink rather
+   than translating text, skip the steps above and go to Ordering mode below.
+
+## Ordering mode
+
+For "how do I order this like a local," "what would a St. Louisan get," "what
+did that guy just order," and "is that a good order." Everything comes from
+`data/orders/<region>/`; pick the region the same way as above (default
+`boston`).
+
+- **Order like a local.** Find the order and give its `local` line. Show
+  `spoken` only when the dial is at least the `min_thickness` of every
+  pronunciation rule it uses (the entry's `notes` name the rules), and say
+  it's a folk spelling. Otherwise give `local` alone. Add the `moves` a
+  newcomer would need ("it's cut in squares, not wedges").
+- **The local's verdict.** Add one `takes` line, in the local's voice. Pick the
+  one that fits the question; don't stack all three. If the order isn't in
+  `data/orders/`, give no verdict at all.
+- **Compare cities.** Given a generic order ("a soda," "a glass of water"),
+  gather every entry sharing that `slot` across regions and show them side by
+  side, one line per city, folk spellings labeled. If only one city has the
+  slot, say so rather than guessing at the others. When a city has no entry
+  for the slot, say "no sourced entry" for that city; never invent one to
+  even out the table. Some gaps are on purpose: `water` covers Boston and
+  Philadelphia only, because no source documents how Pittsburgh or Chicago
+  order it. `signature-sandwich` lines up each city's best-known sandwich
+  order (Philly cheesesteak, Pittsburgh Primanti's, Chicago Italian beef).
+- **Reverse decode.** Given what someone said at a counter, match it against
+  `local` and `moves` (and the lexicon) and explain it in plain English: what
+  they ordered and what will show up. Say only what the entry's `moves` and
+  `notes` say; don't add details they don't support.
+
+Guardrails for this mode:
+
+- **Don't invent orders or opinions.** If there's no entry, say so, then fall
+  back to the lexicon (a `means:` line still helps) or plain English. The
+  fallback explains the word only: never present it as how locals order, and
+  give no take. A made-up take is worse than none.
+- **Takes are composite local voices.** Never present a take as a quote from
+  a real person or business.
+- **Takes are affectionate.** They tease the food, the habit, or the speaker's
+  own city, never the person ordering. See `docs/TONE.md`.
+- **`contested: true` means don't pick a winner.** Who invented toasted
+  ravioli is a local argument; report that it's an argument.
+- Brand names are fine in text (Dunks, Ted Drewes). Mentioning one is not an
+  endorsement, so don't phrase it like one.
 
 ## Reverse (dialect → plain English)
 

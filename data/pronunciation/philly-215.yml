@@ -1,0 +1,74 @@
+# The Philadelphia accent engine (region: philly-215).
+#
+# Same shape as rules.yml (Boston) and stl-314.yml. Applied in the order
+# listed. Curated: changes here affect every philly-215 translation. New
+# VOCABULARY goes in data/lexicon/philly-215/, not here.
+#
+# The backbone is William Labov's work at the University of Pennsylvania. He
+# has studied the Philadelphia accent since 1971, and his team recorded
+# hundreds of native speakers born between 1888 and 1992 ("One Hundred Years
+# of Sound Change in Philadelphia," in the journal Language). Josef
+# Fruehwald, who co-wrote a 2013 paper on the dialect with Labov, has since
+# traced "wooder" back to speakers born around 1900 to 1910. Only features that research names are encoded here, and
+# every respelling is a folk spelling, not a transcription.
+#
+# Two things to know before cranking the dial:
+#   - The accent is moving, in both directions. Labov's team found the vowel
+#     in coffee and water drifting back toward "ah" in younger speakers, while
+#     the vowel in bike and fight is getting STRONGER. A 25-year-old can say
+#     "water" and "boik" in the same breath.
+#   - It's a neighborhood thing. Locals can hear north versus south of Market
+#     Street in it. One respelling is not how the whole city talks.
+#
+# Not encoded: the "gow" vowel in "go," which the same research says rose
+# for decades and then turned around in speakers born around 1950 to 1960.
+# Documented here so it isn't lost; maintainer's call to add it.
+#
+#   Sources:
+#   https://inquirer.com/news/philadelphia/inq2/philadelphia-accent-water-wooder-linguistics-20230325.html
+#   https://www.nbcphiladelphia.com/news/local/philadelphia-accent-wooder-water/2087818/
+#   https://www.cbsnews.com/philadelphia/news/upenn-researchers-tackle-evolution-of-philadelphia-accent/
+
+- id: water-to-wooder
+  name: Wooder
+  order: 1
+  description: >-
+    The city's badge. "Water" comes out "wooder," including in compounds like
+    water ice and water bill. Lexical: one word, not a general rule.
+  examples:
+    - { from: water, to: wooder }
+    - { from: "water ice", to: "wooder ice" }
+    - { from: "water bill", to: "wooder bill" }
+  exceptions: >-
+    Only this word. Linguists still haven't settled how it happened, and
+    look-alike words (walk, wall, waltz) didn't follow, so don't generalize it.
+    Younger speakers say it less, so it's a dial-2 feature, not a given.
+  min_thickness: 2
+
+- id: aw-raising
+  name: Coffee to cawfee
+  order: 2
+  description: >-
+    The vowel in coffee, talk and lost rises toward "aw." The older Philly
+    sound; the research finds it moving back toward "ah" in younger speakers.
+  examples:
+    - { from: coffee, to: cawfee }
+    - { from: talk, to: tawk }
+    - { from: lost, to: lawst }
+  exceptions: Fading. Use it once or twice in a passage, not on every short o.
+  min_thickness: 3
+
+- id: ay-raising
+  name: Bike to boik
+  order: 3
+  description: >-
+    The long i in words like fight and bike moves toward "oi." Unlike most of
+    the accent, this one is getting stronger: younger speakers use it more than
+    their parents and grandparents.
+  examples:
+    - { from: fight, to: foit }
+    - { from: bike, to: boik }
+  exceptions: >-
+    Stick to words like the research examples (fight, bike). Don't run it on
+    every long i in a sentence.
+  min_thickness: 3

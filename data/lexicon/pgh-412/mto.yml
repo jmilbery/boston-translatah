@@ -1,0 +1,9 @@
+term: MTO
+means: made-to-order; a food order built to your spec at Sheetz
+region: pgh-412
+register: 2
+part_of_speech: noun
+example: "Get me an MTO on the way back."
+sources:
+  - type: url
+    ref: https://melmagazine.com/en-us/story/the-sheetz-vs-wawa-war-explained-by-a-real-pennsylvanian

@@ -1,0 +1,16 @@
+order: soft pretzel
+region: philly-215
+local: "A soft pretzel with mustard."
+moves:
+  - "A Philly pretzel is a figure-8, thick in the middle, not the loopy kind."
+  - "Look for them on street corners, not in the supermarket."
+takes:
+  - mood: love
+    line: "Breakfast on the walk to work, out of a paper bag. Mustard if you want it, and most of us want it."
+register: 1
+notes: >-
+  The Encyclopedia of Greater Philadelphia traces the mustard to hot dog
+  vendors, who sold pretzels and already had the mustard out.
+sources:
+  - type: url
+    ref: https://philadelphiaencyclopedia.org/essays/pretzels/

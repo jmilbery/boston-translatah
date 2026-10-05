@@ -1,0 +1,26 @@
+order: toasted ravioli
+region: stl-314
+local: "An order of t-ravs."
+spoken: "An arder of t-ravs."
+moves:
+  - "They're breaded and fried, usually beef-filled, with marinara for dipping."
+takes:
+  - mood: love
+    line: "More than one place on the Hill says they fried the first one. Order a plate and hear the story."
+register: 2
+contested: true
+notes: >-
+  See the lexicon entry t-ravs (an appetizer, never an entree). Born on the Hill, the city's Italian
+  neighborhood. Who invented them is disputed: more than one restaurant
+  claims to have fried the first one, so don't name a winner. The
+  spoken line is a folk spelling from the or-to-ar rule in
+  data/pronunciation/stl-314.yml, on the stressed syllable only.
+sources:
+  - type: url
+    ref: https://en.wikipedia.org/wiki/Toasted_ravioli
+  - type: url
+    ref: https://www.afar.com/magazine/st-louis-food
+  - type: url
+    ref: https://explorestlouis.com/top-five-st-louis-signature-foods
+  - type: url
+    ref: https://everydaywanderer.com/famous-st-louis-foods

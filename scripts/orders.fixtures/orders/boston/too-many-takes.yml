@@ -1,0 +1,11 @@
+order: too many takes
+region: boston
+local: "One more thing."
+takes:
+  - { mood: love, line: "One." }
+  - { mood: love, line: "Two." }
+  - { mood: love, line: "Three." }
+  - { mood: love, line: "Four is one too many." }
+sources:
+  - type: vouch
+    ref: "the fixture itself"
